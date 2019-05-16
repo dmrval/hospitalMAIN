@@ -35,7 +35,7 @@ public class MainController {
 
     @GetMapping("/")
     public String index() {
-        return "allVisit";
+        return "adm_MainPanel";
     }
 
     @GetMapping("/hello")

@@ -3,6 +3,7 @@ package com.dmrval.hospitalapp.entity;
 import javax.persistence.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 @Entity
@@ -116,5 +117,21 @@ public class Patient {
 
     public void setMedicalpolicy(Medicalpolicy medicalpolicy) {
         this.medicalpolicy = medicalpolicy;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(firstname + ", ");
+        sb.append(lastname + ", ");
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(birthday.getTime());
+        sb.append("Дата рождения: " + cal.get(Calendar.DATE) + "-" +
+                (cal.get(Calendar.MONTH) + 1) + "-" +
+                cal.get(Calendar.YEAR) + ", "
+        );
+        sb.append("Домашний адресс: " + address + ", ");
+        sb.append("Мед.полис: " + Math.abs(medicalpolicy.getNumber()) +".");
+        return sb.toString();
     }
 }

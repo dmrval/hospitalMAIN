@@ -66,7 +66,6 @@ public class VisitDaoImpl implements VisitDao {
 
 
     //PRIVATE only this class use=))
-    //GIt Test
     private Visit getVisitPrivate(int id) {
         Visit temp = sessionFactory.getCurrentSession().get(Visit.class, id);
         return temp;

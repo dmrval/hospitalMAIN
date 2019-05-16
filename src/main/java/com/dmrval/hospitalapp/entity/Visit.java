@@ -1,11 +1,8 @@
 package com.dmrval.hospitalapp.entity;
 
 import javax.persistence.*;
-import java.sql.Date;
 import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 @Entity
 public class Visit {

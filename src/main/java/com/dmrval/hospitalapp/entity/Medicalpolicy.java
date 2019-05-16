@@ -55,4 +55,9 @@ public class Medicalpolicy {
         result = 31 * result + number;
         return (int) result;
     }
+
+    @Override
+    public String toString() {
+        return getNumber() + "";
+    }
 }

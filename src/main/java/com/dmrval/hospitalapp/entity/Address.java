@@ -19,7 +19,7 @@ public class Address {
         this.flat = flat;
     }
 
-    public Address(int addressid, String country, String city, String street, int house,int flat) {
+    public Address(int addressid, String country, String city, String street, int house, int flat) {
         this.addressid = addressid;
         this.country = country;
         this.city = city;
@@ -116,5 +116,17 @@ public class Address {
         result = 31 * result + (street != null ? street.hashCode() : 0);
         result = 31 * result + house;
         return result;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(country + ", ");
+        sb.append(city + ", ");
+        sb.append(street + ", ");
+        sb.append("д." + house + ", ");
+        sb.append("кв." + flat);
+        return sb.toString();
+
     }
 }

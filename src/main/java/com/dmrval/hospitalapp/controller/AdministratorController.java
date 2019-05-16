@@ -1,6 +1,10 @@
 package com.dmrval.hospitalapp.controller;
 
+import com.dmrval.hospitalapp.entity.Doctor;
+import com.dmrval.hospitalapp.entity.Patient;
 import com.dmrval.hospitalapp.entity.Visit;
+import com.dmrval.hospitalapp.service.DoctorServise;
+import com.dmrval.hospitalapp.service.PatientServise;
 import com.dmrval.hospitalapp.service.VisitServise;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,15 +22,21 @@ public class AdministratorController {
     @Autowired
     VisitServise visitServise;
 
+    @Autowired
+    PatientServise patientServise;
+
+    @Autowired
+    DoctorServise doctorServise;
+
+    //Mainpanel
     @GetMapping("")
     public String allVisistsMain(Model model) {
         List<Visit> result = visitServise.sortByTime();
         model.addAttribute("lstvst", result);
-        return "adm_allVisit";
+        return "adm_MainPanel";
     }
-    /**
-     * /==================/allVisit
-     */
+
+    //Visits
     @GetMapping("/allVisit")
     public String allVisists(Model model) {
         List<Visit> result = visitServise.sortByTime();
@@ -40,19 +50,28 @@ public class AdministratorController {
         return "adm_visit";
     }
 
-//    @RequestMapping(value = "/administrator/delete/{id}", method = RequestMethod.POST)
-//    public String deleteVisitPOST(@PathVariable("id") int id) {
-//        visitServise.removeVisit(id);
-//        return "adm_visit";
-//    }
-
-//    @RequestMapping(value = "/administrator/delete/{id}", method = RequestMethod.GET)
     @GetMapping("/delete/{id}")
     public String deleteVisitGET(@PathVariable("id") int id) {
         visitServise.removeVisit(id);
         return "redirect:/administrator";
     }
 
+    //Patient
+    @GetMapping("/allPatient")
+    public String allPatients(Model model) {
+        List<Patient> result = patientServise.getAllPatient();
+        model.addAttribute("lstpatient", result);
+        return "adm_allPatient";
+    }
+
+
+    //Doctor
+    @GetMapping("/allDoctor")
+    public String allDoctor(Model model) {
+        List<Doctor> result = doctorServise.getAllDoctor();
+        model.addAttribute("lstdoctor", result);
+        return "adm_allDoctor";
+    }
 
 
 }
