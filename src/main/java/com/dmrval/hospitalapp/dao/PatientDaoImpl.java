@@ -38,7 +38,7 @@ public class PatientDaoImpl implements PatientDao{
     @Transactional
     public void removePatient(int id) {
         sessionFactory.getCurrentSession().beginTransaction();
-        sessionFactory.getCurrentSession().delete(getPatient(id));
+        sessionFactory.getCurrentSession().delete(getPatientPrivate(id));
         sessionFactory.getCurrentSession().getTransaction().commit();
         sessionFactory.getCurrentSession().close();
     }
@@ -63,4 +63,12 @@ public class PatientDaoImpl implements PatientDao{
         sessionFactory.getCurrentSession().close();
         return list;
     }
+
+    //PRIVATE only this class use=))
+    private Patient getPatientPrivate(int id) {
+        Patient temp = sessionFactory.getCurrentSession().get(Patient.class, id);
+        return temp;
+    }
+
+
 }

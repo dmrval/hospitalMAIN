@@ -2,26 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Пациент ${visit.getPatient().getFirstname()} ${visit.getPatient().getLastname()}</title>
+    <style type="text/css">
+        <#include "/resources/allstyle.css">
+    </style>
+    <title>${visit.give_DateString()}</title>
 </head>
 <body>
 <div>
     <h3>Дата и время приема</h3>
-    ${visit.give_DateString()}
-    <h3>Пациент: </h3> ${visit.getPatient().getFirstname()} ${visit.getPatient().getLastname()}
+    <p>${visit.give_DateString()}</p>
+    <h3>Пациент: </h3>
+    <p>${visit.getPatient().getFirstname()} ${visit.getPatient().getLastname()}</p>
     <h3>Поставленный диагноз</h3>
     <#if visit.getDiagnosis()??>
-        ${visit.getDiagnosis().getResultofdiagnosis()}
+        <p>${visit.getDiagnosis().getResultofdiagnosis()}</p>
     <#else>
         Пациенту еще не поставлен диагноз
     </#if>
     <h3>Осматриваемый врач</h3>
-    ${visit.getDoctor().getFirstname()} ${visit.getDoctor().getLastname()}
+    <p>${visit.getDoctor().getFirstname()} ${visit.getDoctor().getLastname()}</p>
 </div>
 <br>
 
-<button onclick="location.href = '/administrator/'">Назад</button>
-<button onclick="location.href = '/administrator/delete/${visit.getVisitid()}'">Удалить запись</button>
+<button class="button21" onclick="location.href = '/administrator/'">Назад</button>
+<button class="button21" onclick="location.href = '/administrator/update/${visit.getVisitid()}'">Редактировать запись
+</button>
+<button class="button21" onclick="location.href = '/administrator/delete/${visit.getVisitid()}'">Удалить запись</button>
 
 
 </body>

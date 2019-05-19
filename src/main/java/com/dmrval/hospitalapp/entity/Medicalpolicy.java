@@ -29,7 +29,7 @@ public class Medicalpolicy {
     @Basic
     @Column(name = "number", nullable = false)
     public long getNumber() {
-        return number;
+        return Math.abs(number);
     }
 
     public void setNumber(long number) {

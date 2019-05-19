@@ -121,8 +121,13 @@ public class Visit {
         StringBuilder sb = new StringBuilder();
         Calendar cal = Calendar.getInstance();
         cal.setTimeInMillis(dayofvisit.getTime());
-        sb.append(cal.get(Calendar.DATE) + "-" +
-                (cal.get(Calendar.MONTH) + 1) + "-" +
+        sb.append(cal.get(Calendar.DATE) + "-");
+        if ((cal.get(Calendar.MONTH) + 1) < 9) {
+            sb.append(0 + "" + (cal.get(Calendar.MONTH) + 1));
+        } else {
+            sb.append(cal.get(Calendar.MONTH) + 1);
+        }
+        sb.append("-" +
                 cal.get(Calendar.YEAR) + " " +
                 cal.get(Calendar.HOUR) + ":"
         );

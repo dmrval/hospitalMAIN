@@ -19,7 +19,7 @@ public class Doctorlicense {
     @Column(name = "doctorlicenseid", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getDoctorlicenseid() {
-        return doctorlicenseid;
+        return Math.abs(doctorlicenseid);
     }
 
     public void setDoctorlicenseid(int doctorlicenseid) {

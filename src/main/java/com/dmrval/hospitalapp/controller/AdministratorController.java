@@ -9,10 +9,7 @@ import com.dmrval.hospitalapp.service.VisitServise;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,9 +27,7 @@ public class AdministratorController {
 
     //Mainpanel
     @GetMapping("")
-    public String allVisistsMain(Model model) {
-        List<Visit> result = visitServise.sortByTime();
-        model.addAttribute("lstvst", result);
+    public String allVisistsMain() {
         return "adm_MainPanel";
     }
 
@@ -56,12 +51,38 @@ public class AdministratorController {
         return "redirect:/administrator";
     }
 
+
+    /*??????????????????????????????????????*/
+    @GetMapping("/update/{id}")
+    public String updateVisit(@PathVariable("id") int id, Model model) {
+        model.addAttribute("doclist", doctorServise.getAllDoctor());
+        model.addAttribute("patlist", patientServise.getAllPatient());
+        model.addAttribute("visit", visitServise.getVisit(id));
+        return "adm_editVisit";
+    }
+
+
+    /*??????????????????????????????????????*/
+
+
     //Patient
     @GetMapping("/allPatient")
     public String allPatients(Model model) {
         List<Patient> result = patientServise.getAllPatient();
         model.addAttribute("lstpatient", result);
         return "adm_allPatient";
+    }
+
+    @GetMapping("/allPatient/delete/{id}")
+    public String deletePatient(@PathVariable("id") int id) {
+        patientServise.removePatient(id);
+        return "redirect:/administrator/allPatient";
+    }
+
+    @GetMapping("/allPatient/update/{id}")
+    public String editPatient(@PathVariable("id") int id, Model model) {
+        model.addAttribute("patient", patientServise.getPatient(id));
+        return "adm_editPatient";
     }
 
 

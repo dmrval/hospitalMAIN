@@ -5,15 +5,14 @@ import com.dmrval.hospitalapp.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Date;
 import java.util.List;
 
 
 @Controller
 @RequestMapping("/")
-@Validated
 public class MainController {
     @Autowired
     DoctorlicenseServise doctorlicenseServise;
@@ -92,9 +91,7 @@ public class MainController {
         return "addDoctor";
     }
 
-    /**
-     * /==================/addPatient
-     */
+    //Patient
     @RequestMapping(value = "/addPatientPost", method = RequestMethod.POST)
     public String addPatientPost(
             @RequestParam("birthday") String birthday,
@@ -120,10 +117,39 @@ public class MainController {
         return "addPatient";
     }
 
+    @RequestMapping(value = "/updatePatient", method = RequestMethod.POST)
+    public String editPatient(
+            @RequestParam("patientid") String patientid,
+            @RequestParam("birthday") Date birthday,
+            @RequestParam("lastname") String lastname,
+            @RequestParam("firstname") String firstname,
+            @RequestParam("medicalpolicy") String medicalpolicy,
+            @RequestParam("country") String country,
+            @RequestParam("city") String city,
+            @RequestParam("street") String street,
+            @RequestParam("house") String house,
+            @RequestParam("flat") String flat) {
+        Patient tmp;
+        tmp = patientServise.getPatient(Integer.parseInt(patientid));
+        try {
+            tmp.setBirthday(birthday);
+        } catch (Exception x) {
+            x.toString();
+            System.err.println("Не правильный формат даты. Дата не изменена");
+        }
+        tmp.setLastname(lastname);
+        tmp.setFirstname(firstname);
+        tmp.getMedicalpolicy().setNumber(Long.parseLong(medicalpolicy));
+        tmp.getAddress().setCountry(country);
+        tmp.getAddress().setCity(city);
+        tmp.getAddress().setStreet(street);
+        tmp.getAddress().setHouse(Integer.parseInt(house));
+        tmp.getAddress().setFlat(Integer.parseInt(flat));
+        patientServise.updatePatient(tmp);
+        return "redirect:/administrator/allPatient";
+    }
 
-    /**
-     * /==================/allVisit
-     */
+    //Visit
     @GetMapping("/allVisit")
     public String allVisists(Model model) {
         List<Visit> result = visitServise.sortByTime();
@@ -136,5 +162,14 @@ public class MainController {
         model.addAttribute("visit", visitServise.getVisit(id));
         return "visit";
     }
+
+    @PostMapping("/administrator/editVisit")
+    public String updateVisit(
+            @ModelAttribute("visit") Visit visit
+    ) {
+        visitServise.updateVisit(visit);
+        return "redirect:/administrator/" + visit.getVisitid();
+    }
+
 
 }

@@ -181,4 +181,23 @@ public class Doctor {
         return sb.toString();
     }
 
+    public String give_BirsdayString() {
+        StringBuilder sb = new StringBuilder();
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(birthday.getTime());
+        sb.append("");
+        if (cal.get(Calendar.DATE) < 9) {
+            sb.append(0 + "" + cal.get(Calendar.DATE));
+        } else
+            sb.append(cal.get(Calendar.DATE));
+        sb.append("-");
+        if (cal.get(Calendar.MONTH) < 9) {
+            sb.append(0 + "" + (cal.get(Calendar.MONTH) + 1));
+        } else {
+            sb.append((cal.get(Calendar.MONTH) + 1));
+        }
+        sb.append("-" + cal.get(Calendar.YEAR));
+        return sb.toString();
+    }
+
 }

@@ -72,21 +72,20 @@ public class Patient {
     }
 
     public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+        if (birthday != null) {
+            this.birthday = birthday;
+        }
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Patient patient = (Patient) o;
-
         if (patientid != patient.patientid) return false;
         if (firstname != null ? !firstname.equals(patient.firstname) : patient.firstname != null) return false;
         if (lastname != null ? !lastname.equals(patient.lastname) : patient.lastname != null) return false;
         if (birthday != null ? !birthday.equals(patient.birthday) : patient.birthday != null) return false;
-
         return true;
     }
 
@@ -131,7 +130,34 @@ public class Patient {
                 cal.get(Calendar.YEAR) + ", "
         );
         sb.append("Домашний адресс: " + address + ", ");
-        sb.append("Мед.полис: " + Math.abs(medicalpolicy.getNumber()) +".");
+        sb.append("Мед.полис: " + Math.abs(medicalpolicy.getNumber()) + ".");
+        return sb.toString();
+    }
+
+    public String give_BirsdayString() {
+        StringBuilder sb = new StringBuilder();
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(birthday.getTime());
+        sb.append("");
+        if (cal.get(Calendar.DATE) < 9) {
+            sb.append(0 + "" + cal.get(Calendar.DATE));
+        } else
+            sb.append(cal.get(Calendar.DATE));
+        sb.append("-");
+        if (cal.get(Calendar.MONTH) < 9) {
+            sb.append(0 + "" + (cal.get(Calendar.MONTH) + 1));
+        } else {
+            sb.append((cal.get(Calendar.MONTH) + 1));
+        }
+        sb.append("-" + cal.get(Calendar.YEAR));
+        return sb.toString();
+    }
+
+    public String give_BirsdayString_for_editPost() {
+        StringBuilder sb = new StringBuilder();
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(birthday.getTime());
+        sb.append(cal.get(Calendar.YEAR) + "-" + (cal.get(Calendar.MONTH) + 1) + "-" + cal.get(Calendar.DATE));
         return sb.toString();
     }
 }

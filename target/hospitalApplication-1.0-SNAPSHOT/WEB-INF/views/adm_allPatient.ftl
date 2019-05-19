@@ -2,19 +2,36 @@
 <html lang="en" xmlns:form="http://www.w3.org/1999/html">
 <head>
     <title>База данных пациентов</title>
+    <style type="text/css">
+        <#include "/resources/allstyle.css">
+    </style>
 </head>
 <body>
-<h2>Список всех пациентов</h2>
-<#list lstpatient as patient>
-
-<p><a href="/administrator/allPatient/${patient.getPatientid()}">${patient.getPatientid()} (подробно)</a> ${patient} <br>
-
+<table>
+    <caption>Список пациентов</caption>
+    <tr>
+        <td>Идентификатор</td>
+        <td>Пациент</td>
+        <td>Дата рождения</td>
+        <td>Домашний адрес</td>
+        <td>Номер полиса</td>
+    </tr>
+    <br>
+    <#list lstpatient as patient>
+    <tr>
+        <td>${patient.getPatientid()}</td>
+        <td>${patient.getFirstname()} ${patient.getLastname()}</td>
+        <td>${patient.give_BirsdayString()}</td>
+        <td>${patient.getAddress()}</td>
+        <td>${patient.getMedicalpolicy().getNumber()}</td>
+        <td><a href="/administrator/allPatient/update/${patient.getPatientid()}">РЕДАКТИРОВАТЬ</a></td>
+        <td><a href="/administrator/allPatient/delete/${patient.getPatientid()}">УДАЛИТЬ</a></td>
+    </tr>
     <#else>
 
-<p>No VISITS
+    <p>No Patients
 
-    </#list>
-
-
+        </#list>
+</table>
 </body>
 </html>

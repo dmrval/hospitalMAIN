@@ -3,6 +3,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Добавить нового пациента</title>
+    <style type="text/css">
+        <#include "/resources/allstyle.css">
+    </style>
 </head>
 <script type="text/javascript">
     function validate() {
@@ -19,34 +22,34 @@
 
 <form name="newPatient" action="/addPatientPost" method="post" onsubmit="return validate()">
     <div>
-        Дата рождения
+        <p>Дата рождения</p>
         <input id="birthday" title="Birthday" name="birthday" type="date" required>
     </div>
     <div>
-        Фамилия
+        <p>Фамилия</p>
         <input id="firstname" title="Firstname" name="firstname" type="text" required>
     </div>
     <div>
-        Имя
+        <p>Имя</p>
         <input id="lastname" title="Lastname" name="lastname" type="text" required>
     </div>
     <div>
         <h3>Домашний адресс</h3>
-        Страна
+        <p>Страна</p>
         <input id="country" title="Country" name="country" type="text" required>
     </div>
     <div>
-        Город
+        <p>Город</p>
         <input id="city" title="City" name="city" type="text" required>
     </div>
     <div>
-        Улица
+        <p>Улица</p>
         <input id="street" title="Street" name="street" type="text" required>
     </div>
     <div>
-        Номер дома
+        <p>Номер дома</p>
         <input id="house" title="House_number" name="house" type="number" required max="2000">
-        Номер квартиры
+        <p>Номер квартиры</p>
         <input id="flat" title="flat_number" name="flat" type="number" required max="2000">
     </div>
     <div>

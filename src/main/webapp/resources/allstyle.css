@@ -1,0 +1,119 @@
+table {
+    width: 100%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    border-collapse: collapse;
+    color: #686461;
+    text-align: center;
+}
+
+caption {
+    padding: 10px;
+    color: white;
+    background: #8FD4C1;
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+}
+
+th {
+    border-bottom: 3px solid #B9B29F;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(odd) {
+    background: white;
+}
+
+tr:nth-child(even) {
+    background: #E8E6D1;
+}
+
+p {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    border-collapse: collapse;
+    color: #686461;
+    padding: 3px;
+    font-size: 1em;
+    margin: 1px;
+}
+
+h1 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    color: #686461;
+    border-bottom: 3px solid #B9B29F;
+    padding: 10px;
+}
+
+h2 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    color: #686461;
+    border-bottom: 3px solid #B9B29F;
+    padding: 10px;
+}
+
+h3 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    color: #686461;
+    border-bottom: 3px solid #B9B29F;
+    padding: 10px;
+}
+
+h4 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    color: #686461;
+    padding: 10px;
+}
+
+.button21 {
+    display: inline-block;
+    height: 3em;
+    line-height: 2em;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    padding: 10px;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .4);
+    border-top-color: rgba(0, 0, 0, .3);
+    border-radius: 2px;
+    background: linear-gradient(rgb(255, 255, 255), rgb(240, 240, 240));
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0) inset,
+    0 1px 1px 1px rgba(255, 255, 255, .2),
+    0 -1px 1px 1px rgba(0, 0, 0, 0);
+    transition: .2s ease-in-out;
+}
+
+.button21:hover:not(:active) {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0) inset,
+    0 1px 1px 1px rgba(0, 255, 255, .5),
+    0 -1px 1px 1px rgba(0, 255, 255, .5);
+}
+
+.button21:active {
+    background: linear-gradient(rgb(250, 250, 250), rgb(235, 235, 235));
+    box-shadow: 0 0 3px rgba(0, 0, 0, .5) inset,
+    0 1px 1px 1px rgba(255, 255, 255, .4),
+    0 -1px 1px 1px rgba(0, 0, 0, .1);
+}
+
+input {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    color: #686461;
+    /*border-bottom: 3px solid #B9B29F;*/
+    padding: 3px;
+}
+
+.editPatient {
+    align-items: center;
+}
+
