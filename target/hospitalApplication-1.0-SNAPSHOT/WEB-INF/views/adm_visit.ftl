@@ -17,14 +17,14 @@
     <#if visit.getDiagnosis()??>
         <p>${visit.getDiagnosis().getResultofdiagnosis()}</p>
     <#else>
-        Пациенту еще не поставлен диагноз
+        <P><a href="/administrator/allVisit/${visit.getVisitid()}/setDiagosis">Поставить диагноз</a></P>
     </#if>
     <h3>Осматриваемый врач</h3>
-    <p>${visit.getDoctor().getFirstname()} ${visit.getDoctor().getLastname()}</p>
+    <p>${visit.getDoctor().getSpecialization()} - ${visit.getDoctor().getFirstname()} ${visit.getDoctor().getLastname()}</p>
 </div>
 <br>
 
-<button class="button21" onclick="location.href = '/administrator/'">Назад</button>
+<button class="button21" onclick="location.href = '/administrator/allVisit'">Назад</button>
 <button class="button21" onclick="location.href = '/administrator/update/${visit.getVisitid()}'">Редактировать запись
 </button>
 <button class="button21" onclick="location.href = '/administrator/delete/${visit.getVisitid()}'">Удалить запись</button>

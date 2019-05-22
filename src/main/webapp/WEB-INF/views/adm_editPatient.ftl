@@ -28,12 +28,13 @@
         <input id="lastname" title="Lastname" name="lastname" type="text" value="${patient.getLastname()}" required/>
     </div>
     <h3>Номер медицинского полиса</h3>
-    <input id="medicalpolicy" name="medicalpolicy" type="number"
-           value="${patient.getMedicalpolicy().getMedicalpolicyid()}" required path="title"/>
+    <input id="medicalpolicy" name="medicalpolicy" type="number" value="${patient.giveMedicalpolicy_Number()}"
+           required/>
     <h3>Домашний адресс</h3>
     <p>Страна</p>
-    <input id="country" title="Country" name="country" type="text" value="${patient.getAddress().getCountry()}"
-           required>
+    <div>
+        <input id="country" title="Country" name="country" type="text" value="${patient.getAddress().getCountry()}"
+               required>
     </div>
     <div>
         <p>Город</p>

@@ -38,7 +38,7 @@ public class DoctorDaoImpl implements DoctorDao {
     @Transactional
     public void removeDoctor(int id) {
         sessionFactory.getCurrentSession().beginTransaction();
-        sessionFactory.getCurrentSession().delete(getDoctor(id));
+        sessionFactory.getCurrentSession().delete(getDoctorPrivate(id));
         sessionFactory.getCurrentSession().getTransaction().commit();
         sessionFactory.getCurrentSession().close();
     }
@@ -62,5 +62,11 @@ public class DoctorDaoImpl implements DoctorDao {
         sessionFactory.getCurrentSession().getTransaction().commit();
         sessionFactory.getCurrentSession().close();
         return list;
+    }
+
+    //PRIVATE only this class use=))
+    private Doctor getDoctorPrivate(int id) {
+        Doctor temp = sessionFactory.getCurrentSession().get(Doctor.class, id);
+        return temp;
     }
 }

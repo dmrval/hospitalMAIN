@@ -122,14 +122,9 @@ public class Patient {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(firstname + ", ");
-        sb.append(lastname + ", ");
-        Calendar cal = Calendar.getInstance();
-        cal.setTimeInMillis(birthday.getTime());
-        sb.append("Дата рождения: " + cal.get(Calendar.DATE) + "-" +
-                (cal.get(Calendar.MONTH) + 1) + "-" +
-                cal.get(Calendar.YEAR) + ", "
-        );
-        sb.append("Домашний адресс: " + address + ", ");
+        sb.append(lastname + "; ");
+        sb.append(give_BirsdayString());
+        sb.append("; ");
         sb.append("Мед.полис: " + Math.abs(medicalpolicy.getNumber()) + ".");
         return sb.toString();
     }
@@ -139,12 +134,12 @@ public class Patient {
         Calendar cal = Calendar.getInstance();
         cal.setTimeInMillis(birthday.getTime());
         sb.append("");
-        if (cal.get(Calendar.DATE) < 9) {
+        if (cal.get(Calendar.DATE) < 10) {
             sb.append(0 + "" + cal.get(Calendar.DATE));
         } else
             sb.append(cal.get(Calendar.DATE));
         sb.append("-");
-        if (cal.get(Calendar.MONTH) < 9) {
+        if (cal.get(Calendar.MONTH) < 10) {
             sb.append(0 + "" + (cal.get(Calendar.MONTH) + 1));
         } else {
             sb.append((cal.get(Calendar.MONTH) + 1));
@@ -157,7 +152,25 @@ public class Patient {
         StringBuilder sb = new StringBuilder();
         Calendar cal = Calendar.getInstance();
         cal.setTimeInMillis(birthday.getTime());
-        sb.append(cal.get(Calendar.YEAR) + "-" + (cal.get(Calendar.MONTH) + 1) + "-" + cal.get(Calendar.DATE));
+        sb.append(cal.get(Calendar.YEAR));
+        sb.append("-");
+        if ((cal.get(Calendar.MONTH) + 1) < 10) {
+            sb.append(0 + "" + (cal.get(Calendar.MONTH) + 1));
+        } else {
+            sb.append((cal.get(Calendar.MONTH) + 1));
+        }
+        sb.append("-");
+        if (cal.get(Calendar.DATE) < 10) {
+            sb.append(0 + "" + cal.get(Calendar.DATE));
+        } else {
+            sb.append(cal.get(Calendar.DATE));
+        }
         return sb.toString();
+    }
+
+    public String giveMedicalpolicy_Number() {
+        long res = medicalpolicy.getNumber();
+        String result = String.valueOf(res);
+        return result;
     }
 }

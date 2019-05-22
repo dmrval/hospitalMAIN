@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:form="http://www.w3.org/1999/html">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Добавить нового пациента</title>
     <style type="text/css">
         <#include "/resources/allstyle.css">
@@ -56,10 +56,15 @@
         <h3>Номер медицинского полиса</h3>
         <input id="medicalpolicy" name="medicalpolicy" type="number" required path="title">
     </div>
+    <br>
     <div>
-        <button type="submit">Добавить</button>
+        <button class="button21" type="submit">Добавить</button>
     </div>
 </form>
+<br>
+<div>
+    <button class="button21" onclick="location.href = '/administrator/allPatient'">Отмена</button>
+</div>
 </body>
 </html>
 

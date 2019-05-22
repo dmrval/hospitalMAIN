@@ -117,3 +117,10 @@ input {
     align-items: center;
 }
 
+textarea{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    color: #686461;
+    padding: 3px;
+    font-size: medium;
+}
+

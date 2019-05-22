@@ -7,6 +7,14 @@
     </style>
 </head>
 <body>
+
+<button class="button21" onclick="location.href = '/administrator/'">Вернуться назад</button>
+
+<button class="button21" onclick="location.href = '/administrator/addPatient'">Добавить пациента</button>
+
+<button class="button21" onclick="location.href = '/administrator/'">На главную страницу</button>
+
+<br>
 <table>
     <caption>Список пациентов</caption>
     <tr>

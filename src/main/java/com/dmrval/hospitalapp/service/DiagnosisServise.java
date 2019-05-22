@@ -7,7 +7,7 @@ import java.util.List;
 public interface DiagnosisServise {
     List<Diagnosis> getAllDiagnosis();
 
-    void addDiagnosis(Diagnosis diagnosis);
+    Diagnosis addDiagnosis(Diagnosis diagnosis);
 
     void updateDiagnosis(Diagnosis diagnosis);
 

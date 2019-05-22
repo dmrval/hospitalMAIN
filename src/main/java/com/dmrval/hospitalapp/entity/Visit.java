@@ -2,6 +2,7 @@ package com.dmrval.hospitalapp.entity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 @Entity
@@ -111,29 +112,26 @@ public class Visit {
         } else sb.append(cal.get(Calendar.MINUTE));
         sb.append("; " + "Доктор: " + doctor.getFirstname() + " " + doctor.getLastname() + "; ");
         sb.append("Пациент: " + patient.getFirstname() + " " + patient.getLastname() + "; ");
-//        if (diagnosis != null) {
-//            sb.append("Диагноз: " + diagnosis.getResultofdiagnosis() + ";");
-//        }
         return sb.toString();
     }
 
     public String give_DateString() {
-        StringBuilder sb = new StringBuilder();
-        Calendar cal = Calendar.getInstance();
-        cal.setTimeInMillis(dayofvisit.getTime());
-        sb.append(cal.get(Calendar.DATE) + "-");
-        if ((cal.get(Calendar.MONTH) + 1) < 9) {
-            sb.append(0 + "" + (cal.get(Calendar.MONTH) + 1));
-        } else {
-            sb.append(cal.get(Calendar.MONTH) + 1);
+        String result = methodRemove_Char(dayofvisit.toString());
+        return result;
+    }
+
+
+    public String give_ID_PATIENT_string() {
+        return String.valueOf(patient.getPatientid());
+    }
+
+    private String methodRemove_Char(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            if (str != null && str.length() > 0 && str.charAt(str.length() - 1) != ':') {
+                str = str.substring(0, str.length() - 1);
+            }
         }
-        sb.append("-" +
-                cal.get(Calendar.YEAR) + " " +
-                cal.get(Calendar.HOUR) + ":"
-        );
-        if (cal.get(Calendar.MINUTE) < 9) {
-            sb.append(0 + "" + cal.get(Calendar.MINUTE));
-        } else sb.append(cal.get(Calendar.MINUTE));
-        return sb.toString();
+        str = str.substring(0, str.length() - 1);
+        return str;
     }
 }

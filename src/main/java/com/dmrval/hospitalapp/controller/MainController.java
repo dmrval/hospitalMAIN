@@ -7,7 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.print.Doc;
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.List;
 
 
@@ -31,6 +33,9 @@ public class MainController {
 
     @Autowired
     VisitServise visitServise;
+
+    @Autowired
+    DiagnosisServise diagnosisServise;
 
     @GetMapping("/")
     public String index() {
@@ -62,9 +67,7 @@ public class MainController {
         return "redirect:/hello";
     }
 
-    /**
-     * /==================/addDoctor
-     */
+    //Doctor
     @RequestMapping(value = "/addDoctorPost", method = RequestMethod.POST)
     public String addDoctorPost(
             @RequestParam("birthday") String birthday,
@@ -86,9 +89,39 @@ public class MainController {
         return "redirect:/hello";
     }
 
-    @RequestMapping(value = "/addDoctor", method = RequestMethod.GET)
-    public String addDoctorGet() {
-        return "addDoctor";
+
+    @RequestMapping(value = "/updateDoctor", method = RequestMethod.POST)
+    public String editDoctor(
+            @RequestParam("doctorid") String doctorid,
+            @RequestParam("birthday") Date birthday,
+            @RequestParam("firstname") String firstname,
+            @RequestParam("lastname") String lastname,
+            @RequestParam("specialization") String specialization,
+            @RequestParam("doctorlicense") String licensenumber,
+            @RequestParam("country") String country,
+            @RequestParam("city") String city,
+            @RequestParam("street") String street,
+            @RequestParam("house") String house,
+            @RequestParam("flat") String flat) {
+        Doctor tmp;
+        tmp = doctorServise.getDoctor(Integer.parseInt(doctorid));
+        try {
+            tmp.setBirthday(birthday);
+        } catch (Exception x) {
+            x.toString();
+            System.err.println("Не правильный формат даты. Дата не изменена");
+        }
+        tmp.setLastname(lastname);
+        tmp.setFirstname(firstname);
+        tmp.getDoctorlicense().setNumber(Long.parseLong(licensenumber));
+        tmp.getAddress().setCountry(country);
+        tmp.setSpecialization(specialization);
+        tmp.getAddress().setCity(city);
+        tmp.getAddress().setStreet(street);
+        tmp.getAddress().setHouse(Integer.parseInt(house));
+        tmp.getAddress().setFlat(Integer.parseInt(flat));
+        doctorServise.updateDoctor(tmp);
+        return "redirect:/administrator/allDoctor";
     }
 
     //Patient
@@ -109,12 +142,7 @@ public class MainController {
         Address address_tmp = new Address(country, city, street, Integer.parseInt(house), Integer.parseInt(flat));
         Patient patient = new Patient(firstname, lastname, birthday, address_tmp, med_tmp);
         patientServise.addPatient(patient);
-        return "redirect:/hello";
-    }
-
-    @GetMapping("/addPatient")
-    public String addPatientGet() {
-        return "addPatient";
+        return "redirect:/administrator/allPatient";
     }
 
     @RequestMapping(value = "/updatePatient", method = RequestMethod.POST)
@@ -163,12 +191,36 @@ public class MainController {
         return "visit";
     }
 
-    @PostMapping("/administrator/editVisit")
+    @PostMapping("/editVisit")
     public String updateVisit(
-            @ModelAttribute("visit") Visit visit
+            @RequestParam("visitid") String visitid,
+            @RequestParam("dayofvisit") String dayofvisit,
+            @RequestParam("doctor") String doctor,
+            @RequestParam("patient") String patient
+
     ) {
-        visitServise.updateVisit(visit);
-        return "redirect:/administrator/" + visit.getVisitid();
+        dayofvisit+=":00.00";
+        Timestamp new_time = Timestamp.valueOf(dayofvisit.replace("T"," "));
+        Visit result;
+        result = visitServise.getVisit(Integer.parseInt(visitid));
+        result.setDayofvisit(new_time);
+        result.setDoctor(doctorServise.getDoctor(Integer.parseInt(doctor)));
+        result.setPatient(patientServise.getPatient(Integer.parseInt(patient)));
+        visitServise.updateVisit(result);
+        return "redirect:/administrator/allVisit/" + result.getVisitid();
+    }
+
+
+    @PostMapping("/setDiagosis")
+    public String setDiagnosis(
+            @RequestParam("textdiag") String textdiag,
+            @RequestParam("visitid") String visitid
+    ) {
+        Visit tmp = visitServise.getVisit(Integer.parseInt(visitid));
+        Diagnosis tmpdiag = diagnosisServise.addDiagnosis(new Diagnosis(textdiag));
+        tmp.setDiagnosis(tmpdiag);
+        visitServise.updateVisit(tmp);
+        return "redirect:/administrator/allVisit/" + Integer.parseInt(visitid);
     }
 
 

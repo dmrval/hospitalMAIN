@@ -17,8 +17,9 @@ public class DiagnosisServiseImpl implements DiagnosisServise {
     }
 
     @Override
-    public void addDiagnosis(Diagnosis diagnosis) {
-        DiagnosisDao.addDiagnosis(diagnosis);
+    public Diagnosis addDiagnosis(Diagnosis diagnosis) {
+
+        return DiagnosisDao.addDiagnosis(diagnosis);
     }
 
     @Override

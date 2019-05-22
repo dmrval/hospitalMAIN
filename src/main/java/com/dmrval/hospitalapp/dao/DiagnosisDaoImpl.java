@@ -18,11 +18,12 @@ public class DiagnosisDaoImpl implements DiagnosisDao{
 
     @Override
     @Transactional
-    public void addDiagnosis(Diagnosis license) {
+    public Diagnosis addDiagnosis(Diagnosis license) {
         sessionFactory.getCurrentSession().beginTransaction();
         sessionFactory.getCurrentSession().save(license);
         sessionFactory.getCurrentSession().getTransaction().commit();
         sessionFactory.getCurrentSession().close();
+        return license;
     }
 
     @Override

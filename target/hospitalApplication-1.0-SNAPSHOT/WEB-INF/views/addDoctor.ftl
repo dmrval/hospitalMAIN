@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:form="http://www.w3.org/1999/html">
 <head>
-    <title>Внести в базу данных нового доктора</title>
+    <title>Добавить в базу данных нового доктора</title>
     <style type="text/css">
         <#include "/resources/allstyle.css">
     </style>
@@ -49,10 +49,15 @@
         <p>Номер квартиры</p>
         <input id="flat" title="flat_number" name="flat" type="number" required max="2000">
     </div>
+    <br>
     <div>
-        <button type="submit">Добавить</button>
+        <button class="button21" type="submit">Добавить</button>
     </div>
 </form>
+<br>
+<div>
+    <button class="button21" onclick="location.href = '/administrator/allDoctor'">Отмена</button>
+</div>
 </body>
 </html>
 

@@ -28,11 +28,13 @@
         <input id="lastname" title="Lastname" name="lastname" type="text" value="${patient.getLastname()}" required/>
     </div>
     <h3>Номер медицинского полиса</h3>
-    <input id="medicalpolicy" name="medicalpolicy" type="number"
-           value="${patient.getMedicalpolicy().getMedicalpolicyid()}" required path="title"/>
+    <input id="medicalpolicy" name="medicalpolicy" type="number" value="${patient.giveMedicalpolicy_Number()}"
+           required/>
     <h3>Домашний адресс</h3>
     <p>Страна</p>
-    <input id="country" title="Country" name="country" type="text" value="${patient.getAddress().getCountry()}" required>
+    <div>
+        <input id="country" title="Country" name="country" type="text" value="${patient.getAddress().getCountry()}"
+               required>
     </div>
     <div>
         <p>Город</p>
@@ -40,20 +42,19 @@
     </div>
     <div>
         <p>Улица</p>
-        <input id="street" title="Street" name="street" type="text" value="${patient.getAddress().getStreet()}" required>
+        <input id="street" title="Street" name="street" type="text" value="${patient.getAddress().getStreet()}"
+               required>
     </div>
     <div>
         <p>Номер дома</p>
-        <input id="house" title="House_number" name="house" type="number" value="${patient.getAddress().getHouse()}" required
+        <input id="house" title="House_number" name="house" type="number" value="${patient.getAddress().getHouse()}"
+               required
                max="2000">
         <p>Номер квартиры</p>
-        <input id="flat" title="flat_number" name="flat" type="number" value="${patient.getAddress().getFlat()}" required
+        <input id="flat" title="flat_number" name="flat" type="number" value="${patient.getAddress().getFlat()}"
+               required
                max="2000">
     </div>
-    <#--<h3>Адресс</h3>-->
-    <#--Страна-->
-    <#--<input id="address" title="address" name="address" type="number"-->
-    <#--value="${patient.getAddress().getAddressid()}" required/>-->
     <br>
     <button class="button21" type="submit">Редактировать</button>
 </form>

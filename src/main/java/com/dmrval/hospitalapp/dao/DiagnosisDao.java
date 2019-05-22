@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface DiagnosisDao {
     List<Diagnosis> getAllDiagnosis();
-    void addDiagnosis(Diagnosis diagnosis);
+    Diagnosis addDiagnosis(Diagnosis diagnosis);
     void updateDiagnosis(Diagnosis diagnosis);
     void removeDiagnosis(int id);
     Diagnosis getDiagnosis(int id);

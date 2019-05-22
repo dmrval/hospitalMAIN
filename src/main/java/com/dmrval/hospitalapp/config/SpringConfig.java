@@ -81,5 +81,17 @@ public class SpringConfig {
         return new VisitDaoImpl();
     }
 
+    //Diagnosis
+
+    @Bean
+    public DiagnosisServise getDiagnosisServise() {
+        return new DiagnosisServiseImpl();
+    }
+
+    @Bean
+    public DiagnosisDao getDiagnosisDao() {
+        return new DiagnosisDaoImpl();
+    }
+
 
 }

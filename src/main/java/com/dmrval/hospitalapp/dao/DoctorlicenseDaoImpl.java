@@ -73,4 +73,7 @@ public class DoctorlicenseDaoImpl implements DoctorlicenseDao {
         sessionFactory.getCurrentSession().close();
         return list;
     }
+
+
+
 }
