@@ -20,15 +20,23 @@
         <P><a href="/administrator/allVisit/${visit.getVisitid()}/setDiagosis">Поставить диагноз</a></P>
     </#if>
     <h3>Осматриваемый врач</h3>
-    <p>${visit.getDoctor().getSpecialization()} - ${visit.getDoctor().getFirstname()} ${visit.getDoctor().getLastname()}</p>
+    <p>${visit.getDoctor().getSpecialization()}
+        - ${visit.getDoctor().getFirstname()} ${visit.getDoctor().getLastname()}</p>
 </div>
 <br>
 
 <button class="button21" onclick="location.href = '/administrator/allVisit'">Назад</button>
-<button class="button21" onclick="location.href = '/administrator/update/${visit.getVisitid()}'">Редактировать запись
+<button class="button21" onclick="location.href = '/administrator/update/${visit.getVisitid()}'">
+    Редактировать запись
 </button>
-<button class="button21" onclick="location.href = '/administrator/delete/${visit.getVisitid()}'">Удалить запись</button>
-
-
+<#if visit.getDiagnosis()??>
+    <button class="button21" onclick="location.href = '/administrator/allVisit/${visit.getVisitid()}/updateDiagnosis'">
+        Обновить диагноз
+    </button>
+<#else>
+</#if>
+<button class="button21" onclick="location.href = '/administrator/delete/${visit.getVisitid()}'">
+    Удалить запись
+</button>
 </body>
 </html>

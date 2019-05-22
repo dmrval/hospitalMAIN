@@ -54,7 +54,9 @@ public class AdministratorController {
         return "redirect:/administrator/allVisit";
     }
     @GetMapping("/addVisit")
-    public String addVisit() {
+    public String addVisit(Model model) {
+        model.addAttribute("doclist", doctorServise.getAllDoctor());
+        model.addAttribute("patlist", patientServise.getAllPatient());
         return "addVisit";
     }
 
@@ -73,7 +75,12 @@ public class AdministratorController {
         return "setDiagnosis";
     }
 
-
+    @GetMapping("/allVisit/{id}/updateDiagnosis")
+    public String updateDiagnisis(@PathVariable("id") int id, Model model) {
+        model.addAttribute("diag", visitServise.getVisit(id).getDiagnosis());
+        model.addAttribute("visit", visitServise.getVisit(id));
+        return "updateDiagnosis";
+    }
 
 
     //Patient
@@ -113,7 +120,7 @@ public class AdministratorController {
         return "adm_allDoctor";
     }
 
-    @RequestMapping(value = "/administrator/addDoctor", method = RequestMethod.GET)
+    @RequestMapping(value = "/addDoctor", method = RequestMethod.GET)
     public String addDoctorGet() {
         return "addDoctor";
     }

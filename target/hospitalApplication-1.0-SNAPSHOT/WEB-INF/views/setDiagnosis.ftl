@@ -10,8 +10,6 @@
 <body>
 <h2>Заключение осмотра:</h2>
 <form action="/setDiagosis" method="post">
-    <#--<input id="diagnosisid" title="diagnosisid" name="diagnosisid" type="number" value="${visit.getDiagnosis().getDiagnosisid()}"-->
-    <#--required hidden/>-->
     <input id="visitid" title="visitid" name="visitid" type="number" value="${visit.getVisitid()}"
            required hidden/>
     <textarea id="textdiag" name="textdiag" title="textdiag" cols="100" required rows="20"></textarea>

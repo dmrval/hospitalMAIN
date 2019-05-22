@@ -13,13 +13,10 @@
     <input id="visitid" title="visitid" name="visitid" type="number" value="${visit.getVisitid()}"
            required hidden/>
     <div>
-        <p>Дата приема(гггг-мм-дд)</p>
+        <p>Дата и время приема (для изменения выберите)</p>
         <input id="dayofvisit" title="dayofvisit" name="dayofvisit" type="datetime-local"
                pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"
                value="${visit.give_DateString()}"/>
-        <#--<input id="timeOfVisit" title="timeOfVisit" name="timeOfVisit" type="datetime-local" />-->
-        <#-- Timestamp(int year, int month, int date, int hour, int minute, int second, int nano)-->
-        <#--2019-05-10T12:12-->
     </div>
     <div>
         <p>Доктор</p>

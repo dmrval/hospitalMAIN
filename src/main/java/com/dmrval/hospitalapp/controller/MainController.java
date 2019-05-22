@@ -86,7 +86,7 @@ public class MainController {
         Address address_tmp = new Address(country, city, street, Integer.parseInt(house), Integer.parseInt(flat));
         Doctor doctor = new Doctor(birthday, firstname, lastname, specialization, address_tmp, lic_tmp);
         doctorServise.addDoctor(doctor);
-        return "redirect:/hello";
+        return "redirect:/administrator/allDoctor/";
     }
 
 
@@ -222,6 +222,38 @@ public class MainController {
         visitServise.updateVisit(tmp);
         return "redirect:/administrator/allVisit/" + Integer.parseInt(visitid);
     }
+
+    @PostMapping("/updateDiagosis")
+    public String updateDiagnosis(
+            @RequestParam("textdiag") String textdiag,
+            @RequestParam("visitid") String visitid,
+            @RequestParam("diagid") String diagid
+    ) {
+        Visit tmp = visitServise.getVisit(Integer.parseInt(visitid));
+        Diagnosis tmpdiag = diagnosisServise.getDiagnosis(Integer.parseInt(diagid));
+        tmpdiag.setResultofdiagnosis(textdiag);
+        tmp.setDiagnosis(tmpdiag);
+        diagnosisServise.updateDiagnosis(tmpdiag);
+        visitServise.updateVisit(tmp);
+        return "redirect:/administrator/allVisit/" + Integer.parseInt(visitid);
+    }
+
+    @PostMapping("/addVisit")
+    public String updateVisit(
+            @RequestParam("dayofvisit") String dayofvisit,
+            @RequestParam("doctor") String doctor,
+            @RequestParam("patient") String patient
+
+    ) {
+        dayofvisit+=":00.00";
+        Timestamp new_time = Timestamp.valueOf(dayofvisit.replace("T"," "));
+        Visit tmp = new Visit(new_time,doctorServise.getDoctor(Integer.parseInt(doctor)),
+                patientServise.getPatient(Integer.parseInt(patient)));
+        visitServise.addVisit(tmp);
+        return "redirect:/administrator/allVisit/" + tmp.getVisitid();
+    }
+
+
 
 
 }
