@@ -1,25 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns:form="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-    <meta charset="UTF-8"/>
-    <title>Hello page</title>
+    <title>Hello World!</title>
 </head>
 <body>
-<h1>HelloMyNigga</h1>
-
-<#list licenses as license>
-
-    ${license.number} <br>
-
-</#list>
-
-
-
-<br>
-<br>
-<br>
-<a href="/createDoctorlicense"><-------------addDoctorlicense-------------></a>
-
-
+<h1 th:inline="text">Hello [[${httpServletRequest.remoteUser}]]!</h1>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
 </body>
 </html>

@@ -23,7 +23,7 @@
 <form name="newPatient" action="/addPatientPost" method="post" onsubmit="return validate()">
     <div>
         <p>Дата рождения</p>
-        <input id="birthday" title="Birthday" name="birthday" type="date" required>
+        <input id="birthday" title="Birthday" min="1920-12-12" name="birthday" type="date" required>
     </div>
     <div>
         <p>Фамилия</p>

@@ -59,7 +59,6 @@
             <artifactId>postgresql</artifactId>
             <version>42.2.5</version>
         </dependency>
-        <!--!!!!!!!!!DONT TOUCH UPPER SUKA!!!!!!!!!!!!!!!!!!!!!!-->
 
         <!-- Hibernate Validator -->
         <dependency>
@@ -85,8 +84,21 @@
             <version>2.0.6.RELEASE</version>
             <scope>compile</scope>
         </dependency>
-
-
-
+        <!--!!!!!!!!!DONT TOUCH UPPER SUKA!!!!!!!!!!!!!!!!!!!!!!-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>5.1.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>5.1.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>2.0.11.RELEASE</version>
+        </dependency>
     </dependencies>
 </project>

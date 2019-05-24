@@ -12,7 +12,7 @@
 <form name="newDoctor" action="/addDoctorPost" method="post">
     <div>
         <p>Дата рождения</p>
-        <input id="birthday" title="Birthday" name="birthday" type="date" required>
+        <input id="birthday" title="Birthday" name="birthday" type="date" max="2004-12-12" min="1920-12-12" required>
     </div>
     <div>
         <p>Фамилия</p>
