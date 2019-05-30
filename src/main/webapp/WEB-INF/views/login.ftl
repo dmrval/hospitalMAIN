@@ -1,14 +1,36 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<html lang="en">
 <head>
-    <title>Spring Security Example </title>
+    <style type="text/css">
+        <#include "/resources/allstyle.css">
+    </style>
+    <script language="javascript" type="text/javascript"
+            src="http://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+    <script language="javascript" type="text/javascript"
+            src="js/login.js">
+    </script>
 </head>
 <body>
-
-<form action="/login" method="post">
-    <div><label> User Name : <input type="text" name="username"/> </label></div>
-    <div><label> Password: <input type="password" name="password"/> </label></div>
-    <div><input type="submit" value="Sign In"/></div>
+<#if error??>
+    <div class="errlogin_password">Логин или пароль введены не верно</div>
+</#if>
+<#if logout??>
+    <div class="logout_apply">Удачный выход из системы</div>
+</#if>
+<form name="f" action="/login" method="post">
+    <fieldset>
+        <legend>Пожалуйста авторизуйтесь</legend>
+        <label for="username">Логин</label>
+        <input type="text" id="username" name="username"/>
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password"/>
+        <br>
+        <div class="form-actions">
+            <br>
+            <input name="submit" type="submit" value="Login" class="button21"/>
+        </div>
+    </fieldset>
 </form>
+
 </body>
-</html>

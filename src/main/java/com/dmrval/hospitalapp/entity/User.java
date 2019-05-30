@@ -1,36 +1,59 @@
 package com.dmrval.hospitalapp.entity;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.List;
 
 @Entity
-@Table(name = "user")
+@Table(name = "usr")
 public class User {
+    private int usrid;
+    private String login;
+    private String password;
+    private List<Role> roles;
+    private State state;
+
+    public User() {
+    }
+
+    public User(int usrid, String login, String password, List<Role> roles, State state) {
+        this.usrid = usrid;
+        this.login = login;
+        this.password = password;
+        this.roles = roles;
+        this.state = state;
+    }
+
+    public User(String login) {
+        this.login = login;
+    }
+
+    public User(User r) {
+        this.usrid = r.usrid;
+        this.login = r.login;
+        this.password = r.password;
+        this.roles = r.roles;
+        this.state = r.state;
+    }
+
+
+    public User(String login, String password) {
+        this.login = login;
+        this.password = password;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long userid;
+    @Column(name = "usrid")
+
+    public int getUserid() {
+        return usrid;
+    }
+
+    public void setUserid(int userid) {
+        this.usrid = userid;
+    }
 
     @Column(name = "login")
-    private String login;
-
-    @Column(name = "password")
-    private String password;
-
-    @Transient
-    private String confirmPassword;
-
-    @ManyToMany(mappedBy = "users")
-    private Set<Role> roles;
-
-    public Long getUserid() {
-        return userid;
-    }
-
-    public void setUserid(Long userid) {
-        this.userid = userid;
-    }
-
     public String getLogin() {
         return login;
     }
@@ -39,6 +62,7 @@ public class User {
         this.login = login;
     }
 
+    @Column(name = "pass")
     public String getPassword() {
         return password;
     }
@@ -47,30 +71,22 @@ public class User {
         this.password = password;
     }
 
-    public String getConfirmPassword() {
-        return confirmPassword;
-    }
-
-    public void setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
-    }
-
-    public Set<Role> getRoles() {
+    @ManyToMany(mappedBy = "users", cascade = CascadeType.ALL)
+    public List<Role> getRoles() {
         return roles;
     }
 
-    public void setRoles(Set<Role> roles) {
+    public void setRoles(List<Role> roles) {
         this.roles = roles;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "userid=" + userid +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                ", confirmPassword='" + confirmPassword + '\'' +
-                ", roles=" + roles +
-                '}';
+    @Enumerated(EnumType.STRING)
+    @Column(name = "state")
+    public State getStateUser() {
+        return state;
+    }
+
+    public void setStateUser(State stateUser) {
+        this.state = stateUser;
     }
 }

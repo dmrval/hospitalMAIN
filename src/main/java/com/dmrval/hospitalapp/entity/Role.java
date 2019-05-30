@@ -1,31 +1,28 @@
 package com.dmrval.hospitalapp.entity;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
+
 
 @Entity
 @Table(name = "role")
 public class Role {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int roleid;
-
-    @Column(name = "rolename")
     private String rolename;
-
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinTable(
-            name = "user_role",
-            joinColumns = @JoinColumn(name = "role_id"),
-            inverseJoinColumns = @JoinColumn(name = "user_id")
-    )
-    private Set<User> users;
-
+    private List<User> users;
 
     public Role() {
     }
 
+
+    public Role(String rolename) {
+        this.rolename = rolename;
+    }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "roleid")
     public int getRoleid() {
         return roleid;
     }
@@ -34,6 +31,7 @@ public class Role {
         this.roleid = roleid;
     }
 
+    @Column(name = "rolename")
     public String getRolename() {
         return rolename;
     }
@@ -42,11 +40,17 @@ public class Role {
         this.rolename = rolename;
     }
 
-    public Set<User> getUsers() {
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "user_role",
+            joinColumns = @JoinColumn(name = "role_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
+    public List<User> getUsers() {
         return users;
     }
 
-    public void setUsers(Set<User> users) {
+    public void setUsers(List<User> users) {
         this.users = users;
     }
 

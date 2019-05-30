@@ -1,17 +1,35 @@
 package com.dmrval.hospitalapp;
 
-import com.dmrval.hospitalapp.entity.Diagnosis;
-import com.dmrval.hospitalapp.entity.Doctor;
-import com.dmrval.hospitalapp.entity.Patient;
-import com.dmrval.hospitalapp.entity.Visit;
+import com.dmrval.hospitalapp.entity.Role;
+import com.dmrval.hospitalapp.entity.User;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 
-import java.sql.Timestamp;
+import javax.persistence.criteria.CriteriaQuery;
+import java.util.List;
+
 
 public class TestDebug {
     public static void main(String[] args) {
-        Visit visit = new Visit(Timestamp.valueOf("2019-05-10 17:12:00.00"),
-                new Doctor(),new Patient(),new Diagnosis());
-        System.out.println(visit.give_DateString());
+        SessionFactory sessionFactory = new org.hibernate.cfg.Configuration().configure().buildSessionFactory();
+        sessionFactory.openSession();
+        sessionFactory.getCurrentSession().beginTransaction();
+        CriteriaQuery<User> criteriaQuery = sessionFactory.getCurrentSession().getCriteriaBuilder().createQuery(User.class);
+        criteriaQuery.from(User.class);
+        List<User> list = sessionFactory.getCurrentSession().createQuery(criteriaQuery).getResultList();
+
+        User result = null;
+        for (User u:list) {
+            if (u.getLogin().equals("dmrval")) {
+                result = u;
+            }
+        }
+
+
+        for (Role r: result.getRoles()) {
+            System.out.println(r.getRolename());
+        }
+
+        System.out.println(result.getLogin() + result.getPassword() );
     }
 }

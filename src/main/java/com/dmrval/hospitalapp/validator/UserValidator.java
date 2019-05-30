@@ -1,19 +1,20 @@
+/*
 package com.dmrval.hospitalapp.validator;
 
 
-        import com.dmrval.hospitalapp.entity.User;
-        import com.dmrval.hospitalapp.service.UserServise;
-        import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.stereotype.Component;
-        import org.springframework.validation.Errors;
-        import org.springframework.validation.ValidationUtils;
-        import org.springframework.validation.Validator;
+import com.dmrval.hospitalapp.entity.User;
+import com.dmrval.hospitalapp.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
+import org.springframework.validation.Validator;
 
 @Component
 public class UserValidator implements Validator {
 
     @Autowired
-    private UserServise userServise;
+    private UserService userServise;
 
     @Override
     public boolean supports(Class<?> aClass) {
@@ -35,3 +36,4 @@ public class UserValidator implements Validator {
 
     }
 }
+*/

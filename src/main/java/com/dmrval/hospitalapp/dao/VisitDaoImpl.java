@@ -3,7 +3,6 @@ package com.dmrval.hospitalapp.dao;
 import com.dmrval.hospitalapp.entity.Visit;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.persistence.criteria.CriteriaQuery;
 import javax.transaction.Transactional;
 import java.util.List;

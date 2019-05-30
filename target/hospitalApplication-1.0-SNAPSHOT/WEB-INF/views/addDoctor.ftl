@@ -28,7 +28,7 @@
     </div>
     <div>
         <h3>Номер лицензии на оказание мед помощи</h3>
-        <input id="number" title="Doctorlicense" name="number" type="number" required>
+        <input id="number" title="Doctorlicense" name="number" type="number" max="999999999999999999" min="0"  required>
     </div>
     <div>
         <h3>Домашний адресс</h3>

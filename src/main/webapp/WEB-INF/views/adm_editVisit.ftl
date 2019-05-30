@@ -13,10 +13,9 @@
     <input id="visitid" title="visitid" name="visitid" type="number" value="${visit.getVisitid()}"
            required hidden/>
     <div>
-        <p>Дата и время приема (для изменения выберите)</p>
+        <p>Дата и время приема </p>
         <input id="dayofvisit" title="dayofvisit" name="dayofvisit" type="datetime-local"
-               pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"
-               value="${visit.give_DateString()}"/>
+               value="${visit.give_dayOfVisitString()}" />
     </div>
     <div>
         <p>Доктор</p>

@@ -16,6 +16,18 @@
         }
         return true;
     }
+
+    function today() {
+        var d = new Date();
+        var day = d.getDate();
+        var month = d.getMonth() + 1;
+        var year = d.getFullYear() - 16;
+        var str = year + "-0" + month + "-" + day;
+        document.getElementById("birthday").max = str;
+        document.getElementById("birthday").value = str;
+    }
+
+    window.onload = today;
 </script>
 <body>
 <h1>Добавить нового пациента</h1>
@@ -23,7 +35,8 @@
 <form name="newPatient" action="/addPatientPost" method="post" onsubmit="return validate()">
     <div>
         <p>Дата рождения</p>
-        <input id="birthday" title="Birthday" min="1920-12-12" name="birthday" type="date" required>
+        <input id="birthday" title="Birthday" min="1920-12-12" name="birthday" type="date"
+               required>
     </div>
     <div>
         <p>Фамилия</p>
@@ -54,7 +67,8 @@
     </div>
     <div>
         <h3>Номер медицинского полиса</h3>
-        <input id="medicalpolicy" name="medicalpolicy" type="number" required path="title">
+        <input id="medicalpolicy" name="medicalpolicy" max="999999999999999999" min="0" type="number" required
+               path="title">
     </div>
     <br>
     <div>

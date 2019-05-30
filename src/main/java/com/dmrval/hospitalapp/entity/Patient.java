@@ -14,6 +14,8 @@ public class Patient {
     private Date birthday;
     private Address address;
     private Medicalpolicy medicalpolicy;
+    private User user;
+
 
     public Patient() {
     }
@@ -61,6 +63,7 @@ public class Patient {
         return lastname;
     }
 
+
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
@@ -76,6 +79,7 @@ public class Patient {
             this.birthday = birthday;
         }
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -108,6 +112,8 @@ public class Patient {
         this.address = address;
     }
 
+
+
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "medicalpolicy", referencedColumnName = "medicalpolicyid", nullable = false)
     public Medicalpolicy getMedicalpolicy() {
@@ -118,6 +124,15 @@ public class Patient {
         this.medicalpolicy = medicalpolicy;
     }
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user", referencedColumnName = "usrid")
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     @Override
     public String toString() {

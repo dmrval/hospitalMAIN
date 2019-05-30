@@ -17,6 +17,8 @@
         <mapping class="com.dmrval.hospitalapp.entity.Medicalpolicy"/>
         <mapping class="com.dmrval.hospitalapp.entity.Patient"/>
         <mapping class="com.dmrval.hospitalapp.entity.Visit"/>
+        <mapping class="com.dmrval.hospitalapp.entity.User"/>
+        <mapping class="com.dmrval.hospitalapp.entity.Role"/>
 
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->

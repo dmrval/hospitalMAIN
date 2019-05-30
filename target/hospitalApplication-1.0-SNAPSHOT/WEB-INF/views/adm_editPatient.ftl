@@ -28,7 +28,7 @@
         <input id="lastname" title="Lastname" name="lastname" type="text" value="${patient.getLastname()}" required/>
     </div>
     <h3>Номер медицинского полиса</h3>
-    <input id="medicalpolicy" name="medicalpolicy" type="number" value="${patient.giveMedicalpolicy_Number()}"
+    <input id="medicalpolicy" name="medicalpolicy" type="number" max="999999999999999999" min="0" value="${patient.giveMedicalpolicy_Number()}"
            required/>
     <h3>Домашний адресс</h3>
     <p>Страна</p>

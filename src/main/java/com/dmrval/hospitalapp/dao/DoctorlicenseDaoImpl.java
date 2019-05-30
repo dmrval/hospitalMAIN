@@ -12,13 +12,10 @@ import javax.transaction.Transactional;
 import java.io.Serializable;
 import java.util.List;
 
-@Repository
-@Service
 public class DoctorlicenseDaoImpl implements DoctorlicenseDao {
 
     @Autowired
     SessionFactory sessionFactory;
-
 
     public DoctorlicenseDaoImpl() {
     }

@@ -1,8 +1,14 @@
 package com.dmrval.hospitalapp.dao;
 
 import com.dmrval.hospitalapp.entity.User;
-import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserDao extends JpaRepository<User, Integer> {
-    User findByUsername(String username);
+import java.util.List;
+
+public interface UserDao {
+    User findByLogin(String login);
+
+    List<User> getAllUsers();
+
+    User getUser(int id);
+
 }

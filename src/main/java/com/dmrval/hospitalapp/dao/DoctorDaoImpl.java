@@ -9,9 +9,9 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 public class DoctorDaoImpl implements DoctorDao {
+
     @Autowired
     SessionFactory sessionFactory;
-
 
     public DoctorDaoImpl() {
     }

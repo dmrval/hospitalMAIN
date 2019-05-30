@@ -15,6 +15,7 @@ public class Doctor {
     private Date birthday;
     private Address address;
     private Doctorlicense doctorlicense;
+    private User user;
 
     public Doctor() {
     }
@@ -163,6 +164,17 @@ public class Doctor {
     public void setAddress(Address address) {
         this.address = address;
     }
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user", referencedColumnName = "usrid")
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
 
     @Override
     public String toString() {

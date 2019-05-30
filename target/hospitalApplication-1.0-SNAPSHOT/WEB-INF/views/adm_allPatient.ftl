@@ -7,13 +7,13 @@
     </style>
 </head>
 <body>
-
+<div class="forCenterButtons">
 <button class="button21" onclick="location.href = '/administrator/'">Вернуться назад</button>
 
 <button class="button21" onclick="location.href = '/administrator/addPatient'">Добавить пациента</button>
 
 <button class="button21" onclick="location.href = '/administrator/'">На главную страницу</button>
-
+</div>
 <br>
 <table>
     <caption>Список пациентов</caption>

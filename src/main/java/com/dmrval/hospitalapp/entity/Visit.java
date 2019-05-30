@@ -118,6 +118,7 @@ public class Visit {
     public String give_DateString() {
         String result = methodRemove_Char(dayofvisit.toString());
         return result;
+
     }
 
 
@@ -134,4 +135,11 @@ public class Visit {
         str = str.substring(0, str.length() - 1);
         return str;
     }
+
+    public String give_dayOfVisitString() {
+        String result = dayofvisit.toString().replace(" ", "T");
+        result = result.substring(0, result.length() - 5);
+        return result;
+    }
+
 }

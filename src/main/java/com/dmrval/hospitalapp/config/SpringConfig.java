@@ -2,12 +2,11 @@ package com.dmrval.hospitalapp.config;
 
 import com.dmrval.hospitalapp.dao.*;
 import com.dmrval.hospitalapp.service.*;
-import com.dmrval.hospitalapp.validator.UserValidator;
+//import com.dmrval.hospitalapp.validator.UserValidator;
 import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 
 @Configuration
@@ -24,15 +23,18 @@ public class SpringConfig {
         return new DoctorlicenseDaoImpl();
     }
 
+    /**
+     * SERVICE
+     *//*
     @Bean
-    public DoctorlicenseServise getDoctorlicenseServise() {
-        return new DoctorlicenseServiseImpl();
-    }
+    public DoctorlicenseService getDoctorlicenseService() {
+        return new DoctorlicenseServiceImpl();
+    }*/
 
     //Address
     @Bean
-    public AddressServise getAddressServise() {
-        return new AddressServiseImlp();
+    public AddressService getAddressService() {
+        return new AddressServiceImlp();
     }
 
     @Bean
@@ -42,8 +44,8 @@ public class SpringConfig {
 
     //Doctor
     @Bean
-    public DoctorServise getDoctorServise() {
-        return new DoctorServiseImpl();
+    public DoctorService getDoctorService() {
+        return new DoctorServiceImpl();
     }
 
     @Bean
@@ -53,8 +55,8 @@ public class SpringConfig {
 
     //Patient
     @Bean
-    public PatientServise getPatientServise() {
-        return new PatientServiseImpl();
+    public PatientService getPatientService() {
+        return new PatientServiceImpl();
     }
 
     @Bean
@@ -64,8 +66,8 @@ public class SpringConfig {
 
     //Medicalpolicy
     @Bean
-    public MedicalpolicyServise getMedicalpolicyServise() {
-        return new MedicalpolicyServiseImpl();
+    public MedicalpolicyService getMedicalpolicyService() {
+        return new MedicalpolicyServiceImpl();
     }
 
     @Bean
@@ -75,8 +77,8 @@ public class SpringConfig {
 
     //Visit
     @Bean
-    public VisitServise getVisitServise() {
-        return new VisitServiseImpl();
+    public VisitService getVisitService() {
+        return new VisitServiceImpl();
     }
 
     @Bean
@@ -87,8 +89,8 @@ public class SpringConfig {
     //Diagnosis
 
     @Bean
-    public DiagnosisServise getDiagnosisServise() {
-        return new DiagnosisServiseImpl();
+    public DiagnosisService getDiagnosisService() {
+        return new DiagnosisServiceImpl();
     }
 
     @Bean
@@ -96,11 +98,16 @@ public class SpringConfig {
         return new DiagnosisDaoImpl();
     }
 
+    //User
 
-    //Security
     @Bean
-    public UserDetailsServiceImpl getUserDetailsService() {
-        return new UserDetailsServiceImpl();
+    public UserService userService() {
+        return new UserServiceImpl();
+    }
+
+    @Bean
+    public UserDao userDao() {
+        return new UserDaoImpl();
     }
 
 

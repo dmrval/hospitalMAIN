@@ -1,10 +1,11 @@
 package com.dmrval.hospitalapp.config;
 
+//import com.dmrval.hospitalapp.service.UserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
@@ -35,9 +36,12 @@ public class WebConfig extends WebMvcConfigurationSupport {
     }
 
     @Override
-    protected void addViewControllers(ViewControllerRegistry registry) {
+    public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/login").setViewName("login");
     }
+
+
+
 }
 
 
