@@ -7,6 +7,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 @Entity
+@Table(name = "doctor")
 public class Doctor {
     private int doctorid;
     private String firstname;
@@ -166,7 +167,7 @@ public class Doctor {
     }
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user", referencedColumnName = "usrid")
+    @JoinColumn(name = "usr", referencedColumnName = "usrid")
     public User getUser() {
         return user;
     }

@@ -3,6 +3,7 @@ package com.dmrval.hospitalapp.entity;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "address")
 public class Address {
     private int addressid;
     private String country;

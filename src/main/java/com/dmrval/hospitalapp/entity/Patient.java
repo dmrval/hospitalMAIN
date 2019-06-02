@@ -7,6 +7,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 @Entity
+@Table(name = "patient")
 public class Patient {
     private int patientid;
     private String firstname;
@@ -21,7 +22,7 @@ public class Patient {
     }
 
     public Patient(String firstname, String lastname, String birthday,
-                   Address address, Medicalpolicy medicalpolicy) {
+                   Address address, Medicalpolicy medicalpolicy, User us) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.address = address;
@@ -34,6 +35,13 @@ public class Patient {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+        user = us;
+    }
+
+    public Patient(String firstname, String lastname, Medicalpolicy medicalpolicy) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.medicalpolicy = medicalpolicy;
     }
 
     @Id
@@ -125,7 +133,7 @@ public class Patient {
     }
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user", referencedColumnName = "usrid")
+    @JoinColumn(name = "usr", referencedColumnName = "usrid")
     public User getUser() {
         return user;
     }

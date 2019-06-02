@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class LoginController {
 
-    @GetMapping(value = {"/", "/login"})
+    @GetMapping(value = {"","/login"})
     public String getLoginPage(ModelMap model, HttpServletRequest request) {
         if(request.getParameterMap().containsKey("error")) {
             model.addAttribute("error",true);
@@ -26,13 +26,16 @@ public class LoginController {
         return "login";
     }
 
+
     @GetMapping("/accessDenied")
     public String getAccecDeniedPage() {
         return "accessDenied";
     }
 
-//    /signUp
-
+    @GetMapping("/singUp")
+    public String getsignUpPage() {
+        return "singUp";
+    }
 
 
 }

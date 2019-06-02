@@ -1,17 +1,23 @@
 package com.dmrval.hospitalapp.dao;
 
+import com.dmrval.hospitalapp.entity.Role;
 import com.dmrval.hospitalapp.entity.User;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.criteria.CriteriaQuery;
 import javax.transaction.Transactional;
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoImpl implements UserDao {
 
     @Autowired
     SessionFactory sessionFactory;
+
+    @Autowired
+    RoleDao roleDao;
 
     @Override
     @Transactional
@@ -51,6 +57,15 @@ public class UserDaoImpl implements UserDao {
         sessionFactory.getCurrentSession().close();
         return temp;
     }
+
+    @Override
+    public void saveUser(User user) {
+        sessionFactory.getCurrentSession().beginTransaction();
+        Serializable result = sessionFactory.getCurrentSession().save(user);
+        sessionFactory.getCurrentSession().getTransaction().commit();
+        sessionFactory.getCurrentSession().close();
+    }
+
     //PRIVATE only this class use=))
     private User getUserPrivate(int id) {
         User temp = sessionFactory.getCurrentSession().get(User.class, id);

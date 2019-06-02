@@ -14,4 +14,6 @@ public interface PatientService {
     void removePatient(int id);
 
     Patient getPatient(int id);
+
+    Patient findPatByLogin(String login);
 }

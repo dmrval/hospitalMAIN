@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.*;
 
@@ -20,16 +21,20 @@ public class UserDetailsImpl implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
-        for (Role role: user.getRoles()) {
-            grantedAuthorities.add(new SimpleGrantedAuthority(role.getRolename()));
-        }
-        return grantedAuthorities;
+        if (user != null) {
+            Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
+            for (Role role : user.getRoles()) {
+                grantedAuthorities.add(new SimpleGrantedAuthority(role.getRolename()));
+            }
+            return grantedAuthorities;
+        } else return null;
     }
 
     @Override
     public String getPassword() {
-        return user.getPassword();
+        if (user != null) {
+            return user.getPassword();
+        } else return null;
     }
 
     @Override
@@ -44,7 +49,9 @@ public class UserDetailsImpl implements UserDetails {
 
     @Override
     public boolean isAccountNonLocked() {
-        return true;
+        if (user != null) {
+            return !user.getStateUser().equals(State.BLOCKED);
+        } else return false;
     }
 
     @Override
@@ -54,7 +61,10 @@ public class UserDetailsImpl implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return true;
+        if (user != null) {
+            return user.getStateUser().equals(State.ACTIVE);
+        }
+        return false;
     }
 
 }

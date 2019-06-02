@@ -35,7 +35,7 @@
     </div>
     <h3>Номер лицензии</h3>
     <input id="doctorlicense" name="doctorlicense" type="number"
-           value="${doctor.giveDoctorlicense_Number()}" max="999999999999999999" min="0"  required path="title"/>
+           value="${doctor.giveDoctorlicense_Number()}" max="999999999999999999" min="0" required path="title"/>
     <h3>Домашний адресс</h3>
     <div>
         <p>Страна</p>

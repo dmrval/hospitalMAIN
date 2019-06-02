@@ -8,14 +8,13 @@
     </style>
 </head>
 <body>
-
 <form name="pat" action="/updatePatient" method="post" class="editPatient">
     <input id="patientid" title="patientid" name="patientid" type="number" value="${patient.getPatientid()}"
            required hidden/>
     <div>
         <p>День рождения(гггг-мм-дд)</p>
         <input id="birthday" title="Birthday" name="birthday" type="text"
-               pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"
+               pattern="[1-2]{1}[9-0]{1}[0-9]{2}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"
                value="${patient.give_BirsdayString_for_editPost()}"/>
     </div>
     <div>
@@ -28,7 +27,8 @@
         <input id="lastname" title="Lastname" name="lastname" type="text" value="${patient.getLastname()}" required/>
     </div>
     <h3>Номер медицинского полиса</h3>
-    <input id="medicalpolicy" name="medicalpolicy" type="number" max="999999999999999999" min="0" value="${patient.giveMedicalpolicy_Number()}"
+    <input id="medicalpolicy" name="medicalpolicy" type="number" max="999999999999999999" min="0"
+           value="${patient.giveMedicalpolicy_Number()}"
            required/>
     <h3>Домашний адресс</h3>
     <p>Страна</p>

@@ -8,14 +8,13 @@
     </style>
 </head>
 <body>
-
 <form name="visit" action="/editVisit" method="post">
     <input id="visitid" title="visitid" name="visitid" type="number" value="${visit.getVisitid()}"
            required hidden/>
     <div>
         <p>Дата и время приема </p>
         <input id="dayofvisit" title="dayofvisit" name="dayofvisit" type="datetime-local"
-               value="${visit.give_dayOfVisitString()}" />
+               value="${visit.give_dayOfVisitString()}"/>
     </div>
     <div>
         <p>Доктор</p>
@@ -23,7 +22,7 @@
             <#list doclist as doc>
                 <option value="${doc.getDoctorid()}">${doc}</option>
             </#list>
-            <option selected value="${visit.getDoctor().getDoctorid()}"> ВЫБРАН  -  ${visit.getDoctor()}</option>
+            <option selected value="${visit.getDoctor().getDoctorid()}"> ВЫБРАН - ${visit.getDoctor()}</option>
         </select>
     </div>
     <div>
@@ -32,7 +31,7 @@
             <#list patlist as pat>
                 <option value="${pat.getPatientid()}">${pat}</option>
             </#list>
-            <option selected value="${visit.getPatient().getPatientid()}"> ВЫБРАН  -  ${visit.getPatient()}</option>
+            <option selected value="${visit.getPatient().getPatientid()}"> ВЫБРАН - ${visit.getPatient()}</option>
         </select>
     </div>
     <br>

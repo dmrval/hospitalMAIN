@@ -3,16 +3,20 @@ package com.dmrval.hospitalapp.controller;
 import com.dmrval.hospitalapp.entity.*;
 import com.dmrval.hospitalapp.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+
+import java.security.Principal;
 import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.List;
 
 
 @Controller
-@RequestMapping("/")
+@RequestMapping
 public class MainController {
     @Autowired
     DoctorlicenseService doctorlicenseService;
@@ -35,17 +39,16 @@ public class MainController {
     @Autowired
     DiagnosisService diagnosisService;
 
-    //??????
+    @Autowired
+    UserService UserService;
 
+    @Autowired
+    RoleSevice roleSevice;
 
-
-    //??????
-
-    /*
-    @GetMapping("/")
-    public String index() {
-        return "adm_MainPanel";
-    }*/
+    @Autowired
+    PasswordEncoder passwordEncoder;
+    @Autowired
+    UserService userService;
 
     @GetMapping("/hello")
     public String hello(Model model) {
@@ -140,12 +143,16 @@ public class MainController {
             @RequestParam("city") String city,
             @RequestParam("street") String street,
             @RequestParam("house") String house,
-            @RequestParam("flat") String flat
-
+            @RequestParam("flat") String flat,
+            @RequestParam("login") String login
     ) {
         Medicalpolicy med_tmp = new Medicalpolicy(Long.parseLong(medicalpolicy));
         Address address_tmp = new Address(country, city, street, Integer.parseInt(house), Integer.parseInt(flat));
-        Patient patient = new Patient(firstname, lastname, birthday, address_tmp, med_tmp);
+        User userForPatient = new User(login, passwordEncoder.encode("123456"));
+        Role roleforUser = roleSevice.findById(3);
+        userForPatient.getRoles().add(roleforUser);
+        roleforUser.getUsers().add(userForPatient);
+        Patient patient = new Patient(firstname, lastname, birthday, address_tmp, med_tmp, userForPatient);
         patientService.addPatient(patient);
         return "redirect:/administrator/allPatient";
     }
@@ -259,6 +266,59 @@ public class MainController {
                 patientService.getPatient(Integer.parseInt(patient)));
         visitService.addVisit(tmp);
         return "redirect:/administrator/allVisit/" + tmp.getVisitid();
+    }
+
+
+    //signUp
+
+    @PostMapping("/signUp")
+    public String signUpPost(
+            @RequestParam("login") String login,
+            @RequestParam("password") String password,
+            @RequestParam("password2") String password2,
+            @RequestParam("firstname") String firstname,
+            @RequestParam("lastname") String lastname,
+            @RequestParam("medicalpolicy") String medicalpolicy,
+
+            ModelMap model
+    ) {
+        User user = new User(login, passwordEncoder.encode(password));
+        if (userService.userLoginIsExist(user) || login.equals("")) {
+            model.addAttribute("userIsExist", true);
+            return "singUp";
+        }
+        if (!password.equals(password2)) {
+            model.addAttribute("notdublicate", true);
+            return "singUp";
+        }
+        Patient patient = new Patient(firstname, lastname, new Medicalpolicy(Long.parseLong(medicalpolicy)));
+        Role usRole = roleSevice.findById(3);
+        user.getRoles().add(usRole);
+        usRole.getUsers().add(user);
+        patient.setUser(user);
+        patientService.addPatient(patient);
+        return "redirect:/login";
+    }
+
+
+    //PATIENTCONTROLLER
+
+
+    @PostMapping("/patNewPassword")
+    public String signUpPost(
+            @RequestParam("password") String password,
+            @RequestParam("password2") String password2,
+            ModelMap model,
+            Principal principal
+    ) {
+        if (!password.equals(password2)) {
+            model.addAttribute("notdublicate", true);
+            return "pat_newPassword";
+        }
+        Patient patient = patientService.findPatByLogin(principal.getName());
+        patient.getUser().setPassword(passwordEncoder.encode(password));
+        patientService.updatePatient(patient);
+        return "redirect:/login";
     }
 
 

@@ -7,5 +7,13 @@ import java.util.List;
 public interface UserService {
     User findByLogin(String login);
 
-     List<User> getAllUsers();
+    List<User> getAllUsers();
+
+    User getUser(int id);
+
+    void saveUser(User user);
+
+    public boolean userLoginIsExist(User u);
+
+
 }

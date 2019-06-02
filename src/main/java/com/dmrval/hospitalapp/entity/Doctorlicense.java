@@ -3,6 +3,7 @@ package com.dmrval.hospitalapp.entity;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "doctorlicense")
 public class Doctorlicense {
     private int doctorlicenseid;
     private long number;

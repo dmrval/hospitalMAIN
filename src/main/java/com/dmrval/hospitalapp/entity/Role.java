@@ -1,6 +1,8 @@
 package com.dmrval.hospitalapp.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -8,9 +10,23 @@ import java.util.Set;
 @Entity
 @Table(name = "role")
 public class Role {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "roleid", nullable = false)
     private int roleid;
+
+    @Column(name = "rolename")
     private String rolename;
-    private List<User> users;
+
+
+    @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "user_role",
+            joinColumns = @JoinColumn(name = "role_id", referencedColumnName = "roleid"),
+            inverseJoinColumns = @JoinColumn(name = "user_id", referencedColumnName = "usrid")
+    )
+    private List<User> users = new ArrayList<>();
 
     public Role() {
     }
@@ -20,9 +36,7 @@ public class Role {
         this.rolename = rolename;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "roleid")
+
     public int getRoleid() {
         return roleid;
     }
@@ -31,7 +45,7 @@ public class Role {
         this.roleid = roleid;
     }
 
-    @Column(name = "rolename")
+
     public String getRolename() {
         return rolename;
     }
@@ -40,12 +54,7 @@ public class Role {
         this.rolename = rolename;
     }
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinTable(
-            name = "user_role",
-            joinColumns = @JoinColumn(name = "role_id"),
-            inverseJoinColumns = @JoinColumn(name = "user_id")
-    )
+
     public List<User> getUsers() {
         return users;
     }

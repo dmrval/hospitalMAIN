@@ -18,13 +18,13 @@
 <#if logout??>
     <div class="logout_apply">Удачный выход из системы</div>
 </#if>
-<form name="f" action="/login" method="post">
+<form name="f" action="/login" method="post" class="forCenterButtons">
     <fieldset>
         <legend>Пожалуйста авторизуйтесь</legend>
         <label for="username">Логин</label>
-        <input type="text" id="username" name="username"/>
+        <input type="text" id="username" name="username" value=""/>
         <label for="password">Пароль</label>
-        <input type="password" id="password" name="password"/>
+        <input type="password" id="password" name="password" value=""/>
         <br>
         <div class="form-actions">
             <br>
@@ -32,5 +32,8 @@
         </div>
     </fieldset>
 </form>
+<br>
+<button class="button21" onclick="location.href = '/singUp'">Регистрация</button>
+
 
 </body>

@@ -1,16 +1,38 @@
 package com.dmrval.hospitalapp.entity;
 
+import com.dmrval.hospitalapp.service.RoleSevice;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "usr")
 public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "usrid",nullable = false)
     private int usrid;
+
+    @Column(name = "login")
     private String login;
+
+    @Column(name = "pass")
     private String password;
-    private List<Role> roles;
-    private State state;
+
+    @ManyToMany(mappedBy = "users", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    private List<Role> roles = new ArrayList<>();
+
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "state")
+    private State state = State.ACTIVE;
+
 
     public User() {
     }
@@ -35,15 +57,18 @@ public class User {
         this.state = r.state;
     }
 
+    public User(String login, String password, List<Role> roles, State state) {
+        this.login = login;
+        this.password = password;
+        this.roles = roles;
+        this.state = state;
+    }
 
     public User(String login, String password) {
         this.login = login;
         this.password = password;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "usrid")
 
     public int getUserid() {
         return usrid;
@@ -53,7 +78,6 @@ public class User {
         this.usrid = userid;
     }
 
-    @Column(name = "login")
     public String getLogin() {
         return login;
     }
@@ -62,7 +86,6 @@ public class User {
         this.login = login;
     }
 
-    @Column(name = "pass")
     public String getPassword() {
         return password;
     }
@@ -71,7 +94,6 @@ public class User {
         this.password = password;
     }
 
-    @ManyToMany(mappedBy = "users", cascade = CascadeType.ALL)
     public List<Role> getRoles() {
         return roles;
     }
@@ -80,8 +102,7 @@ public class User {
         this.roles = roles;
     }
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "state")
+
     public State getStateUser() {
         return state;
     }

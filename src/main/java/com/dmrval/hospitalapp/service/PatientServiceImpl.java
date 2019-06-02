@@ -34,4 +34,17 @@ public class PatientServiceImpl implements PatientService {
     public Patient getPatient(int id) {
         return PatientDao.getPatient(id);
     }
+
+    @Override
+    public Patient findPatByLogin(String login) {
+        List<Patient> patients = getAllPatient();
+        for (Patient tmp : patients) {
+            if (tmp.getUser().getLogin().equals(login)) {
+                return tmp;
+            }
+        }
+        return null;
+    }
+
+
 }

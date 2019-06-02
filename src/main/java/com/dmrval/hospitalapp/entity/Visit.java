@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 @Entity
+@Table(name = "visit")
 public class Visit {
     private int visitid;
     private Timestamp dayofvisit;

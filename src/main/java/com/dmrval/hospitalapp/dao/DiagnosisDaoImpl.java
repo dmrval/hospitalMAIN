@@ -9,6 +9,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 public class DiagnosisDaoImpl implements DiagnosisDao{
+
     @Autowired
     SessionFactory sessionFactory;
 
