@@ -17,13 +17,13 @@ import java.util.List;
 @RequestMapping("/administrator")
 public class AdministratorController {
     @Autowired
-    VisitService visitService;
+    private VisitService visitService;
 
     @Autowired
-    PatientService patientService;
+    private PatientService patientService;
 
     @Autowired
-    DoctorService doctorService;
+    private DoctorService doctorService;
 
     //Mainpanel
     @GetMapping("")
@@ -50,6 +50,7 @@ public class AdministratorController {
         visitService.removeVisit(id);
         return "redirect:/administrator/allVisit";
     }
+
     @GetMapping("/addVisit")
     public String addVisit(Model model) {
         model.addAttribute("doclist", doctorService.getAllDoctor());
@@ -101,7 +102,8 @@ public class AdministratorController {
 
     @GetMapping("/allPatient/update/{id}")
     public String editPatient(@PathVariable("id") int id, Model model) {
-        model.addAttribute("patient", patientService.getPatient(id));
+        Patient patient = patientService.getPatient(id);
+        model.addAttribute("patient", patient);
         return "adm_editPatient";
     }
 

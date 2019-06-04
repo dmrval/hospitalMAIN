@@ -10,4 +10,6 @@ public interface PatientDao {
     void updatePatient(Patient patient);
     void removePatient(int id);
     Patient getPatient(int id);
+    Patient getPatientbyLogin(String log);
+
 }

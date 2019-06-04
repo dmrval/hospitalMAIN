@@ -3,47 +3,44 @@ package com.dmrval.hospitalapp.service;
 import com.dmrval.hospitalapp.dao.PatientDao;
 import com.dmrval.hospitalapp.entity.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
+import java.security.Principal;
 import java.util.List;
 
 public class PatientServiceImpl implements PatientService {
+
     @Autowired
-    PatientDao PatientDao;
+    PatientDao patientDao;
 
     @Override
     public List<Patient> getAllPatient() {
-        return PatientDao.getAllPatient();
+        return patientDao.getAllPatient();
     }
 
     @Override
     public void addPatient(Patient patient) {
-        PatientDao.addPatient(patient);
+        patientDao.addPatient(patient);
     }
 
     @Override
     public void updatePatient(Patient patient) {
-        PatientDao.updatePatient(patient);
+        patientDao.updatePatient(patient);
     }
 
     @Override
     public void removePatient(int id) {
-        PatientDao.removePatient(id);
+        patientDao.removePatient(id);
     }
 
     @Override
     public Patient getPatient(int id) {
-        return PatientDao.getPatient(id);
+        return patientDao.getPatient(id);
     }
 
     @Override
-    public Patient findPatByLogin(String login) {
-        List<Patient> patients = getAllPatient();
-        for (Patient tmp : patients) {
-            if (tmp.getUser().getLogin().equals(login)) {
-                return tmp;
-            }
-        }
-        return null;
+    public Patient getPatientbyLogin(String login) {
+        return patientDao.getPatientbyLogin(login);
     }
 
 

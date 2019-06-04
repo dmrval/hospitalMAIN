@@ -33,7 +33,7 @@
     </fieldset>
 </form>
 <br>
-<button class="button21" onclick="location.href = '/singUp'">Регистрация</button>
-
-
+<div class="forCenterButtons">
+    <button class="button21" onclick="location.href = '/singUp'">Регистрация</button>
+</div>
 </body>

@@ -8,10 +8,9 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.transaction.Transactional;
 import java.util.List;
 
-public class PatientDaoImpl implements PatientDao{
+public class PatientDaoImpl implements PatientDao {
     @Autowired
     SessionFactory sessionFactory;
-
 
     public PatientDaoImpl() {
     }
@@ -44,13 +43,36 @@ public class PatientDaoImpl implements PatientDao{
     }
 
     @Override
-    @Transactional
     public Patient getPatient(int id) {
         sessionFactory.getCurrentSession().beginTransaction();
-        Patient temp = sessionFactory.getCurrentSession().get(Patient.class, id);
+        Patient temp = null;
+        List<Patient> list = getAllPatientPrivate();
+        for (Patient pt : list) {
+            if (pt.getPatientid() == id) {
+                temp = pt;
+            }
+        }
+//        Patient temp = sessionFactory.getCurrentSession().get(Patient.class, id);
         sessionFactory.getCurrentSession().getTransaction().commit();
         sessionFactory.getCurrentSession().close();
         return temp;
+    }
+
+    @Override
+    public Patient getPatientbyLogin(String log) {
+        sessionFactory.getCurrentSession().beginTransaction();
+        List<Patient> listPat = getAllPatientPrivate();
+        Patient result = new Patient();
+        for (Patient ds:listPat
+             ) {
+            System.out.println(ds.getUser().getLogin() +"    --------       -----   ----    ----    --");
+            if (ds.getUser().getLogin().equals(log)) {
+                result = ds;
+            }
+        }
+        sessionFactory.getCurrentSession().getTransaction().commit();
+        sessionFactory.getCurrentSession().close();
+        return result;
     }
 
     @Override
@@ -64,10 +86,16 @@ public class PatientDaoImpl implements PatientDao{
         return list;
     }
 
-    //PRIVATE only this class use=))
+    // PRIVATE only this class use=))
     private Patient getPatientPrivate(int id) {
-        Patient temp = sessionFactory.getCurrentSession().get(Patient.class, id);
-        return temp;
+        return sessionFactory.getCurrentSession().get(Patient.class, id);
+    }
+
+    private List<Patient> getAllPatientPrivate() {
+        CriteriaQuery<Patient> criteriaQuery = sessionFactory.getCurrentSession().getCriteriaBuilder().createQuery(Patient.class);
+        criteriaQuery.from(Patient.class);
+        List<Patient> list = sessionFactory.getCurrentSession().createQuery(criteriaQuery).getResultList();
+        return list;
     }
 
 

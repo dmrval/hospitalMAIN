@@ -15,5 +15,5 @@ public interface PatientService {
 
     Patient getPatient(int id);
 
-    Patient findPatByLogin(String login);
+    Patient getPatientbyLogin(String log);
 }

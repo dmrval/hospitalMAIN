@@ -68,8 +68,8 @@ sequence|table|36323|36325|1
       <Comment>standard public schema</Comment>
       <StateNumber>1911</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2019-06-01.14:48:13.611</IntrospectionTimestamp>
-      <IntrospectionStateNumber>3086</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2019-06-03.21:51:34.984</IntrospectionTimestamp>
+      <IntrospectionStateNumber>3255</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -177,7 +177,7 @@ sequence|table|36323|36325|1
     <table id="26" parent="9" name="address">
       <ObjectId>36243</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3031</StateNumber>
+      <StateNumber>3194</StateNumber>
     </table>
     <table id="27" parent="9" name="diagnosis">
       <ObjectId>36254</ObjectId>
@@ -187,7 +187,7 @@ sequence|table|36323|36325|1
     <table id="28" parent="9" name="doctor">
       <ObjectId>36265</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3037</StateNumber>
+      <StateNumber>3240</StateNumber>
     </table>
     <table id="29" parent="9" name="doctorlicense">
       <ObjectId>36276</ObjectId>
@@ -197,32 +197,32 @@ sequence|table|36323|36325|1
     <table id="30" parent="9" name="medicalpolicy">
       <ObjectId>36284</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3032</StateNumber>
+      <StateNumber>3196</StateNumber>
     </table>
     <table id="31" parent="9" name="patient">
       <ObjectId>36292</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3038</StateNumber>
+      <StateNumber>3252</StateNumber>
     </table>
     <table id="32" parent="9" name="role">
       <ObjectId>36303</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3035</StateNumber>
+      <StateNumber>3229</StateNumber>
     </table>
     <table id="33" parent="9" name="user_role">
       <ObjectId>36309</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3035</StateNumber>
+      <StateNumber>3255</StateNumber>
     </table>
     <table id="34" parent="9" name="usr">
       <ObjectId>36314</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3034</StateNumber>
+      <StateNumber>3255</StateNumber>
     </table>
     <table id="35" parent="9" name="visit">
       <ObjectId>36325</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3038</StateNumber>
+      <StateNumber>3188</StateNumber>
     </table>
     <column id="36" parent="26" name="addressid">
       <Position>1</Position>
@@ -377,14 +377,16 @@ sequence|table|36323|36325|1
       <Primary>1</Primary>
     </key>
     <foreign-key id="58" parent="28" name="fk2rnskutw9pxhc5hoc8xq2060e">
-      <ObjectId>36331</ObjectId>
-      <StateNumber>3028</StateNumber>
+      <ObjectId>36417</ObjectId>
+      <StateNumber>3192</StateNumber>
       <ColNames>address</ColNames>
       <RefTableId>36243</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>address</RefTableName>
       <RefKeyName>address_pkey</RefKeyName>
       <RefColNames>addressid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <foreign-key id="59" parent="28" name="fkbkgj131yt126pevwef1rmor56">
       <ObjectId>36336</ObjectId>
@@ -397,8 +399,8 @@ sequence|table|36323|36325|1
       <RefColNames>doctorlicenseid</RefColNames>
     </foreign-key>
     <foreign-key id="60" parent="28" name="fk7lneotrkir9qam7u3hdl1a9t0">
-      <ObjectId>36341</ObjectId>
-      <StateNumber>3030</StateNumber>
+      <ObjectId>36447</ObjectId>
+      <StateNumber>3240</StateNumber>
       <ColNames>usr</ColNames>
       <RefTableId>36314</RefTableId>
       <RefColPositions>1</RefColPositions>
@@ -523,28 +525,32 @@ sequence|table|36323|36325|1
       <Primary>1</Primary>
     </key>
     <foreign-key id="78" parent="31" name="fk6jf9wuhas6r41rx0hkvempunx">
-      <ObjectId>36346</ObjectId>
-      <StateNumber>3031</StateNumber>
+      <ObjectId>36422</ObjectId>
+      <StateNumber>3194</StateNumber>
       <ColNames>address</ColNames>
       <RefTableId>36243</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>address</RefTableName>
       <RefKeyName>address_pkey</RefKeyName>
       <RefColNames>addressid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <foreign-key id="79" parent="31" name="fk4v1p6rcmnx0bx65tvbomjskdj">
-      <ObjectId>36351</ObjectId>
-      <StateNumber>3032</StateNumber>
+      <ObjectId>36427</ObjectId>
+      <StateNumber>3196</StateNumber>
       <ColNames>medicalpolicy</ColNames>
       <RefTableId>36284</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>medicalpolicy</RefTableName>
       <RefKeyName>medicalpolicy_pkey</RefKeyName>
       <RefColNames>medicalpolicyid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <foreign-key id="80" parent="31" name="fk5eab9v3jndtem2o6dd9ono5m8">
-      <ObjectId>36356</ObjectId>
-      <StateNumber>3033</StateNumber>
+      <ObjectId>36457</ObjectId>
+      <StateNumber>3252</StateNumber>
       <ColNames>usr</ColNames>
       <RefTableId>36314</RefTableId>
       <RefColPositions>1</RefColPositions>
@@ -594,8 +600,8 @@ sequence|table|36323|36325|1
       <TypeId>23</TypeId>
     </column>
     <foreign-key id="87" parent="33" name="fka68196081fvovjhkek5m97n3y">
-      <ObjectId>36366</ObjectId>
-      <StateNumber>3035</StateNumber>
+      <ObjectId>36432</ObjectId>
+      <StateNumber>3229</StateNumber>
       <ColNames>role_id</ColNames>
       <RefTableId>36303</RefTableId>
       <RefColPositions>1</RefColPositions>
@@ -604,14 +610,16 @@ sequence|table|36323|36325|1
       <RefColNames>roleid</RefColNames>
     </foreign-key>
     <foreign-key id="88" parent="33" name="fkfpm8swft53ulq2hl11yplpr5">
-      <ObjectId>36361</ObjectId>
-      <StateNumber>3034</StateNumber>
+      <ObjectId>36462</ObjectId>
+      <StateNumber>3255</StateNumber>
       <ColNames>user_id</ColNames>
       <RefTableId>36314</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>usr</RefTableName>
       <RefKeyName>usr_pkey</RefKeyName>
       <RefColNames>usrid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <column id="89" parent="34" name="usrid">
       <Position>1</Position>
@@ -711,24 +719,28 @@ sequence|table|36323|36325|1
       <RefColNames>diagnosisid</RefColNames>
     </foreign-key>
     <foreign-key id="103" parent="35" name="fksd0sfk4ma6ikk1oqtic52n2e">
-      <ObjectId>36376</ObjectId>
-      <StateNumber>3037</StateNumber>
+      <ObjectId>36407</ObjectId>
+      <StateNumber>3188</StateNumber>
       <ColNames>doctor</ColNames>
       <RefTableId>36265</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>doctor</RefTableName>
       <RefKeyName>doctor_pkey</RefKeyName>
       <RefColNames>doctorid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <foreign-key id="104" parent="35" name="fk3tc2nk9pa4jcw4fewpfj25a1h">
-      <ObjectId>36381</ObjectId>
-      <StateNumber>3038</StateNumber>
+      <ObjectId>36402</ObjectId>
+      <StateNumber>3186</StateNumber>
       <ColNames>patient</ColNames>
       <RefTableId>36292</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>patient</RefTableName>
       <RefKeyName>patient_pkey</RefKeyName>
       <RefColNames>patientid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
     </foreign-key>
   </database-model>
 </dataSource>

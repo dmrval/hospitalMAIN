@@ -19,36 +19,36 @@ import java.util.List;
 @RequestMapping
 public class MainController {
     @Autowired
-    DoctorlicenseService doctorlicenseService;
+    private DoctorlicenseService doctorlicenseService;
 
     @Autowired
-    AddressService addressService;
+    private AddressService addressService;
 
     @Autowired
-    DoctorService doctorService;
+    private DoctorService doctorService;
 
     @Autowired
-    PatientService patientService;
+    private PatientService patientService;
 
     @Autowired
-    MedicalpolicyService medicalpolicyService;
+    private MedicalpolicyService medicalpolicyService;
 
     @Autowired
-    VisitService visitService;
+    private VisitService visitService;
 
     @Autowired
-    DiagnosisService diagnosisService;
+    private DiagnosisService diagnosisService;
 
     @Autowired
-    UserService UserService;
+    private UserService UserService;
 
     @Autowired
-    RoleSevice roleSevice;
+    private RoleSevice roleSevice;
 
     @Autowired
-    PasswordEncoder passwordEncoder;
+    private PasswordEncoder passwordEncoder;
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @GetMapping("/hello")
     public String hello(Model model) {
@@ -149,7 +149,7 @@ public class MainController {
         Medicalpolicy med_tmp = new Medicalpolicy(Long.parseLong(medicalpolicy));
         Address address_tmp = new Address(country, city, street, Integer.parseInt(house), Integer.parseInt(flat));
         User userForPatient = new User(login, passwordEncoder.encode("123456"));
-        Role roleforUser = roleSevice.findById(3);
+        Role roleforUser = roleSevice.findById(16);
         userForPatient.getRoles().add(roleforUser);
         roleforUser.getUsers().add(userForPatient);
         Patient patient = new Patient(firstname, lastname, birthday, address_tmp, med_tmp, userForPatient);
@@ -180,6 +180,8 @@ public class MainController {
         tmp.setLastname(lastname);
         tmp.setFirstname(firstname);
         tmp.getMedicalpolicy().setNumber(Long.parseLong(medicalpolicy));
+        Address tmpAddress = new Address();
+        tmp.setAddress(tmpAddress);
         tmp.getAddress().setCountry(country);
         tmp.getAddress().setCity(city);
         tmp.getAddress().setStreet(street);
@@ -292,7 +294,7 @@ public class MainController {
             return "singUp";
         }
         Patient patient = new Patient(firstname, lastname, new Medicalpolicy(Long.parseLong(medicalpolicy)));
-        Role usRole = roleSevice.findById(3);
+        Role usRole = roleSevice.findById(16);
         user.getRoles().add(usRole);
         usRole.getUsers().add(user);
         patient.setUser(user);
@@ -303,23 +305,66 @@ public class MainController {
 
     //PATIENTCONTROLLER
 
-
     @PostMapping("/patNewPassword")
     public String signUpPost(
             @RequestParam("password") String password,
             @RequestParam("password2") String password2,
+            @RequestParam("oldpass") String oldpass,
             ModelMap model,
             Principal principal
     ) {
+        Patient patient = patientService.getPatientbyLogin(principal.getName());
+        String currPass = passwordEncoder.encode(patient.getUser().getPassword());
+        System.out.println(currPass);
         if (!password.equals(password2)) {
             model.addAttribute("notdublicate", true);
             return "pat_newPassword";
         }
-        Patient patient = patientService.findPatByLogin(principal.getName());
+        if (!passwordEncoder.matches(oldpass, patient.getUser().getPassword())) {
+            model.addAttribute("wrongoldpass", true);
+            return "pat_newPassword";
+        }
         patient.getUser().setPassword(passwordEncoder.encode(password));
         patientService.updatePatient(patient);
         return "redirect:/login";
     }
 
 
+    @PostMapping("/pat_patSettings")
+    public String getPat_SettingsPost(
+            @RequestParam("birthday") Date birthday,
+            @RequestParam("lastname") String lastname,
+            @RequestParam("firstname") String firstname,
+            @RequestParam("medicalpolicy") String medicalpolicy,
+            @RequestParam("country") String country,
+            @RequestParam("city") String city,
+            @RequestParam("street") String street,
+            @RequestParam("house") String house,
+            @RequestParam("flat") String flat,
+            Principal principal
+    ) {
+        Patient tmp = patientService.getPatientbyLogin(principal.getName());
+        try {
+            tmp.setBirthday(birthday);
+        } catch (Exception x) {
+            x.toString();
+            System.err.println("Не правильный формат даты. Дата не изменена");
+        }
+        tmp.setLastname(lastname);
+        tmp.setFirstname(firstname);
+        tmp.getMedicalpolicy().setNumber(Long.parseLong(medicalpolicy));
+        Address address = new Address();
+        tmp.setAddress(address);
+        tmp.getAddress().setCountry(country);
+        tmp.getAddress().setCity(city);
+        tmp.getAddress().setStreet(street);
+        tmp.getAddress().setHouse(Integer.parseInt(house));
+        tmp.getAddress().setFlat(Integer.parseInt(flat));
+        patientService.updatePatient(tmp);
+        return "redirect:/patient";
+    }
 }
+
+
+
+

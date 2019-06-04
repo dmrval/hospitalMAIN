@@ -28,7 +28,11 @@ public class UserDaoImpl implements UserDao {
         List<User> list = sessionFactory.getCurrentSession().createQuery(criteriaQuery).getResultList();
         for (User u : list) {
             if (u.getLogin().equals(login)) {
-                return getUserPrivate(u.getUserid());
+                User s = getUserPrivate(u.getUserid());
+                sessionFactory.getCurrentSession().getTransaction().commit();
+                sessionFactory.getCurrentSession().close();
+                return s;
+
             }
         }
         sessionFactory.getCurrentSession().getTransaction().commit();

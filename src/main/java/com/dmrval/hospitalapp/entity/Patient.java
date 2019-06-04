@@ -147,7 +147,7 @@ public class Patient {
         StringBuilder sb = new StringBuilder();
         sb.append(firstname + ", ");
         sb.append(lastname + "; ");
-        sb.append(give_BirsdayString());
+//        sb.append(give_BirsdayString());
         sb.append("; ");
         sb.append("Мед.полис: " + Math.abs(medicalpolicy.getNumber()) + ".");
         return sb.toString();

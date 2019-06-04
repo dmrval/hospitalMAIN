@@ -15,6 +15,7 @@
             var str = year + "-0" + month + "-" + day + " 00:00";
             document.getElementById("dayofvisit").max = str;
         }
+
         window.onload = today;
     </script>
 </head>
@@ -28,7 +29,7 @@
     </div>
     <div>
         <p>Доктор</p>
-        <select id="doctor" name="doctor" size="7" typeof="" required>
+        <select id="doctor" name="doctor" size="7" required>
             <#list doclist as doc>
                 <option value="${doc.getDoctorid()}">${doc}</option>
             </#list>

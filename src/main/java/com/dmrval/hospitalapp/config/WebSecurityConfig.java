@@ -27,36 +27,31 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                    .antMatchers("/administrator/**").hasAuthority("ADMIN")
-                    .antMatchers("/doctor/**").hasAuthority("ADMIN")
-                    .antMatchers("/doctor/**").hasAuthority("DOCTOR")
-                    .antMatchers("/patient/**").hasAuthority("ADMIN")
-                    .antMatchers("/patient/**").hasAuthority("DOCTOR")
-                    .antMatchers("/patient/**").hasAuthority("PATIENT")
-                    .antMatchers("/signUp").permitAll()
-                    .anyRequest().permitAll()
+                .antMatchers("/administrator/**")./*hasAuthority("ADMIN")*/permitAll()
+                .antMatchers("/doctor/**").hasAuthority("DOCTOR")
+                .antMatchers("/patient/**").hasAuthority("PATIENT")
+                .antMatchers("/signUp").permitAll()
+                .anyRequest().permitAll()
                 .and()
-                    .formLogin()
-                    .loginPage("/login")
-                    .successHandler((req,res,auth)->{
-                        for (GrantedAuthority authority : auth.getAuthorities()) {
-                            if (authority.getAuthority().equals("ADMIN")) {
-                                res.sendRedirect("/administrator/");
-                            }
-                            else if (authority.getAuthority().equals("DOCTOR")) {
-                                res.sendRedirect("/doctor/");
-                            }
-                            else if (authority.getAuthority().equals("PATIENT")){
-                                res.sendRedirect("/patient/");
-                            }
+                .formLogin()
+                .loginPage("/login")
+                .successHandler((req, res, auth) -> {
+                    for (GrantedAuthority authority : auth.getAuthorities()) {
+                        if (authority.getAuthority().equals("ADMIN")) {
+                            res.sendRedirect("/administrator/");
+                        } else if (authority.getAuthority().equals("DOCTOR")) {
+                            res.sendRedirect("/doctor/");
+                        } else if (authority.getAuthority().equals("PATIENT")) {
+                            res.sendRedirect("/patient/");
                         }
-                    })
-                    .permitAll()
+                    }
+                })
+                .permitAll()
                 .and()
-                    .logout()
-                    .permitAll().
+                .logout()
+                .permitAll().
                 and()
-                    .exceptionHandling().accessDeniedPage("/accessDenied");
+                .exceptionHandling().accessDeniedPage("/accessDenied");
         http.csrf().disable();
     }
 
@@ -65,13 +60,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
 
-
-        /**this is for debug use blya*/
-        /*inMemoryAuthentication()
-                .withUser("dmrval").password("irbis").roles("ADM");*/
     }
-
-
 
 
 }

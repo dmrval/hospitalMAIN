@@ -8,11 +8,11 @@
 </head>
 <body>
 <div class="forCenterButtons">
-<button class="button21" onclick="location.href = '/administrator/'">Вернуться назад</button>
+    <button class="button21" onclick="location.href = '/administrator/'">Вернуться назад</button>
 
-<button class="button21" onclick="location.href = '/administrator/addPatient'">Добавить пациента</button>
+    <button class="button21" onclick="location.href = '/administrator/addPatient'">Добавить пациента</button>
 
-<button class="button21" onclick="location.href = '/administrator/'">На главную страницу</button>
+    <button class="button21" onclick="location.href = '/administrator/'">На главную страницу</button>
 </div>
 <br>
 <table>
@@ -29,8 +29,16 @@
     <tr>
         <td>${patient.getPatientid()}</td>
         <td>${patient.getFirstname()} ${patient.getLastname()}</td>
-        <td>${patient.give_BirsdayString()}</td>
-        <td>${patient.getAddress()}</td>
+        <#if patient.getBirthday()??>
+            <td>${patient.give_BirsdayString()}</td>
+        <#else>
+            <td> ---</td>
+        </#if>
+        <#if patient.getAddress()??>
+            <td>${patient.getAddress()}</td>
+        <#else>
+            <td> ---</td>
+        </#if>
         <td>${patient.getMedicalpolicy().getNumber()}</td>
         <td><a href="/administrator/allPatient/update/${patient.getPatientid()}">РЕДАКТИРОВАТЬ</a></td>
         <td><a href="/administrator/allPatient/delete/${patient.getPatientid()}">УДАЛИТЬ</a></td>
