@@ -80,6 +80,7 @@ h4 {
     user-select: none;
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     padding: 10px;
+    margin-right: 10px;
     font-size: large;
     color: rgb(0, 0, 0);
     outline: none;
@@ -139,26 +140,37 @@ legend {
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     color: #686461;
     padding: 3px;
-    font-size: medium;
+    font-size: 1.7em;
+
 }
-.errlogin_password{
+
+.errlogin_password {
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     color: darkred;
     padding: 3px;
-    font-size: large;
+    font-size: 1.7em;
+    text-align: center;
 }
+
 .logout_apply {
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     color: darkgreen;
     padding: 3px;
-    font-size: large;
+    font-size: 1.7em;
+    text-align: center;
+
 }
-.accessDenied{
+
+.accessDenied {
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     color: dimgray;
     padding: 3px;
     font-size: 5em;
     text-align: center;
+}
+
+.div_For_InlineBlock {
+    display: inline-block;
 }
 
 

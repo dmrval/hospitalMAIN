@@ -2,6 +2,7 @@ package com.dmrval.hospitalapp.controller;
 
 import com.dmrval.hospitalapp.entity.Doctor;
 import com.dmrval.hospitalapp.entity.Patient;
+import com.dmrval.hospitalapp.entity.State;
 import com.dmrval.hospitalapp.entity.Visit;
 import com.dmrval.hospitalapp.service.DoctorService;
 import com.dmrval.hospitalapp.service.PatientService;
@@ -96,6 +97,9 @@ public class AdministratorController {
 
     @GetMapping("/allPatient/delete/{id}")
     public String deletePatient(@PathVariable("id") int id) {
+        Patient r = patientService.getPatient(id);
+        r.getUser().setState(State.NOTACTIVE);
+        patientService.updatePatient(r);
         patientService.removePatient(id);
         return "redirect:/administrator/allPatient";
     }

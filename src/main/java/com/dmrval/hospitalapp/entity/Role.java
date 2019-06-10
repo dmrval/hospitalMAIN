@@ -20,17 +20,8 @@ public class Role {
     private String rolename;
 
 
-    @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "user_role",
-            joinColumns = @JoinColumn(name = "role_id", referencedColumnName = "roleid"),
-            inverseJoinColumns = @JoinColumn(name = "user_id", referencedColumnName = "usrid")
-    )
-    private List<User> users = new ArrayList<>();
-
     public Role() {
     }
-
 
     public Role(String rolename) {
         this.rolename = rolename;
@@ -55,20 +46,6 @@ public class Role {
     }
 
 
-    public List<User> getUsers() {
-        return users;
-    }
 
-    public void setUsers(List<User> users) {
-        this.users = users;
-    }
 
-    @Override
-    public String toString() {
-        return "Role{" +
-                "roleid=" + roleid +
-                ", rolename='" + rolename + '\'' +
-                ", users=" + users +
-                '}';
-    }
 }

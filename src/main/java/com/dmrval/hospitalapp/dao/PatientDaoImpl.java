@@ -4,6 +4,7 @@ import com.dmrval.hospitalapp.entity.Patient;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.transaction.Transactional;
 import java.util.List;
@@ -37,7 +38,8 @@ public class PatientDaoImpl implements PatientDao {
     @Transactional
     public void removePatient(int id) {
         sessionFactory.getCurrentSession().beginTransaction();
-        sessionFactory.getCurrentSession().delete(getPatientPrivate(id));
+        Query query = sessionFactory.getCurrentSession().createQuery("delete from Patient where patientid=" + id);
+        query.executeUpdate();
         sessionFactory.getCurrentSession().getTransaction().commit();
         sessionFactory.getCurrentSession().close();
     }
@@ -52,7 +54,6 @@ public class PatientDaoImpl implements PatientDao {
                 temp = pt;
             }
         }
-//        Patient temp = sessionFactory.getCurrentSession().get(Patient.class, id);
         sessionFactory.getCurrentSession().getTransaction().commit();
         sessionFactory.getCurrentSession().close();
         return temp;
@@ -65,7 +66,6 @@ public class PatientDaoImpl implements PatientDao {
         Patient result = new Patient();
         for (Patient ds:listPat
              ) {
-            System.out.println(ds.getUser().getLogin() +"    --------       -----   ----    ----    --");
             if (ds.getUser().getLogin().equals(log)) {
                 result = ds;
             }

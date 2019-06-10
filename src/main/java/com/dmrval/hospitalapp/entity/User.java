@@ -25,9 +25,9 @@ public class User {
     @Column(name = "pass")
     private String password;
 
-    @ManyToMany(mappedBy = "users", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    private List<Role> roles = new ArrayList<>();
-
+    @ManyToOne
+    @JoinColumn(name = "role", referencedColumnName = "roleid", nullable = false)
+    private Role role;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "state")
@@ -37,38 +37,37 @@ public class User {
     public User() {
     }
 
-    public User(int usrid, String login, String password, List<Role> roles, State state) {
+
+
+    public User(String login, String password, Role role) {
+        this.login = login;
+        this.password = password;
+        this.role = role;
+    }
+
+    public int getUsrid() {
+        return usrid;
+    }
+
+    public void setUsrid(int usrid) {
         this.usrid = usrid;
-        this.login = login;
-        this.password = password;
-        this.roles = roles;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public State getState() {
+        return state;
+    }
+
+    public void setState(State state) {
         this.state = state;
     }
-
-    public User(String login) {
-        this.login = login;
-    }
-
-    public User(User r) {
-        this.usrid = r.usrid;
-        this.login = r.login;
-        this.password = r.password;
-        this.roles = r.roles;
-        this.state = r.state;
-    }
-
-    public User(String login, String password, List<Role> roles, State state) {
-        this.login = login;
-        this.password = password;
-        this.roles = roles;
-        this.state = state;
-    }
-
-    public User(String login, String password) {
-        this.login = login;
-        this.password = password;
-    }
-
 
     public int getUserid() {
         return usrid;
@@ -93,15 +92,6 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    public List<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
-    }
-
 
     public State getStateUser() {
         return state;

@@ -14,12 +14,11 @@
         <p>Дата рождения</p>
         <input id="birthday" title="Birthday" name="birthday" type="date" max="2004-12-12" min="1920-12-12" required>
     </div>
+    <br>
     <div>
-        <p>Фамилия</p>
+        <label>Фамилия </label>
         <input id="firstname" title="Firstname" name="firstname" type="text" required>
-    </div>
-    <div>
-        <p>Имя</p>
+        <label>Имя </label>
         <input id="lastname" title="Lastname" name="lastname" type="text" required>
     </div>
     <div>
@@ -32,21 +31,18 @@
     </div>
     <div>
         <h3>Домашний адресс</h3>
-        <p>Страна</p>
+        <label>Страна </label>
         <input id="country" title="Country" name="country" type="text" required>
-    </div>
-    <div>
-        <p>Город</p>
+        <label>Город </label>
         <input id="city" title="City" name="city" type="text" required>
-    </div>
-    <div>
-        <p>Улица</p>
+        <label>Улица </label>
         <input id="street" title="Street" name="street" type="text" required>
-    </div>
+    </div${doctor.getDoctorid()}>
+    <br>
     <div>
-        <p> Номер дома</p>
+        <label>Номер дома </label>
         <input id="house" title="House_number" name="house" type="number" required max="2000">
-        <p>Номер квартиры</p>
+        <label>Номер квартиры </label>
         <input id="flat" title="flat_number" name="flat" type="number" required max="2000">
     </div>
     <br>

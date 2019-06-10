@@ -4,12 +4,6 @@
     <style type="text/css">
         <#include "/resources/allstyle.css">
     </style>
-    <script language="javascript" type="text/javascript"
-            src="http://code.jquery.com/jquery-2.1.1.min.js">
-    </script>
-    <script language="javascript" type="text/javascript"
-            src="js/login.js">
-    </script>
 </head>
 <body>
 <#if error??>
@@ -23,6 +17,8 @@
         <legend>Пожалуйста авторизуйтесь</legend>
         <label for="username">Логин</label>
         <input type="text" id="username" name="username" value=""/>
+        <br>
+        <br>
         <label for="password">Пароль</label>
         <input type="password" id="password" name="password" value=""/>
         <br>

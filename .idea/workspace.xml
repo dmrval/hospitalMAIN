@@ -85,7 +85,47 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="doctor: table" type="69fad909:PgImplModel$LocalTable" />
+        <item name="doctorlicense: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="HospitalDB" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="medicalpolicy: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="HospitalDB" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="patient: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="HospitalDB" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="role: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="HospitalDB" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="usr: table" type="69fad909:PgImplModel$LocalTable" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -118,62 +158,95 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/AdministratorController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
+            <state relative-caret-position="359">
+              <caret line="369" column="42" selection-start-line="369" selection-start-column="42" selection-end-line="369" selection-end-column="42" />
               <folding>
-                <element signature="e#3067#3068#0" expanded="true" />
-                <element signature="e#3102#3103#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/PatientService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/SecurityWebApplicationInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editPatient.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allPatient.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/PatientDaoImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="46" column="62" lean-forward="true" selection-start-line="46" selection-start-column="62" selection-end-line="46" selection-end-column="62" />
+            <state relative-caret-position="255">
+              <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_addVisit.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_allVisit.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/allstyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="164" column="68" lean-forward="true" selection-start-line="164" selection-start-column="68" selection-end-line="164" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/WorkCalendar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="478">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
-                <element signature="e#3355#3356#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#287#288#0" expanded="true" />
+                <element signature="e#335#336#0" expanded="true" />
+                <element signature="e#1268#1269#0" expanded="true" />
+                <element signature="e#1303#1304#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/PatientDao.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/PatientController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            <state relative-caret-position="274">
+              <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -185,11 +258,11 @@
       <list>
         <option value="CSS File" />
         <option value="spring-beans.schema" />
-        <option value="Jsp File" />
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -248,57 +321,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Address.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Diagnosis.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Doctorlicense.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Medicalpolicy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Visit.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Doctor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/RoleDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/SpringConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/UserDetailsImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/DiagnosisDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/MedicalpolicyServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allDoctor.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addDoctor.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editDoctor.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editVisit.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/SecurityWebApplicationInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_MainPanel.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_MainPanel.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/patSettings.ftl.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/patSettings.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_newPassword.ftl.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_MainPanel.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singUp.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_newPassword.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_patSettings.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_allVisit.ftl.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_allVisit.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allPatient.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editPatient.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addVisit.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Patient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/UserDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/AdministratorController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Role.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/TestDebug.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/WebSecurityConfig.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/PatientDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/PatientService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/PatientController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/PatientServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Doctor.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/UserDetailsImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/UserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Patient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/PatientDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addVisit.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_addVisit.ftl.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allDoctor.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allPatient.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_getFreeTimes.ftl.html" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singUp.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_patSettings.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_newPassword.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editDoctor.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editPatient.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addPatient.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/AdministratorController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_MainPanel.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/AddDoctorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/UserDaoImpl.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addDoctor.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/TestDebug.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/SpringConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Visit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/VisitDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/VisitService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/VisitServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/VisitDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/PatientController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/WorkCalendar.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_addVisit.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/allstyle.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_allVisit.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/WebSecurityConfig.java" />
       </list>
     </option>
   </component>
@@ -333,18 +406,16 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="x" value="-1830" />
+    <option name="y" value="-25" />
+    <option name="width" value="1552" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -481,6 +552,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -490,7 +563,7 @@
     <property name="ToolWindowMessages.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559623600534" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560147719863" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="E:/dmrvalProject" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -512,6 +585,7 @@
       <recent name="Q:\diplooom\hospital\src\main\resources\static\css" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.dmrval.hospitalapp.trash" />
       <recent name="com.dmrval" />
       <recent name="com.dmrval.hospitalapp.entity" />
       <recent name="" />
@@ -549,7 +623,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WorkCalendar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dmrval.hospitalapp.entity.WorkCalendar" />
+      <module name="hospital" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dmrval.hospitalapp.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="addDoctor.ftl" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WEB-INF/views/addDoctor.ftl">
+      <method v="2" />
+    </configuration>
+    <configuration name="pat_addVisit.ftl" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WEB-INF/views/pat_addVisit.ftl">
       <method v="2" />
     </configuration>
     <configuration name="Tomcat " type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat " ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -626,12 +716,16 @@
     </configuration>
     <list>
       <item itemvalue="Application.TestDebug" />
+      <item itemvalue="Application.WorkCalendar" />
       <item itemvalue="JavaScript Debug.addDoctor.ftl" />
+      <item itemvalue="JavaScript Debug.pat_addVisit.ftl" />
       <item itemvalue="Tomcat Server.Tomcat " />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.TestDebug" />
+        <item itemvalue="Application.WorkCalendar" />
+        <item itemvalue="JavaScript Debug.pat_addVisit.ftl" />
         <item itemvalue="JavaScript Debug.addDoctor.ftl" />
       </list>
     </recent_temporary>
@@ -668,12 +762,14 @@
       <workItem from="1559036170098" duration="19275000" />
       <workItem from="1559122457879" duration="33289000" />
       <workItem from="1559276283711" duration="52256000" />
-      <workItem from="1559540796657" duration="19916000" />
+      <workItem from="1559540796657" duration="27411000" />
+      <workItem from="1559640744520" duration="72316000" />
+      <workItem from="1560007340198" duration="17399000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="553808000" />
+    <option name="totallyTimeSpent" value="651018000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -688,19 +784,19 @@
     <frame x="-1928" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7144341" visible="true" weight="0.18283582" />
-      <window_info id="Structure" order="1" sideWeight="0.28428352" side_tool="true" weight="0.28281853" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.71339566" visible="true" weight="0.16471216" />
+      <window_info id="Structure" order="1" sideWeight="0.28556594" side_tool="true" weight="0.18283582" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.28556594" side_tool="true" weight="0.15831557" />
-      <window_info id="Web" order="7" sideWeight="0.28428352" side_tool="true" weight="0.36872587" />
-      <window_info id="Persistence" order="8" sideWeight="0.2858661" side_tool="true" weight="0.15671642" />
+      <window_info id="Favorites" order="6" sideWeight="0.28556594" side_tool="true" weight="0.18283582" />
+      <window_info id="Web" order="7" sideWeight="0.28556594" side_tool="true" weight="0.18283582" />
+      <window_info id="Persistence" order="8" sideWeight="0.28660437" side_tool="true" weight="0.18496802" />
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32917964" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.27417642" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.36863968" />
+      <window_info anchor="bottom" x="3" y="537" width="1910" height="537" id="Debug" order="3" sideWeight="0.49946696" type="FLOATING" weight="0.36863968" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32917964" />
@@ -709,60 +805,63 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32917964" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.35721704" />
-      <window_info anchor="bottom" x="-1340" y="489" width="940" height="418" id="Messages" order="12" sideWeight="0.50053304" side_tool="true" weight="0.33333334" />
+      <window_info anchor="bottom" x="-1340" y="489" width="940" height="418" id="Messages" order="12" sideWeight="0.5010661" side_tool="true" weight="0.22637591" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32917964" />
       <window_info anchor="bottom" id="Database Changes" order="14" sideWeight="0.49946696" weight="0.22741432" />
       <window_info anchor="bottom" id="Version Control" order="15" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.32917964" />
-      <window_info active="true" anchor="bottom" auto_hide="true" x="16" y="195" width="1853" height="876" id="Run" order="17" sideWeight="0.49946696" type="FLOATING" visible="true" weight="0.386059" />
+      <window_info anchor="bottom" x="10" y="387" width="1895" height="576" id="Run" order="17" sideWeight="0.4989339" visible="true" weight="0.3800623" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.1380597" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" weight="0.3291506" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.1977612" />
+      <window_info anchor="right" id="Database" order="6" sideWeight="0.46556887" weight="0.12260128" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.3291506" />
+      <window_info anchor="right" x="-1069" y="420" width="624" height="484" id="Documentation" order="10" sideWeight="0.53443116" side_tool="true" type="FLOATING" weight="0.12260128" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7893536" weight="0.26061776" />
-      <window_info id="Structure" order="1" sideWeight="0.21052632" side_tool="true" weight="0.3127413" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.71339566" visible="true" weight="0.16471216" />
+      <window_info id="Structure" order="1" sideWeight="0.28556594" side_tool="true" weight="0.18283582" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.21064639" side_tool="true" weight="0.2442085" />
-      <window_info id="Web" order="7" sideWeight="0.21052632" side_tool="true" weight="0.3127413" />
-      <window_info id="Persistence" order="8" sideWeight="0.21216848" side_tool="true" weight="0.3127413" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.2751817" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.27897948" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.33222407" />
+      <window_info id="Favorites" order="6" sideWeight="0.28556594" side_tool="true" weight="0.18283582" />
+      <window_info id="Web" order="7" sideWeight="0.28556594" side_tool="true" weight="0.18283582" />
+      <window_info id="Persistence" order="8" sideWeight="0.28660437" side_tool="true" weight="0.18496802" />
+      <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32917964" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.27417642" />
+      <window_info anchor="bottom" x="3" y="537" width="1910" height="537" id="Debug" order="3" sideWeight="0.49946696" type="FLOATING" weight="0.36863968" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32917964" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.24318658" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.24299066" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.124610595" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32917964" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.35721704" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.29062673" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" x="-1340" y="489" width="940" height="418" id="Messages" order="12" sideWeight="0.5010661" side_tool="true" weight="0.30633438" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32917964" />
+      <window_info anchor="bottom" id="Database Changes" order="14" sideWeight="0.49946696" weight="0.22741432" />
       <window_info anchor="bottom" id="Version Control" order="15" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.32917964" />
+      <window_info anchor="bottom" x="10" y="387" width="1895" height="576" id="Run" order="17" sideWeight="0.4989339" visible="true" weight="0.27102804" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.1380597" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" weight="0.3291506" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.25482625" />
+      <window_info anchor="right" id="Database" order="6" sideWeight="0.46556887" weight="0.12260128" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.3291506" />
+      <window_info anchor="right" x="543" y="407" width="624" height="484" id="Documentation" order="10" sideWeight="0.53443116" side_tool="true" type="FLOATING" weight="0.12260128" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -780,79 +879,243 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/VisitDaoImpl.java">
+    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/role/index/role_pkey">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="17">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/MedicalpolicyDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_newPassword.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="102">
+          <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/DoctorDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_visit.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-241">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="153">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/DoctorlicenseDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allDoctor.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="51" column="18" lean-forward="true" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        <state relative-caret-position="289">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_patSettings.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="221">
+          <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/UserDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="58" selection-start-line="58" selection-end-line="59" />
+        <state relative-caret-position="527">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/SingUpService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/AddDoctorController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_MainPanel.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="170">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/VisitService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/RoleDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_MainPanel.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state relative-caret-position="391">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="762">
+          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.sql/java/sql/Timestamp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2272">
+          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/patient">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allVisit.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/Calendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="550" column="31" lean-forward="true" selection-start-line="550" selection-start-column="31" selection-end-line="550" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/doctor">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/usr">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addDoctor.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addPatient.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/visit">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/AdministratorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="122" column="32" lean-forward="true" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4094#4095#0" expanded="true" />
+            <element signature="e#4128#4129#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singUp.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allPatient.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="687">
+          <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/role">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editPatient.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-security.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editDoctor.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Doctor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="102" column="37" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/TestDebug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/DiagnosisServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/DiagnosisService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/SpringConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+          <folding>
+            <element signature="e#2830#2831#0" expanded="true" />
+            <element signature="e#2880#2881#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
@@ -863,45 +1126,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/WebConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Visit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="493">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+          <folding>
+            <element signature="e#887#888#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/SpringConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addVisit.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
+        <state relative-caret-position="204">
+          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/address">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/diagnosis">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Diagnosis.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editVisit.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="289">
+          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/TestDebug.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/VisitServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="e#1578#1579#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/VisitDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/VisitDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3999#4000#0" expanded="true" />
+            <element signature="e#4034#4035#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/VisitService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/WorkCalendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#1268#1269#0" expanded="true" />
+            <element signature="e#1303#1304#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/PatientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/allstyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="164" column="68" lean-forward="true" selection-start-line="164" selection-start-column="68" selection-end-line="164" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_addVisit.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_allVisit.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="369" column="42" selection-start-line="369" selection-start-column="42" selection-end-line="369" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -917,381 +1258,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Visit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="105" column="67" lean-forward="true" selection-start-line="105" selection-start-column="67" selection-end-line="105" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Patient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="146" column="47" lean-forward="true" selection-start-line="146" selection-start-column="47" selection-end-line="146" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/a73ab2e9-4062-4bc4-a69a-9ca8bc295020.SCHEMA:postgres.public">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>a73ab2e9-4062-4bc4-a69a-9ca8bc295020.SCHEMA:postgres.public</OriginalElement>
-          <nodes>
-            <node x="704.0833333333333" y="288.5">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.user_role</node>
-            <node x="382.0" y="44.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.medicalpolicy</node>
-            <node x="387.5" y="478.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.visit</node>
-            <node x="198.0" y="0.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.address</node>
-            <node x="383.5" y="233.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.patient</node>
-            <node x="856.0833333333333" y="288.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.diagnosis</node>
-            <node x="114.3166666666666" y="222.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.doctor</node>
-            <node x="0.0" y="44.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.doctorlicense</node>
-            <node x="749.0" y="44.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.role</node>
-            <node x="580.0" y="22.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.usr</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.doctor" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.usr">
-              <point x="65.0" y="-103.0" />
-              <point x="276.8166666666666" y="192.0" />
-              <point x="604.8333333333334" y="192.0" />
-              <point x="-49.66666666666663" y="59.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.doctor" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.doctorlicense">
-              <point x="-65.0" y="-103.0" />
-              <point x="146.8166666666666" y="202.0" />
-              <point x="89.0" y="202.0" />
-              <point x="0.0" y="37.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.patient" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.medicalpolicy">
-              <point x="0.0" y="-92.0" />
-              <point x="0.0" y="37.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.patient" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.address">
-              <point x="-58.333333333333314" y="-92.0" />
-              <point x="412.66666666666663" y="182.0" />
-              <point x="321.0" y="182.0" />
-              <point x="41.0" y="81.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.visit" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.diagnosis">
-              <point x="55.666666666666686" y="-70.0" />
-              <point x="526.6666666666666" y="453.0" />
-              <point x="966.5833333333333" y="453.0" />
-              <point x="0.0" y="37.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.doctor" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.address">
-              <point x="0.0" y="-103.0" />
-              <point x="211.8166666666666" y="202.0" />
-              <point x="239.0" y="202.0" />
-              <point x="-41.0" y="81.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.visit" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.doctor">
-              <point x="-55.66666666666663" y="-70.0" />
-              <point x="415.33333333333337" y="453.0" />
-              <point x="211.8166666666666" y="453.0" />
-              <point x="0.0" y="103.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.user_role" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.usr">
-              <point x="-33.0" y="-36.5" />
-              <point x="737.0833333333333" y="202.0" />
-              <point x="704.1666666666666" y="202.0" />
-              <point x="49.66666666666663" y="59.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.patient" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.usr">
-              <point x="58.333333333333314" y="-92.0" />
-              <point x="529.3333333333333" y="202.0" />
-              <point x="654.5" y="202.0" />
-              <point x="0.0" y="59.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.visit" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.patient">
-              <point x="0.0" y="-70.0" />
-              <point x="0.0" y="92.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.user_role" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.role">
-              <point x="33.0" y="-36.5" />
-              <point x="803.0833333333333" y="202.0" />
-              <point x="836.0" y="202.0" />
-              <point x="0.0" y="37.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.9608378870673953" x="239.781990521327" y="84.19620853080565" />
-          <SelectedNodes>
-            <node>a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.usr</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/visit">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/PatientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1358#1359#0" expanded="true" />
-            <element signature="e#1395#1396#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="230" column="32" lean-forward="true" selection-start-line="230" selection-start-column="32" selection-end-line="230" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="46" lean-forward="true" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1134#1135#0" expanded="true" />
-            <element signature="e#1171#1172#0" expanded="true" />
-            <element signature="e#1235#1236#0" expanded="true" />
-            <element signature="e#1266#1267#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/UserDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/UserDetailsImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
-            <element signature="e#1280#1281#0" expanded="true" />
-            <element signature="e#1318#1319#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/RoleSevice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/DoctorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/DoctorServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/doctor">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/medicalpolicy">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/user_role">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="ctid" enabled="false" />
-          </column-attributes>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/usr">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/role">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/patient">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allPatient.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editPatient.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/RoleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/PatientServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#857#858#0" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
-            <element signature="e#1004#1005#0" expanded="true" />
-            <element signature="e#1072#1073#0" expanded="true" />
-            <element signature="e#1130#1131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/PatientDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/PatientService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/AdministratorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
-          <folding>
-            <element signature="e#3067#3068#0" expanded="true" />
-            <element signature="e#3102#3103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/PatientDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="46" column="62" lean-forward="true" selection-start-line="46" selection-start-column="62" selection-end-line="46" selection-end-column="62" />
-          <folding>
-            <element signature="e#3355#3356#0" expanded="true" />
-          </folding>
+          <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
         </state>
       </provider>
     </entry>

@@ -32,7 +32,6 @@ public class UserDaoImpl implements UserDao {
                 sessionFactory.getCurrentSession().getTransaction().commit();
                 sessionFactory.getCurrentSession().close();
                 return s;
-
             }
         }
         sessionFactory.getCurrentSession().getTransaction().commit();
@@ -75,5 +74,6 @@ public class UserDaoImpl implements UserDao {
         User temp = sessionFactory.getCurrentSession().get(User.class, id);
         return temp;
     }
+
     
 }

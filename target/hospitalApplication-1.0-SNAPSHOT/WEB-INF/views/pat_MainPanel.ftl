@@ -10,7 +10,7 @@
 <body>
 <div class="forCenterButtons">
     <div>
-        <button class="button21" onclick="location.href = '/patient/patSettings'">Заполнить/обновить данные</button>
+        <button class="button21" onclick="location.href = '/patient/patSettings'">Редактировать профиль</button>
         <button class="button21" onclick="location.href = '/patient/newPassword'">Изменить пароль</button>
     </div>
     <br>

@@ -166,7 +166,7 @@ public class Doctor {
         this.address = address;
     }
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "usr", referencedColumnName = "usrid")
     public User getUser() {
         return user;

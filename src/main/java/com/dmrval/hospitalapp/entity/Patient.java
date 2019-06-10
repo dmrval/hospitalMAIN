@@ -9,12 +9,33 @@ import java.util.Date;
 @Entity
 @Table(name = "patient")
 public class Patient {
+    @Id
+    @Column(name = "patientid", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int patientid;
+
+    @Basic
+    @Column(name = "firstname", nullable = false, length = 255)
     private String firstname;
+
+    @Basic
+    @Column(name = "lastname", nullable = false, length = 255)
     private String lastname;
+
+    @Basic
+    @Column(name = "birthday")
     private Date birthday;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address", referencedColumnName = "addressid")
     private Address address;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "medicalpolicy", referencedColumnName = "medicalpolicyid", nullable = false)
     private Medicalpolicy medicalpolicy;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "usr", referencedColumnName = "usrid", nullable = false)
     private User user;
 
 
@@ -44,9 +65,14 @@ public class Patient {
         this.medicalpolicy = medicalpolicy;
     }
 
-    @Id
-    @Column(name = "patientid", nullable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Patient(String firstname, String lastname, Medicalpolicy medicalpolicy, User user) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.medicalpolicy = medicalpolicy;
+        this.user = user;
+    }
+
+
     public int getPatientid() {
         return patientid;
     }
@@ -55,8 +81,7 @@ public class Patient {
         this.patientid = patientid;
     }
 
-    @Basic
-    @Column(name = "firstname", nullable = false, length = 255)
+
     public String getFirstname() {
         return firstname;
     }
@@ -65,8 +90,7 @@ public class Patient {
         this.firstname = firstname;
     }
 
-    @Basic
-    @Column(name = "lastname", nullable = false, length = 255)
+
     public String getLastname() {
         return lastname;
     }
@@ -76,8 +100,7 @@ public class Patient {
         this.lastname = lastname;
     }
 
-    @Basic
-    @Column(name = "birthday", nullable = false)
+
     public Date getBirthday() {
         return birthday;
     }
@@ -110,8 +133,7 @@ public class Patient {
         return result;
     }
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "address", referencedColumnName = "addressid", nullable = false)
+
     public Address getAddress() {
         return address;
     }
@@ -121,9 +143,6 @@ public class Patient {
     }
 
 
-
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "medicalpolicy", referencedColumnName = "medicalpolicyid", nullable = false)
     public Medicalpolicy getMedicalpolicy() {
         return medicalpolicy;
     }
@@ -132,8 +151,7 @@ public class Patient {
         this.medicalpolicy = medicalpolicy;
     }
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "usr", referencedColumnName = "usrid")
+
     public User getUser() {
         return user;
     }

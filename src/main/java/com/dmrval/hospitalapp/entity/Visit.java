@@ -30,6 +30,10 @@ public class Visit {
     public Visit() {
     }
 
+    public Visit(Timestamp dayofvisit) {
+        this.dayofvisit = dayofvisit;
+    }
+
     @Id
     @Column(name = "visitid", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)

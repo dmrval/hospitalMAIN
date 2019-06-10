@@ -10,15 +10,16 @@
 <body>
 <div class="form-style-2">
     <div class="form-style-2-heading">
-        <h2>Зарегистрируйтесь!</h2>
+        <h2 class="forCenterButtons">Зарегистрируйтесь!</h2>
     </div>
-    <br>
     <#if userIsExist??>
         <div class="errlogin_password">Пользователь с таким именем уже существует</div>
+        <br>
     </#if>
 
     <#if notdublicate??>
         <div class="errlogin_password">Введенные пароли не совпадают</div>
+        <br>
     </#if>
     <form method="post" action="/signUp" class="forCenterButtons">
         <label for="login">Фамилия
@@ -67,7 +68,7 @@
 
         <br>
         <div>
-            <input  class="button21" type="submit" value="Зарегестрировать">
+            <input class="button21" type="submit" value="Зарегистрироваться">
         </div>
 
         <br>

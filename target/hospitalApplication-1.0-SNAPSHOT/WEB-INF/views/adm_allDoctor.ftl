@@ -38,7 +38,7 @@
         <td><a href="/administrator/allDoctor/delete/${doctor.getDoctorid()}">УДАЛИТЬ</a></td>
     </tr>
     <#else>
-    <p>No Patients
+    <p>Докторов в базе нет
         </#list>
 </table>
 </body>

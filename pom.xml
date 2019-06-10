@@ -78,7 +78,6 @@
             <version>2.0.6.RELEASE</version>
             <scope>compile</scope>
         </dependency>
-        <!--!!!!!!!!!DONT TOUCH UPPER SUKA!!!!!!!!!!!!!!!!!!!!!!-->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
@@ -111,6 +110,8 @@
             <artifactId>spring-boot-starter-security</artifactId>
             <version>RELEASE</version>
         </dependency>
+        <!--!!!!!!!!!DONT TOUCH UPPER SUKA!!!!!!!!!!!!!!!!!!!!!!-->
+
     </dependencies>
 
 

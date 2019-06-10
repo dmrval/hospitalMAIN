@@ -41,33 +41,30 @@
         <p>Логин</p>
         <input id="login" title="login" name="login" type="text" required>
     </div>
+    <br>
     <div>
-        <p>Фамилия</p>
+        <label>Фамилия</label>
         <input id="firstname" title="Firstname" name="firstname" type="text" required>
-    </div>
-    <div>
-        <p>Имя</p>
+        <label>Имя</label>
         <input id="lastname" title="Lastname" name="lastname" type="text" required>
     </div>
     <div>
         <h3>Домашний адресс</h3>
-        <p>Страна</p>
+        <label>Страна</label>
         <input id="country" title="Country" name="country" type="text" required>
-    </div>
-    <div>
-        <p>Город</p>
+        <label>Город</label>
         <input id="city" title="City" name="city" type="text" required>
-    </div>
-    <div>
-        <p>Улица</p>
+        <label>Улица</label>
         <input id="street" title="Street" name="street" type="text" required>
     </div>
+    <br>
     <div>
-        <p>Номер дома</p>
+        <label>Номер дома</label>
         <input id="house" title="House_number" name="house" type="number" required max="2000">
-        <p>Номер квартиры</p>
+        <label>Номер квартиры</label>
         <input id="flat" title="flat_number" name="flat" type="number" required max="2000">
     </div>
+    <br>
     <div>
         <h3>Номер медицинского полиса</h3>
         <input id="medicalpolicy" name="medicalpolicy" max="999999999999999999" min="0" type="number" required

@@ -1,16 +1,23 @@
 package com.dmrval.hospitalapp.dao;
 
+import com.dmrval.hospitalapp.entity.Doctor;
+import com.dmrval.hospitalapp.entity.Patient;
 import com.dmrval.hospitalapp.entity.Visit;
+import com.dmrval.hospitalapp.entity.WorkCalendar;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.persistence.criteria.CriteriaQuery;
 import javax.transaction.Transactional;
+import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 public class VisitDaoImpl implements VisitDao {
     @Autowired
-    SessionFactory sessionFactory;
+    private SessionFactory sessionFactory;
 
+    private WorkCalendar workCalendar;
 
     public VisitDaoImpl() {
     }
@@ -53,6 +60,42 @@ public class VisitDaoImpl implements VisitDao {
     }
 
     @Override
+    public List<Visit> getAllVisit_ByOnePatient(Patient patient) {
+        List<Visit> allVisits = getAllVisit();
+        List<Visit> patientVisits = new ArrayList<>();
+        for (Visit v : allVisits
+        ) {
+            if (v.getPatient().getUser().getLogin().equals(patient.getUser().getLogin())) {
+                patientVisits.add(v);
+            }
+        }
+
+        return patientVisits;
+    }
+
+    @Override
+    public List<Timestamp> getTimestampByDoctor(Doctor doctor) {
+        List<Visit> allVisits = getAllVisit();
+        List<Visit> doctorVisits = new ArrayList<>();
+        for (Visit curr : allVisits) {
+            if (curr.getDoctor().getUser().getLogin().equals(doctor.getUser().getLogin())) {
+                doctorVisits.add(curr);
+            }
+        }
+        List<Timestamp> workCal = new WorkCalendar().getWorkCalendar();
+        for (Visit curr : doctorVisits) {
+            for (int i = 0; i < workCal.size(); i++) {
+                if (curr.getDayofvisit().compareTo(workCal.get(i)) == 0) {
+                    workCal.remove(i);
+                }
+            }
+        }
+        workCalendar = new WorkCalendar(workCal);
+        return workCal;
+    }
+
+
+    @Override
     public List<Visit> getAllVisit() {
         sessionFactory.getCurrentSession().beginTransaction();
         CriteriaQuery<Visit> criteriaQuery = sessionFactory.getCurrentSession().getCriteriaBuilder().createQuery(Visit.class);
@@ -64,11 +107,14 @@ public class VisitDaoImpl implements VisitDao {
     }
 
 
+
     //PRIVATE only this class use=))
     private Visit getVisitPrivate(int id) {
         Visit temp = sessionFactory.getCurrentSession().get(Visit.class, id);
         return temp;
     }
 
-
+    public WorkCalendar getWorkCalendar() {
+        return workCalendar;
+    }
 }

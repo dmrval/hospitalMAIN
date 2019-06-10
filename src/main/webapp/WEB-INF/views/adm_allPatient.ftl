@@ -45,7 +45,7 @@
     </tr>
     <#else>
 
-    <p>No Patients
+    <p>Пациентов в базе нет
 
         </#list>
 </table>

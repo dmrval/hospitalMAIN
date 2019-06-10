@@ -9,17 +9,16 @@
 </head>
 <body>
 
-<h2>Введите новый пароль</h2>
-<br>
+<h2 class="forCenterButtons">Введите новый пароль</h2>
 <#if notdublicate??>
     <div class="errlogin_password">Введенные пароли не совпадают</div>
+    <br>
 </#if>
 <#if wrongoldpass??>
     <div class="errlogin_password">Вы ввели не верный пароль</div>
+    <br>
 </#if>
-
 <form method="post" action="/patNewPassword" class="forCenterButtons">
-
     <label for="password">Введите старый пароль
         <input class="input-field" type="password" id="oldpass" name="oldpass" required>
         <br>
@@ -39,7 +38,15 @@
     </label>
 
     <br>
-    <input type="submit" value="Обновить пароль">
+
+    <button class="button21" type="submit" value="Обновить пароль">Обновить пароль</button>
 </form>
+
+<br>
+
+<div class="forCenterButtons">
+    <button class="button21" onclick="location.href = '/patient'">Главная страница</button>
+</div>
+
 </body>
 </html>

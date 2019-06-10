@@ -18,47 +18,40 @@
                pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"
                value="${doctor.give_BirsdayString_for_editPost()}"/>
     </div>
+    <br>
     <div>
-        <p>Фамилия</p>
+        <label>Фамилия </label>
         <input id="firstname" title="Firstname" name="firstname" type="text" value="${doctor.getFirstname()}"
                required/>
-    </div>
-    <div>
-        <p>Имя</p>
+        <label>Имя </label>
         <input id="lastname" title="Lastname" name="lastname" type="text" value="${doctor.getLastname()}" required/>
     </div>
     <div>
         <p>Специализация</p>
         <input id="specialization" title="specialization" name="specialization" type="text"
-               value="${doctor.getSpecialization()}"
-               required/>
+               value="${doctor.getSpecialization()}" required/>
     </div>
     <h3>Номер лицензии</h3>
     <input id="doctorlicense" name="doctorlicense" type="number"
            value="${doctor.giveDoctorlicense_Number()}" max="999999999999999999" min="0" required path="title"/>
     <h3>Домашний адресс</h3>
     <div>
-        <p>Страна</p>
+        <label>Страна </label>
         <input id="country" title="Country" name="country" type="text" value="${doctor.getAddress().getCountry()}"
                required>
-    </div>
-    <div>
-        <p>Город</p>
+        <label>Город </label>
         <input id="city" title="City" name="city" type="text" value="${doctor.getAddress().getCity()}" required>
-    </div>
-    <div>
-        <p>Улица</p>
+        <label>Улица </label>
         <input id="street" title="Street" name="street" type="text" value="${doctor.getAddress().getStreet()}"
                required>
     </div>
+    <br>
     <div>
-        <p>Номер дома</p>
+        <label>Номер дома </label>
         <input id="house" title="House_number" name="house" type="number" value="${doctor.getAddress().getHouse()}"
-               required
-               max="2000">
-        <p>Номер квартиры</p>
-        <input id="flat" title="flat_number" name="flat" type="number" value="${doctor.getAddress().getFlat()}"
-               required
+               required max="2000">
+        <label>Номер квартиры </label>
+        <input id="flat" title="flat_number" name="flat" type="number" value="${doctor.getAddress().getFlat()}" required
                max="2000">
     </div>
     <br>
