@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.sql.Date;
-import java.sql.Time;
 import java.sql.Timestamp;
-import java.util.Calendar;
 import java.util.List;
 
 
@@ -82,6 +80,7 @@ public class MainController {
     @RequestMapping(value = "/addDoctorPost", method = RequestMethod.POST)
     public String addDoctorPost(
             @RequestParam("birthday") String birthday,
+            @RequestParam("login") String login,
             @RequestParam("firstname") String firstname,
             @RequestParam("lastname") String lastname,
             @RequestParam("specialization") String specialization,
@@ -95,7 +94,9 @@ public class MainController {
     ) {
         Doctorlicense lic_tmp = new Doctorlicense(Long.parseLong(licensenumber));
         Address address_tmp = new Address(country, city, street, Integer.parseInt(house), Integer.parseInt(flat));
-        Doctor doctor = new Doctor(birthday, firstname, lastname, specialization, address_tmp, lic_tmp);
+        User user = new User(login, passwordEncoder.encode("123456"), roleSevice.findById(9));
+        userService.saveUser(user);
+        Doctor doctor = new Doctor(birthday, firstname, lastname, specialization, address_tmp, lic_tmp,user);
         doctorService.addDoctor(doctor);
         return "redirect:/administrator/allDoctor/";
     }
@@ -367,10 +368,72 @@ public class MainController {
             @RequestParam String doctor
     ) {
         Timestamp t = visitService.getWorkCalendar().getWorkCalendar().get(Integer.parseInt(currTime));
-        Visit visit = new Visit(t,doctorService.getDoctor(Integer.parseInt(doctor)), patientService.getPatientbyLogin(principal.getName()));
+        Visit visit = new Visit(t, doctorService.getDoctor(Integer.parseInt(doctor)), patientService.getPatientbyLogin(principal.getName()));
         visitService.addVisit(visit);
         return "redirect:/patient/allVisits";
     }
+
+    //DOCTORCONTROLLER
+
+    @PostMapping("/docNewPassword")
+    public String signUpPostForDoc(
+            @RequestParam("password") String password,
+            @RequestParam("password2") String password2,
+            @RequestParam("oldpass") String oldpass,
+            ModelMap model,
+            Principal principal
+    ) {
+        Doctor doctor = doctorService.getDoctorbyLogin(principal.getName());
+        String currPass = passwordEncoder.encode(doctor.getUser().getPassword());
+        System.out.println(currPass);
+        if (!password.equals(password2)) {
+            model.addAttribute("notdublicate", true);
+            return "doc_newPassword";
+        }
+        if (!passwordEncoder.matches(oldpass, doctor.getUser().getPassword())) {
+            model.addAttribute("wrongoldpass", true);
+            return "doc_newPassword";
+        }
+        doctor.getUser().setPassword(passwordEncoder.encode(password));
+        userService.updateUser(doctor.getUser());
+        return "redirect:/login";
+    }
+
+    @RequestMapping(value = "/doc_docSettings", method = RequestMethod.POST)
+    public String editDoctorbyDoc(
+            @RequestParam("doctorid") String doctorid,
+            @RequestParam("birthday") Date birthday,
+            @RequestParam("firstname") String firstname,
+            @RequestParam("lastname") String lastname,
+            @RequestParam("specialization") String specialization,
+            @RequestParam("doctorlicense") String licensenumber,
+            @RequestParam("country") String country,
+            @RequestParam("city") String city,
+            @RequestParam("street") String street,
+            @RequestParam("house") String house,
+            @RequestParam("flat") String flat) {
+        Doctor tmp;
+        tmp = doctorService.getDoctor(Integer.parseInt(doctorid));
+        try {
+            tmp.setBirthday(birthday);
+        } catch (Exception x) {
+            x.toString();
+            System.err.println("Не правильный формат даты. Дата не изменена");
+        }
+        tmp.setLastname(lastname);
+        tmp.setFirstname(firstname);
+        tmp.getDoctorlicense().setNumber(Long.parseLong(licensenumber));
+        tmp.getAddress().setCountry(country);
+        tmp.setSpecialization(specialization);
+        tmp.getAddress().setCity(city);
+        tmp.getAddress().setStreet(street);
+        tmp.getAddress().setHouse(Integer.parseInt(house));
+        tmp.getAddress().setFlat(Integer.parseInt(flat));
+        doctorService.updateDoctor(tmp);
+        return "redirect:/doctor";
+    }
+
+
 }
 
 

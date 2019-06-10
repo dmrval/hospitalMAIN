@@ -1,15 +1,14 @@
 package com.dmrval.hospitalapp.controller;
 
-import com.dmrval.hospitalapp.entity.Doctor;
-import com.dmrval.hospitalapp.entity.Patient;
-import com.dmrval.hospitalapp.entity.State;
-import com.dmrval.hospitalapp.entity.Visit;
+import com.dmrval.hospitalapp.entity.*;
 import com.dmrval.hospitalapp.service.DoctorService;
 import com.dmrval.hospitalapp.service.PatientService;
+import com.dmrval.hospitalapp.service.UserService;
 import com.dmrval.hospitalapp.service.VisitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,6 +24,8 @@ public class AdministratorController {
 
     @Autowired
     private DoctorService doctorService;
+    @Autowired
+    private UserService userService;
 
     //Mainpanel
     @GetMapping("")
@@ -96,7 +97,14 @@ public class AdministratorController {
     }
 
     @GetMapping("/allPatient/delete/{id}")
-    public String deletePatient(@PathVariable("id") int id) {
+    public String deletePatient(@PathVariable("id") int id, Model model) {
+        Patient tmp = patientService.getPatient(id);
+        if (visitService.getAllVisit_ByOnePatient(tmp).size() != 0) {
+            model.addAttribute("notEmpty", true);
+            List<Patient> result = patientService.getAllPatient();
+            model.addAttribute("lstpatient", result);
+            return "adm_allPatient";
+        }
         Patient r = patientService.getPatient(id);
         r.getUser().setState(State.NOTACTIVE);
         patientService.updatePatient(r);
@@ -125,7 +133,17 @@ public class AdministratorController {
     }
 
     @GetMapping("/allDoctor/delete/{id}")
-    public String deleteDoctor(@PathVariable("id") int id) {
+    public String deleteDoctor(@PathVariable("id") int id, Model model) {
+        Doctor tmp = doctorService.getDoctor(id);
+        if (visitService.getTimestampByDoctor(tmp).size()!=0) {
+            model.addAttribute("notEmpty", true);
+            List<Doctor> result = doctorService.getAllDoctor();
+            model.addAttribute("lstdoctor", result);
+            return "adm_allDoctor";
+        }
+        User user = doctorService.getDoctor(id).getUser();
+        user.setState(State.NOTACTIVE);
+        userService.updateUser(user);
         doctorService.removeDoctor(id);
         return "redirect:/administrator/allDoctor";
     }

@@ -4,6 +4,7 @@ import com.dmrval.hospitalapp.entity.Doctor;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.transaction.Transactional;
 import java.util.List;
@@ -38,7 +39,8 @@ public class DoctorDaoImpl implements DoctorDao {
     @Transactional
     public void removeDoctor(int id) {
         sessionFactory.getCurrentSession().beginTransaction();
-        sessionFactory.getCurrentSession().delete(getDoctorPrivate(id));
+        Query query = sessionFactory.getCurrentSession().createQuery("delete from Doctor where doctorid=" + id);
+        query.executeUpdate();
         sessionFactory.getCurrentSession().getTransaction().commit();
         sessionFactory.getCurrentSession().close();
     }
@@ -64,9 +66,34 @@ public class DoctorDaoImpl implements DoctorDao {
         return list;
     }
 
+    @Override
+    public Doctor getDoctorbyLogin(String log) {
+        sessionFactory.getCurrentSession().beginTransaction();
+        List<Doctor> listPat = getAllDoctorPrivate();
+        Doctor result = new Doctor();
+        for (Doctor ds:listPat
+        ) {
+            if (ds.getUser().getLogin().equals(log)) {
+                result = ds;
+            }
+        }
+        sessionFactory.getCurrentSession().getTransaction().commit();
+        sessionFactory.getCurrentSession().close();
+        return result;
+    }
+
     //PRIVATE only this class use=))
     private Doctor getDoctorPrivate(int id) {
         Doctor temp = sessionFactory.getCurrentSession().get(Doctor.class, id);
         return temp;
     }
+
+    private List<Doctor> getAllDoctorPrivate() {
+        CriteriaQuery<Doctor> criteriaQuery = sessionFactory.getCurrentSession().getCriteriaBuilder().createQuery(Doctor.class);
+        criteriaQuery.from(Doctor.class);
+        List<Doctor> list = sessionFactory.getCurrentSession().createQuery(criteriaQuery).getResultList();
+        return list;
+    }
+
+
 }

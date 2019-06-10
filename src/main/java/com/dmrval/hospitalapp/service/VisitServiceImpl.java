@@ -54,6 +54,11 @@ public class VisitServiceImpl implements VisitService {
     }
 
     @Override
+    public List<Visit> getAllVisit_ByOneDoctor(Doctor doctor) {
+        return visitDao.getAllVisit_ByOneDoctor(doctor);
+    }
+
+    @Override
     public List<Timestamp> getTimestampByDoctor(Doctor doctor) {
         return visitDao.getTimestampByDoctor(doctor);
     }

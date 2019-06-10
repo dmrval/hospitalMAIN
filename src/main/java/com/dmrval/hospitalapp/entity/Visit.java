@@ -73,7 +73,7 @@ public class Visit {
     }
 
     @ManyToOne
-    @JoinColumn(name = "doctor", referencedColumnName = "doctorid", nullable = false)
+    @JoinColumn(name = "doctor", referencedColumnName = "doctorid")
     public Doctor getDoctor() {
         return doctor;
     }
@@ -83,7 +83,7 @@ public class Visit {
     }
 
     @ManyToOne
-    @JoinColumn(name = "patient", referencedColumnName = "patientid", nullable = false)
+    @JoinColumn(name = "patient", referencedColumnName = "patientid")
     public Patient getPatient() {
         return patient;
     }

@@ -13,6 +13,8 @@
     <div>
         <p>Дата рождения</p>
         <input id="birthday" title="Birthday" name="birthday" type="date" max="2004-12-12" min="1920-12-12" required>
+        <label>Логин </label>
+        <input id="login" title="login" name="login" type="text" required>
     </div>
     <br>
     <div>
@@ -37,7 +39,7 @@
         <input id="city" title="City" name="city" type="text" required>
         <label>Улица </label>
         <input id="street" title="Street" name="street" type="text" required>
-    </div${doctor.getDoctorid()}>
+    </div>
     <br>
     <div>
         <label>Номер дома </label>

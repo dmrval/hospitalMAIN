@@ -1,6 +1,7 @@
 package com.dmrval.hospitalapp.dao;
 
 import com.dmrval.hospitalapp.entity.Doctor;
+import com.dmrval.hospitalapp.entity.Patient;
 
 import java.util.List;
 
@@ -10,4 +11,6 @@ public interface DoctorDao {
     void updateDoctor(Doctor doctor);
     void removeDoctor(int id);
     Doctor getDoctor(int id);
+    Doctor getDoctorbyLogin(String log);
+
 }

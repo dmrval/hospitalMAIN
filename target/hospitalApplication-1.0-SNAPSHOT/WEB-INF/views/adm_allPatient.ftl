@@ -14,6 +14,10 @@
 
     <button class="button21" onclick="location.href = '/administrator/'">На главную страницу</button>
 </div>
+<#if notEmpty??>
+    <div class="errlogin_password">Нельзя удалить этого пациента, у него есть записи</div>
+    <br>
+</#if>
 <br>
 <table>
     <caption>Список пациентов</caption>

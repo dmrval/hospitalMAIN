@@ -29,6 +29,7 @@
 
         </#list>
 </table>
+<br>
 <div class="forCenterButtons">
     <button class="button21" onclick="location.href = '/patient'">Главная страница</button>
 </div>

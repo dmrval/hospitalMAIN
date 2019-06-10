@@ -21,6 +21,8 @@ public interface VisitDao {
 
     List<Visit> getAllVisit_ByOnePatient(Patient patient);
 
+    List<Visit> getAllVisit_ByOneDoctor(Doctor doctor);
+
     List<Timestamp> getTimestampByDoctor(Doctor doctor);
 
     WorkCalendar getWorkCalendar() ;

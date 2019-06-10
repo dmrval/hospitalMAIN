@@ -22,7 +22,7 @@ public class Doctor {
     }
 
     public Doctor(String birthday, String firstname, String lastname, String specialization,
-                  Address address, Doctorlicense doctorlicense) {
+                  Address address, Doctorlicense doctorlicense, User u) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.specialization = specialization;
@@ -36,6 +36,7 @@ public class Doctor {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+        user = u;
     }
 
     public Doctor(String birthday, String firstname, String lastname, String specialization, Doctorlicense doctorlicense) {

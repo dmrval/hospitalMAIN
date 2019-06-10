@@ -34,4 +34,9 @@ public class DoctorServiceImpl implements DoctorService {
     public Doctor getDoctor(int id) {
         return DoctorDao.getDoctor(id);
     }
+
+    @Override
+    public Doctor getDoctorbyLogin(String log) {
+        return DoctorDao.getDoctorbyLogin(log);
+    }
 }

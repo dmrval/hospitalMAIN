@@ -15,5 +15,6 @@ public interface UserService {
 
     public boolean userLoginIsExist(User u);
 
+    void updateUser(User user);
 
 }

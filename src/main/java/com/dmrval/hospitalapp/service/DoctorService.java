@@ -10,4 +10,6 @@ public interface DoctorService {
     void updateDoctor(Doctor doctor);
     void removeDoctor(int id);
     Doctor getDoctor(int id);
+    Doctor getDoctorbyLogin(String log);
+
 }

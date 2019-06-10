@@ -69,6 +69,14 @@ public class UserDaoImpl implements UserDao {
         sessionFactory.getCurrentSession().close();
     }
 
+    @Override
+    public void updateUser(User user) {
+        sessionFactory.getCurrentSession().beginTransaction();
+        sessionFactory.getCurrentSession().update(user);
+        sessionFactory.getCurrentSession().getTransaction().commit();
+        sessionFactory.getCurrentSession().close();
+    }
+
     //PRIVATE only this class use=))
     private User getUserPrivate(int id) {
         User temp = sessionFactory.getCurrentSession().get(User.class, id);

@@ -74,6 +74,20 @@ public class VisitDaoImpl implements VisitDao {
     }
 
     @Override
+    public List<Visit> getAllVisit_ByOneDoctor(Doctor doctor) {
+        List<Visit> allVisits = getAllVisit();
+        List<Visit> doctorVisits = new ArrayList<>();
+        for (Visit v : allVisits
+        ) {
+            if (v.getDoctor().getUser().getLogin().equals(doctor.getUser().getLogin())) {
+                doctorVisits.add(v);
+            }
+        }
+
+        return doctorVisits;
+    }
+
+    @Override
     public List<Timestamp> getTimestampByDoctor(Doctor doctor) {
         List<Visit> allVisits = getAllVisit();
         List<Visit> doctorVisits = new ArrayList<>();
