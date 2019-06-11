@@ -3,9 +3,7 @@ package com.dmrval.hospitalapp.service;
 import com.dmrval.hospitalapp.dao.PatientDao;
 import com.dmrval.hospitalapp.entity.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
-import java.security.Principal;
 import java.util.List;
 
 public class PatientServiceImpl implements PatientService {

@@ -1,6 +1,5 @@
 package com.dmrval.hospitalapp.controller;
 
-import com.dmrval.hospitalapp.entity.Visit;
 import com.dmrval.hospitalapp.service.DoctorService;
 import com.dmrval.hospitalapp.service.PatientService;
 import com.dmrval.hospitalapp.service.VisitService;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.security.Principal;
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller

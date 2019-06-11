@@ -1,7 +1,6 @@
 package com.dmrval.hospitalapp.dao;
 
 import com.dmrval.hospitalapp.entity.Doctor;
-import com.dmrval.hospitalapp.entity.Patient;
 
 import java.util.List;
 

@@ -2,7 +2,6 @@ package com.dmrval.hospitalapp.entity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 @Entity

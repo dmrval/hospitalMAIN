@@ -1,6 +1,5 @@
 package com.dmrval.hospitalapp.dao;
 
-import com.dmrval.hospitalapp.entity.Role;
 import com.dmrval.hospitalapp.entity.User;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.transaction.Transactional;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoImpl implements UserDao {

@@ -1,6 +1,5 @@
 package com.dmrval.hospitalapp.config;
 
-//import com.dmrval.hospitalapp.service.UserDetailsServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;

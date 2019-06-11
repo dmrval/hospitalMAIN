@@ -2,15 +2,12 @@ package com.dmrval.hospitalapp.config;
 
 import com.dmrval.hospitalapp.dao.*;
 import com.dmrval.hospitalapp.service.*;
-//import com.dmrval.hospitalapp.validator.UserValidator;
 import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import java.sql.Timestamp;
 
 
 @Configuration

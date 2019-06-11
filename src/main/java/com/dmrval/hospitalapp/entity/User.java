@@ -1,14 +1,7 @@
 package com.dmrval.hospitalapp.entity;
 
-import com.dmrval.hospitalapp.service.RoleSevice;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "usr")
