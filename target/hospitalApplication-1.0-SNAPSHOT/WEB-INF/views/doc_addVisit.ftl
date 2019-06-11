@@ -10,8 +10,8 @@
 <body>
 <h2 class="forCenterButtons">Выберите пациента</h2>
 <#if calendarDay??>
-    <form class="forCenterButtons" name="patAddvisit" action="/patAddvisit" method="post">
-        <h3>Запись к ${doc.getSpecialization()} - ${doc.getFirstname()} ${doc.getLastname()}</h3>
+    <form class="forCenterButtons" name="docAddvisit" action="/docAddvisit" method="post">
+        <h3>Пациент - ${pat.getFirstname()} ${pat.getLastname()}</h3>
         <br>
         <label>Выберите удобное время</label>
         <div>
@@ -21,7 +21,7 @@
                 </#list>
             </select>
         </div>
-        <input id="doctor" title="doctor" name="doctor" value="${doc.getDoctorid()}"
+        <input id="patient" title="patient" name="patient" value="${pat.getPatientid()}"
                required hidden/>
         <br>
         <input class="forCenterButtons" type="submit" value="Подтвердить запись!"/>

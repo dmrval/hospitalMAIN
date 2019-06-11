@@ -375,6 +375,19 @@ public class MainController {
 
     //DOCTORCONTROLLER
 
+    @PostMapping("/docAddvisit")
+    public String getDocAddvisit(
+            @RequestParam String currTime,
+            Principal principal,
+            @RequestParam String patient
+    ) {
+        Doctor current = doctorService.getDoctorbyLogin(principal.getName());
+        Timestamp t = visitService.getWorkCalendar().getWorkCalendar().get(Integer.parseInt(currTime));
+        Visit visit = new Visit(t, current, patientService.getPatient(Integer.parseInt(patient)));
+        visitService.addVisit(visit);
+        return "redirect:/doctor/allVisits";
+    }
+
     @PostMapping("/docNewPassword")
     public String signUpPostForDoc(
             @RequestParam("password") String password,

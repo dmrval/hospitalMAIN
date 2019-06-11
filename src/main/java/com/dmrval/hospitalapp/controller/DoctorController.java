@@ -1,5 +1,6 @@
 package com.dmrval.hospitalapp.controller;
 
+import com.dmrval.hospitalapp.entity.Doctor;
 import com.dmrval.hospitalapp.service.DoctorService;
 import com.dmrval.hospitalapp.service.PatientService;
 import com.dmrval.hospitalapp.service.VisitService;
@@ -7,8 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.security.Principal;
+import java.sql.Timestamp;
+import java.util.List;
 
 @Controller
 public class DoctorController {
@@ -53,6 +57,17 @@ public class DoctorController {
         return "doc_addVisit";
     }
 
+
+    @GetMapping("/doctor/addVisit/{id}/getFreeTimes")
+    public String getFreeTimes(@PathVariable int id, Model model, Principal principal) {
+        //для минуса занятых посещений
+        Doctor current = doctorService.getDoctorbyLogin(principal.getName());
+        List<Timestamp> getFreeTime = visitService.getTimestampByDoctor(current);
+        model.addAttribute("calendarDay", visitService.getWorkCalendar());
+        model.addAttribute("pat", patientService.getPatient(id));
+        model.addAttribute("lstpatient", patientService.getAllPatient());
+        return "doc_addVisit";
+    }
 
 
 
