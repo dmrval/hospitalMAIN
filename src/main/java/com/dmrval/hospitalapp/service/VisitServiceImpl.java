@@ -8,9 +8,10 @@ import com.dmrval.hospitalapp.entity.WorkCalendar;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.sql.Timestamp;
+import java.util.Comparator;
 import java.util.List;
 
-public class VisitServiceImpl implements VisitService {
+public class VisitServiceImpl implements VisitService{
     @Autowired
     VisitDao visitDao;
 
@@ -42,9 +43,7 @@ public class VisitServiceImpl implements VisitService {
 
     public List<Visit> sortByTime() {
         List<Visit> list = getAllVisit();
-        list.sort((e1, e2) ->
-                new Long(e1.getDayofvisit().getTime()).compareTo(
-                        new Long(e2.getDayofvisit().getTime())));
+        list.sort((o1, o2) -> o2.getDayofvisit().compareTo(o1.getDayofvisit()));
         return list;
     }
 

@@ -1,6 +1,7 @@
 package com.dmrval.hospitalapp.controller;
 
 import com.dmrval.hospitalapp.entity.Doctor;
+import com.dmrval.hospitalapp.entity.Visit;
 import com.dmrval.hospitalapp.service.DoctorService;
 import com.dmrval.hospitalapp.service.PatientService;
 import com.dmrval.hospitalapp.service.VisitService;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.security.Principal;
 import java.sql.Timestamp;
+import java.util.Comparator;
 import java.util.List;
 
 @Controller
@@ -33,8 +35,11 @@ public class DoctorController {
 
     @GetMapping("/doctor/allVisits")
     public String getAllVisitByDoctor(Model model, Principal principal) {
-        model.addAttribute("lstvst", visitService.getAllVisit_ByOneDoctor(
-                doctorService.getDoctorbyLogin(principal.getName())));
+        List<Visit> visitList = visitService.getAllVisit_ByOneDoctor(
+                doctorService.getDoctorbyLogin(principal.getName()));
+
+        visitList.sort((o1, o2) -> o2.getDayofvisit().compareTo(o1.getDayofvisit()));
+        model.addAttribute("lstvst", visitList);
         return "doc_allVisit";
     }
 
@@ -68,8 +73,6 @@ public class DoctorController {
         model.addAttribute("lstpatient", patientService.getAllPatient());
         return "doc_addVisit";
     }
-
-
 
 
 }

@@ -11,9 +11,10 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.transaction.Transactional;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
-public class VisitDaoImpl implements VisitDao {
+public class VisitDaoImpl implements VisitDao{
     @Autowired
     private SessionFactory sessionFactory;
 
@@ -108,7 +109,6 @@ public class VisitDaoImpl implements VisitDao {
         return workCal;
     }
 
-
     @Override
     public List<Visit> getAllVisit() {
         sessionFactory.getCurrentSession().beginTransaction();
@@ -120,8 +120,6 @@ public class VisitDaoImpl implements VisitDao {
         return list;
     }
 
-
-
     //PRIVATE only this class use=))
     private Visit getVisitPrivate(int id) {
         Visit temp = sessionFactory.getCurrentSession().get(Visit.class, id);
@@ -131,4 +129,6 @@ public class VisitDaoImpl implements VisitDao {
     public WorkCalendar getWorkCalendar() {
         return workCalendar;
     }
+
+
 }

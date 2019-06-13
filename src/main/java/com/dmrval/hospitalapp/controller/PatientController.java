@@ -1,5 +1,6 @@
 package com.dmrval.hospitalapp.controller;
 
+import com.dmrval.hospitalapp.entity.Visit;
 import com.dmrval.hospitalapp.service.DoctorService;
 import com.dmrval.hospitalapp.service.PatientService;
 import com.dmrval.hospitalapp.service.VisitService;
@@ -44,7 +45,9 @@ public class PatientController {
 
     @GetMapping("/patient/allVisits")
     public String getPatientAllVisits(Model model, Principal principal) {
-        model.addAttribute("lstvst", visitService.getAllVisit_ByOnePatient(patientService.getPatientbyLogin(principal.getName())));
+        List<Visit> list = visitService.getAllVisit_ByOnePatient(patientService.getPatientbyLogin(principal.getName()));
+        list.sort((o1, o2) -> o2.getDayofvisit().compareTo(o1.getDayofvisit()));
+        model.addAttribute("lstvst", list);
         return "pat_allVisit";
     }
 

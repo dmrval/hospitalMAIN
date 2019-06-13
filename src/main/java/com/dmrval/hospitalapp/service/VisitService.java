@@ -6,6 +6,7 @@ import com.dmrval.hospitalapp.entity.Visit;
 import com.dmrval.hospitalapp.entity.WorkCalendar;
 
 import java.sql.Timestamp;
+import java.util.Comparator;
 import java.util.List;
 
 public interface VisitService {
@@ -28,6 +29,7 @@ public interface VisitService {
     List<Timestamp> getTimestampByDoctor(Doctor doctor);
 
     WorkCalendar getWorkCalendar();
+
 
 
 }
