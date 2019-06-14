@@ -6,6 +6,7 @@ import com.dmrval.hospitalapp.service.DoctorService;
 import com.dmrval.hospitalapp.service.PatientService;
 import com.dmrval.hospitalapp.service.VisitService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,8 +29,15 @@ public class DoctorController {
     @Autowired
     private PatientService patientService;
 
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
     @GetMapping("/doctor")
-    public String getMainpanelDoctor() {
+    public String getMainpanelDoctor(Model model, Principal principal) {
+        String currpass = doctorService.getDoctorbyLogin(principal.getName()).getUser().getPassword();
+        if (passwordEncoder.matches("123456", currpass)) {
+            model.addAttribute("plschangepass", true);
+        }
         return "doc_MainPanel";
     }
 

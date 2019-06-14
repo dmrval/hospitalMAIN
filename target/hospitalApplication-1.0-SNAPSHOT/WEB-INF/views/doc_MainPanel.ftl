@@ -8,6 +8,10 @@
     </style>
 </head>
 <body>
+<#if plschangepass??>
+    <div class="logout_apply">Пожалуйста измените свой пароль</div>
+    <br>
+</#if>
 <div class="forCenterButtons">
     <div>
         <button class="button21" onclick="location.href = '/doctor/docSettings'">Редактировать профиль</button>
