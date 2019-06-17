@@ -20,9 +20,14 @@
     </div>
 </form>
 <br>
-<div>
-    <button class="button21" onclick="location.href = '/administrator/allVisit/${visit.getVisitid()}'">Отмена</button>
-</div>
-
+<#if isADMIN??>
+    <div>
+        <button class="button21" onclick="location.href = '/administrator/allVisits/${visit.getVisitid()}'">Отмена</button>
+    </div>
+<#else>
+    <div>
+        <button class="button21" onclick="location.href = '/doctor/allVisits/${visit.getVisitid()}'">Отмена</button>
+    </div>
+</#if>
 </body>
 </html>

@@ -4,6 +4,7 @@ import com.dmrval.hospitalapp.entity.Doctor;
 import com.dmrval.hospitalapp.entity.Visit;
 import com.dmrval.hospitalapp.service.DoctorService;
 import com.dmrval.hospitalapp.service.PatientService;
+import com.dmrval.hospitalapp.service.UserService;
 import com.dmrval.hospitalapp.service.VisitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -30,7 +31,10 @@ public class DoctorController {
     private PatientService patientService;
 
     @Autowired
-    PasswordEncoder passwordEncoder;
+    private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private UserService userService;
 
     @GetMapping("/doctor")
     public String getMainpanelDoctor(Model model, Principal principal) {
@@ -45,10 +49,9 @@ public class DoctorController {
     public String getAllVisitByDoctor(Model model, Principal principal) {
         List<Visit> visitList = visitService.getAllVisit_ByOneDoctor(
                 doctorService.getDoctorbyLogin(principal.getName()));
-
         visitList.sort((o1, o2) -> o2.getDayofvisit().compareTo(o1.getDayofvisit()));
         model.addAttribute("lstvst", visitList);
-        return "doc_allVisit";
+        return "doc_allVisits";
     }
 
     @GetMapping("/doctor/newPassword")
@@ -65,21 +68,40 @@ public class DoctorController {
 
 
     @GetMapping("/doctor/addVisit")
-    public String getDocAddVisit(Model model, Principal principal) {
+    public String getDocAddVisit(Model model) {
         model.addAttribute("lstpatient", patientService.getAllPatient());
         return "doc_addVisit";
     }
 
-
     @GetMapping("/doctor/addVisit/{id}/getFreeTimes")
     public String getFreeTimes(@PathVariable int id, Model model, Principal principal) {
-        //для минуса занятых посещений
         Doctor current = doctorService.getDoctorbyLogin(principal.getName());
+        //для минуса занятых посещений
         List<Timestamp> getFreeTime = visitService.getTimestampByDoctor(current);
         model.addAttribute("calendarDay", visitService.getWorkCalendar());
         model.addAttribute("pat", patientService.getPatient(id));
         model.addAttribute("lstpatient", patientService.getAllPatient());
         return "doc_addVisit";
+    }
+
+    @GetMapping("/doctor/allVisits/{id}")
+    public String getVisitById(@PathVariable("id") int id, Model model) {
+        model.addAttribute("visit", visitService.getVisit(id));
+        return "visit";
+    }
+
+    @GetMapping("/doctor/allVisits/{id}/setDiagosis")
+    public String setDiagnisis(@PathVariable("id") int id, Model model) {
+        model.addAttribute("visit", visitService.getVisit(id));
+        model.addAttribute("diag", visitService.getVisit(id).getDiagnosis());
+        return "setDiagnosis";
+    }
+
+    @GetMapping("/doctor/allVisits/{id}/updateDiagnosis")
+    public String updateDiagnisis(@PathVariable("id") int id, Model model) {
+        model.addAttribute("diag", visitService.getVisit(id).getDiagnosis());
+        model.addAttribute("visit", visitService.getVisit(id));
+        return "updateDiagnosis";
     }
 
 

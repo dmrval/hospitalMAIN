@@ -3,12 +3,14 @@ package com.dmrval.hospitalapp.controller;
 import com.dmrval.hospitalapp.entity.*;
 import com.dmrval.hospitalapp.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
 import java.sql.Date;
 import java.sql.Timestamp;
@@ -51,29 +53,29 @@ public class MainController {
     private UserService userService;
 
 
-    @GetMapping("/hello")
-    public String hello(Model model) {
-        model.addAttribute("licenses", doctorlicenseService.getAllDoctorlicense());
-        return "hello";
+    @GetMapping("/")
+    public String getMain(HttpServletRequest request) {
+        Principal principal = request.getUserPrincipal();
+        if (principal != null) {
+            return getHome(principal);
+        }
+        return "login";
     }
 
-    @GetMapping("/createDoctorlicense")
-    public String createDoctorlicense() {
-        return "createDoctorlicense";
-    }
-
-
-    @PostMapping("/addDoctorlicensePage")
-    public String addDoctorlicensePage(@ModelAttribute("tmplicense") Doctorlicense doctorlicense) {
-        doctorlicenseService.addDoctorlicense(doctorlicense);
-        return "redirect:/hello";
-    }
-
-
-    @PostMapping("/updateDoctorlicensePage")
-    public String updateDoctorlicensePage(@ModelAttribute("updateLicense") Doctorlicense doctorlicense) {
-        doctorlicenseService.updateDoctorlicense(doctorlicense);
-        return "redirect:/hello";
+    @GetMapping("/home")
+    public String getHome(Principal principal) {
+        if (principal.getName() != null) {
+            if (userService.findByLogin(principal.getName()).getRole().getRolename().equals("ADMIN")) {
+                return "adm_MainPanel";
+            }
+            if (userService.findByLogin(principal.getName()).getRole().getRolename().equals("DOCTOR")) {
+                return "doc_MainPanel";
+            }
+            if (userService.findByLogin(principal.getName()).getRole().getRolename().equals("ADMIN")) {
+                return "pat_MainPanel";
+            }
+        }
+        return "login";
     }
 
     //Doctor
@@ -96,9 +98,9 @@ public class MainController {
         Address address_tmp = new Address(country, city, street, Integer.parseInt(house), Integer.parseInt(flat));
         User user = new User(login, passwordEncoder.encode("123456"), roleSevice.findById(9));
         userService.saveUser(user);
-        Doctor doctor = new Doctor(birthday, firstname, lastname, specialization, address_tmp, lic_tmp,user);
+        Doctor doctor = new Doctor(birthday, firstname, lastname, specialization, address_tmp, lic_tmp, user);
         doctorService.addDoctor(doctor);
-        return "redirect:/administrator/allDoctor/";
+        return "redirect:/administrator/allDoctors/";
     }
 
 
@@ -133,7 +135,7 @@ public class MainController {
         tmp.getAddress().setHouse(Integer.parseInt(house));
         tmp.getAddress().setFlat(Integer.parseInt(flat));
         doctorService.updateDoctor(tmp);
-        return "redirect:/administrator/allDoctor";
+        return "redirect:/administrator/allDoctors";
     }
 
     //Patient
@@ -155,7 +157,7 @@ public class MainController {
         User userForPatient = new User(login, passwordEncoder.encode("123456"), roleSevice.findById(7));
         Patient patient = new Patient(firstname, lastname, birthday, address_tmp, med_tmp, userForPatient);
         patientService.addPatient(patient);
-        return "redirect:/administrator/allPatient";
+        return "redirect:/administrator/allPatients";
     }
 
     @RequestMapping(value = "/updatePatient", method = RequestMethod.POST)
@@ -189,18 +191,18 @@ public class MainController {
         tmp.getAddress().setHouse(Integer.parseInt(house));
         tmp.getAddress().setFlat(Integer.parseInt(flat));
         patientService.updatePatient(tmp);
-        return "redirect:/administrator/allPatient";
+        return "redirect:/administrator/allPatients";
     }
 
     //Visit
-    @GetMapping("/allVisit")
+    @GetMapping("/allVisits")
     public String allVisists(Model model) {
         List<Visit> result = visitService.sortByTime();
         model.addAttribute("lstvst", result);
-        return "allVisit";
+        return "allVisits";
     }
 
-    @GetMapping("/allVisit/{id}")
+    @GetMapping("/allVisits/{id}")
     public String getVisitById(@PathVariable("id") int id, Model model) {
         model.addAttribute("visit", visitService.getVisit(id));
         return "visit";
@@ -225,7 +227,7 @@ public class MainController {
         result.setDoctor(doctorService.getDoctor(Integer.parseInt(doctor)));
         result.setPatient(patientService.getPatient(Integer.parseInt(patient)));
         visitService.updateVisit(result);
-        return "redirect:/administrator/allVisit/" + result.getVisitid();
+        return "redirect:/administrator/allVisits/" + result.getVisitid();
     }
 
 
@@ -238,7 +240,7 @@ public class MainController {
         Diagnosis tmpdiag = diagnosisService.addDiagnosis(new Diagnosis(textdiag));
         tmp.setDiagnosis(tmpdiag);
         visitService.updateVisit(tmp);
-        return "redirect:/administrator/allVisit/" + Integer.parseInt(visitid);
+        return "redirect:/administrator/allVisits/" + Integer.parseInt(visitid);
     }
 
     @PostMapping("/updateDiagosis")
@@ -253,7 +255,7 @@ public class MainController {
         tmp.setDiagnosis(tmpdiag);
         diagnosisService.updateDiagnosis(tmpdiag);
         visitService.updateVisit(tmp);
-        return "redirect:/administrator/allVisit/" + Integer.parseInt(visitid);
+        return "redirect:/administrator/allVisits/" + Integer.parseInt(visitid);
     }
 
     @PostMapping("/addVisit")
@@ -268,7 +270,7 @@ public class MainController {
         Visit tmp = new Visit(new_time, doctorService.getDoctor(Integer.parseInt(doctor)),
                 patientService.getPatient(Integer.parseInt(patient)));
         visitService.addVisit(tmp);
-        return "redirect:/administrator/allVisit/" + tmp.getVisitid();
+        return "redirect:/administrator/allVisits/" + tmp.getVisitid();
     }
 
 
@@ -445,8 +447,6 @@ public class MainController {
         doctorService.updateDoctor(tmp);
         return "redirect:/doctor";
     }
-
-
 }
 
 

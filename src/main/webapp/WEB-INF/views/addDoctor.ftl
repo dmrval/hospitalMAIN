@@ -54,7 +54,7 @@
 </form>
 <br>
 <div>
-    <button class="button21" onclick="location.href = '/administrator/allDoctor'">Отмена</button>
+    <button class="button21" onclick="location.href = '/administrator/allDoctors'">Отмена</button>
 </div>
 </body>
 </html>

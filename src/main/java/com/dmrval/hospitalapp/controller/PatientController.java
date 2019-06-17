@@ -56,7 +56,7 @@ public class PatientController {
         List<Visit> list = visitService.getAllVisit_ByOnePatient(patientService.getPatientbyLogin(principal.getName()));
         list.sort((o1, o2) -> o2.getDayofvisit().compareTo(o1.getDayofvisit()));
         model.addAttribute("lstvst", list);
-        return "pat_allVisit";
+        return "pat_allVisits";
     }
 
     @GetMapping("/patient/addVisit")

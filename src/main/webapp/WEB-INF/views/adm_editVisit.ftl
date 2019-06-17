@@ -40,7 +40,7 @@
     </div>
 </form>
 <br>
-<button class="button21" onclick="location.href = '/administrator/allVisit/${visit.getVisitid()}'">Назад</button>
+<button class="button21" onclick="location.href = '/administrator/allVisits/${visit.getVisitid()}'">Назад</button>
 
 
 </body>

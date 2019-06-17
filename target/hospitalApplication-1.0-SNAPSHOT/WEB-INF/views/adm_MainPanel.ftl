@@ -9,9 +9,9 @@
 </head>
 <body>
 <div class="forCenterButtons">
-<button class="button21" onclick="location.href = '/administrator/allVisit'">База данных Записей</button>
-<button class="button21" onclick="location.href = '/administrator/allDoctor'">База данных Докторов</button>
-<button class="button21" onclick="location.href = '/administrator/allPatient'">База данных Пациентов</button>
+<button class="button21" onclick="location.href = '/administrator/allVisits'">База данных Записей</button>
+<button class="button21" onclick="location.href = '/administrator/allDoctors'">База данных Докторов</button>
+<button class="button21" onclick="location.href = '/administrator/allPatients'">База данных Пациентов</button>
     <br>
     <div>
         <br>

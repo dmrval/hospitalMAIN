@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @Controller
@@ -23,6 +24,7 @@ public class AdministratorController {
 
     @Autowired
     private DoctorService doctorService;
+
     @Autowired
     private UserService userService;
 
@@ -33,23 +35,24 @@ public class AdministratorController {
     }
 
     //Visits
-    @GetMapping("/allVisit")
+    @GetMapping("/allVisits")
     public String allVisists(Model model) {
         List<Visit> result = visitService.sortByTime();
         model.addAttribute("lstvst", result);
-        return "adm_allVisit";
+        return "adm_allVisits";
     }
 
-    @GetMapping("/allVisit/{id}")
+    @GetMapping("/allVisits/{id}")
     public String getVisitById(@PathVariable("id") int id, Model model) {
+        model.addAttribute("isADMIN", true);
         model.addAttribute("visit", visitService.getVisit(id));
-        return "adm_visit";
+        return "visit";
     }
 
     @GetMapping("/delete/{id}")
     public String deleteVisitGET(@PathVariable("id") int id) {
         visitService.removeVisit(id);
-        return "redirect:/administrator/allVisit";
+        return "redirect:/administrator/allVisits";
     }
 
     @GetMapping("/addVisit")
@@ -67,15 +70,17 @@ public class AdministratorController {
         return "adm_editVisit";
     }
 
-    @GetMapping("/allVisit/{id}/setDiagosis")
+    @GetMapping("/allVisits/{id}/setDiagosis")
     public String setDiagnisis(@PathVariable("id") int id, Model model) {
+        model.addAttribute("isADMIN", true);
         model.addAttribute("visit", visitService.getVisit(id));
         model.addAttribute("diag", visitService.getVisit(id).getDiagnosis());
         return "setDiagnosis";
     }
 
-    @GetMapping("/allVisit/{id}/updateDiagnosis")
+    @GetMapping("/allVisits/{id}/updateDiagnosis")
     public String updateDiagnisis(@PathVariable("id") int id, Model model) {
+        model.addAttribute("isADMIN", true);
         model.addAttribute("diag", visitService.getVisit(id).getDiagnosis());
         model.addAttribute("visit", visitService.getVisit(id));
         return "updateDiagnosis";
@@ -83,11 +88,11 @@ public class AdministratorController {
 
 
     //Patient
-    @GetMapping("/allPatient")
+    @GetMapping("/allPatients")
     public String allPatients(Model model) {
         List<Patient> result = patientService.getAllPatient();
         model.addAttribute("lstpatient", result);
-        return "adm_allPatient";
+        return "adm_allPatients";
     }
 
     @GetMapping("/addPatient")
@@ -95,23 +100,23 @@ public class AdministratorController {
         return "addPatient";
     }
 
-    @GetMapping("/allPatient/delete/{id}")
+    @GetMapping("/allPatients/delete/{id}")
     public String deletePatient(@PathVariable("id") int id, Model model) {
         Patient tmp = patientService.getPatient(id);
         if (visitService.getAllVisit_ByOnePatient(tmp).size() != 0) {
             model.addAttribute("notEmpty", true);
             List<Patient> result = patientService.getAllPatient();
             model.addAttribute("lstpatient", result);
-            return "adm_allPatient";
+            return "adm_allPatients";
         }
         Patient r = patientService.getPatient(id);
         r.getUser().setState(State.NOTACTIVE);
         patientService.updatePatient(r);
         patientService.removePatient(id);
-        return "redirect:/administrator/allPatient";
+        return "redirect:/administrator/allPatients";
     }
 
-    @GetMapping("/allPatient/update/{id}")
+    @GetMapping("/allPatients/update/{id}")
     public String editPatient(@PathVariable("id") int id, Model model) {
         Patient patient = patientService.getPatient(id);
         model.addAttribute("patient", patient);
@@ -119,11 +124,11 @@ public class AdministratorController {
     }
 
     //Doctor
-    @GetMapping("/allDoctor")
+    @GetMapping("/allDoctors")
     public String allDoctor(Model model) {
         List<Doctor> result = doctorService.getAllDoctor();
         model.addAttribute("lstdoctor", result);
-        return "adm_allDoctor";
+        return "adm_allDoctors";
     }
 
     @RequestMapping(value = "/addDoctor", method = RequestMethod.GET)
@@ -131,23 +136,23 @@ public class AdministratorController {
         return "addDoctor";
     }
 
-    @GetMapping("/allDoctor/delete/{id}")
+    @GetMapping("/allDoctors/delete/{id}")
     public String deleteDoctor(@PathVariable("id") int id, Model model) {
         Doctor tmp = doctorService.getDoctor(id);
-        if (visitService.getTimestampByDoctor(tmp).size()!=0) {
+        if (visitService.getAllVisit_ByOneDoctor(tmp).size()!=0) {
             model.addAttribute("notEmpty", true);
             List<Doctor> result = doctorService.getAllDoctor();
             model.addAttribute("lstdoctor", result);
-            return "adm_allDoctor";
+            return "adm_allDoctors";
         }
         User user = doctorService.getDoctor(id).getUser();
         user.setState(State.NOTACTIVE);
         userService.updateUser(user);
         doctorService.removeDoctor(id);
-        return "redirect:/administrator/allDoctor";
+        return "redirect:/administrator/allDoctors";
     }
 
-    @GetMapping("/allDoctor/update/{id}")
+    @GetMapping("/allDoctors/update/{id}")
     public String editDoctor(@PathVariable("id") int id, Model model) {
         model.addAttribute("doctor", doctorService.getDoctor(id));
         return "adm_editDoctor";

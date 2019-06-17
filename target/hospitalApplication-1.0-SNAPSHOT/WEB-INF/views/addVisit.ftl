@@ -49,7 +49,7 @@
     </div>
 </form>
 <br>
-<button class="button21" onclick="location.href = '/administrator/allVisit/'">Отмена</button>
+<button class="button21" onclick="location.href = '/administrator/allVisits/'">Отмена</button>
 
 
 </body>
