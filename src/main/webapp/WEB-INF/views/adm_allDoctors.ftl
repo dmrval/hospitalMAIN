@@ -45,5 +45,8 @@
     <p>Докторов в базе нет
         </#list>
 </table>
+<div id="footer">
+    &copy; Creator - Valeev Damir Rinatovich
+</div>
 </body>
 </html>

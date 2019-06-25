@@ -29,5 +29,8 @@
         <button class="button21" onclick="location.href = '/doctor/allVisits/${visit.getVisitid()}'">Отмена</button>
     </div>
 </#if>
+<div id="footer">
+    &copy; Creator - Valeev Damir Rinatovich
+</div>
 </body>
 </html>

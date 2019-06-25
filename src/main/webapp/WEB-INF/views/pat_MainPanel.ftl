@@ -29,5 +29,8 @@
         <button class="button21" onclick="location.href = '/logout'"> Выход</button>
     </div>
 </div>
+<div id="footer">
+    &copy; Creator - Valeev Damir Rinatovich
+</div>
 </body>
 </html>

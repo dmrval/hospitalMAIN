@@ -81,5 +81,8 @@
 <div>
     <button class="button21" onclick="location.href = '/patient'">Отмена</button>
 </div>
+<div id="footer">
+    &copy; Creator - Valeev Damir Rinatovich
+</div>
 </body>
 </html>

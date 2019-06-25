@@ -51,6 +51,8 @@
 <br>
 <button class="button21" onclick="location.href = '/administrator/allVisits/'">Отмена</button>
 
-
+<div id="footer">
+    &copy; Creator - Valeev Damir Rinatovich
+</div>
 </body>
 </html>

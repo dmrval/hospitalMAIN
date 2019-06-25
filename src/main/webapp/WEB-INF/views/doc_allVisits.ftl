@@ -32,5 +32,8 @@
     <button class="button21" onclick="location.href = '/doctor'">Главная страница</button>
 </div>
 <br>
+<div id="footer">
+    &copy; Creator - Valeev Damir Rinatovich
+</div>
 </body>
 </html>

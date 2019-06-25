@@ -78,6 +78,8 @@
         <button class="button21" onclick="location.href = '/login'">Назад</button>
     </div>
 
-
+    <div id="footer">
+        &copy; Creator - Valeev Damir Rinatovich
+    </div>
 </body>
 </html>

@@ -14,5 +14,8 @@
 <form action="/hello">
     <button style="vertical-align: middle">Cancel</button>
 </form>
+<div id="footer">
+    &copy; Creator - Valeev Damir Rinatovich
+</div>
 </body>
 </html>

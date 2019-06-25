@@ -5,6 +5,8 @@
     <title>QQQQ</title>
 </head>
 <body>
-
+<div id="footer">
+    &copy; Creator - Valeev Damir Rinatovich
+</div>
 </body>
 </html>
