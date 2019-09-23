@@ -25,6 +25,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.version></spring.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -43,6 +44,8 @@
             <artifactId>spring-context-support</artifactId>
             <version>4.3.9.RELEASE</version>
         </dependency>
+
+
         <dependency>
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>
@@ -54,13 +57,13 @@
             <artifactId>hibernate-core</artifactId>
             <version>5.4.2.Final</version>
         </dependency>
+
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.2.5</version>
         </dependency>
 
-        <!-- Hibernate Validator -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
@@ -72,46 +75,36 @@
             <artifactId>tomcat-embed-core</artifactId>
             <version>8.5.34</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-web</artifactId>-->
-            <!--<version>2.0.6.RELEASE</version>-->
-            <!--<scope>compile</scope>-->
-        <!--</dependency>-->
+
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
             <version>4.0.1.RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
             <version>4.0.1.RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-taglibs</artifactId>
             <version>4.0.1.RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
             <version>2.0.11.RELEASE</version>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-web</artifactId>-->
-            <!--<version>2.0.6.RELEASE</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-security</artifactId>-->
-            <!--<version>RELEASE</version>-->
-        <!--</dependency>-->
-
-
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.6.3</version>
+        </dependency>
     </dependencies>
 
 

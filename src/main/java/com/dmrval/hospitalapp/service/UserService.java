@@ -13,7 +13,7 @@ public interface UserService {
 
     void saveUser(User user);
 
-    public boolean userLoginIsExist(User u);
+    boolean userLoginIsExist(User u);
 
     void updateUser(User user);
 

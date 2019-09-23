@@ -22,9 +22,9 @@
 <body>
 <form name="visit" action="/addVisit" method="post">
     <div>
-        <p>Дата и время приема</p>
+        <p>Дата и время приема гггг-мм-ддTчч:00</p>
         <input id="dayofvisit" title="dayofvisit" name="dayofvisit" type="datetime-local"
-               pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"
+               pattern="[1-2]{1}[0-9]{3}[-]{1}[0-1]{1}[0-9]{1}[-]{1}[0-2]{1}[0-9]{1}[T]{1}[0-2]{1}[0-9]{1}[:]{1}[0-5]{1}[0-9]{1}"    value="2019-09-12T11:00"
                required/>
     </div>
     <div>

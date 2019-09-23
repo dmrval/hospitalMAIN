@@ -82,96 +82,6 @@
         <item name="HospitalDB" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="address: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="HospitalDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="diagnosis: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="HospitalDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="doctor: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="HospitalDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="doctorlicense: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="HospitalDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="medicalpolicy: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="HospitalDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="patient: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="HospitalDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="role: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="HospitalDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="usr: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="HospitalDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="visit: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="HospitalDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
         <item name="extensions" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
@@ -188,34 +98,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/PatientDaoImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Diagnosis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="72" column="39" lean-forward="true" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/SecurityWebApplicationInitializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/WebSecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="40" column="74" lean-forward="true" selection-start-line="40" selection-start-column="74" selection-end-line="40" selection-end-column="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-104">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -260,6 +146,7 @@
       <find>Patient</find>
       <find>PatientDao</find>
       <find>all</find>
+      <find>UserDetailsService</find>
     </findStrings>
     <replaceStrings>
       <replace>context</replace>
@@ -291,14 +178,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Visit.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/PatientServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/UserDetailsImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/UserDetailsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/TestDebug.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/VisitDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/VisitService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/VisitDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/VisitServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_allVisit.ftl" />
@@ -306,24 +187,14 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_visit.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_visit.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/PatientController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/AdministratorController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/DoctorController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addDoctor.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addPatient.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addVisit.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allDoctors.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allPatients.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allVisits.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editDoctor.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editPatient.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editVisit.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_MainPanel.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/createDoctorlicense.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_addVisit.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_allVisits.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_docSettings.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_MainPanel.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_newPassword.ftl" />
@@ -337,11 +208,27 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singUp.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/update.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/updateDiagnosis.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/visit.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accessDenied.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/allstyle.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_allVisits.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/VisitService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/SpringConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/PatientServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/AdministratorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addPatient.ftl" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/DoctorController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/visit.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accessDenied.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addVisit.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editVisit.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addDoctor.ftl" />
       </list>
     </option>
   </component>
@@ -375,19 +262,20 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-7" />
+    <option name="y" value="-7" />
+    <option name="width" value="1550" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <showMembers ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -403,121 +291,7 @@
             <path>
               <item name="hospitalApplication" type="b2602c69:ProjectViewProjectNode" />
               <item name="hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hospitalApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hospitalApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hospitalApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hospitalapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hospitalApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hospitalapp" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hospitalApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hospitalapp" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hospitalApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hospitalapp" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hospitalApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hospitalapp" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hospitalApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hospitalapp" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hospitalApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hospitalApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hospitalApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hospitalApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hospitalApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hospitalApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -532,25 +306,26 @@
     <property name="ToolWindowMessages.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561005519596" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569217716289" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../calculatorTask" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.other" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="Q:\diplooom\hospital\src\main\java\com\dmrval\hospitalapp\hibernateLogic" />
-      <recent name="Q:\diplooom\hospital\src" />
-      <recent name="Q:\diplooom\hospital\src\main\java\com\dmrval\hospitalapp" />
-      <recent name="Q:\diplooom\hospital\src\main\java" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="Q:\diplooom\hospital\src\main\webapp\WEB-INF\views" />
+      <recent name="Q:\diplooom\hospital\src\main\webapp\WEB-INF" />
+      <recent name="Q:\diplooom\hospital\src\main\webapp\images" />
+      <recent name="Q:\diplooom\hospital\src\main\webapp\resources" />
+      <recent name="Q:\diplooom\hospital\src\main\webapp" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="com.dmrval.hospitalapp.trash" />
@@ -558,12 +333,11 @@
       <recent name="com.dmrval.hospitalapp.entity" />
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="Q:\diplooom\hospital\src\main\webapp\WEB-INF\views" />
-      <recent name="Q:\diplooom\hospital\src\main\webapp\WEB-INF" />
-      <recent name="Q:\diplooom\hospital\src\main\webapp\images" />
-      <recent name="Q:\diplooom\hospital\src\main\webapp\resources" />
-      <recent name="Q:\diplooom\hospital\src\main\webapp" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="Q:\diplooom\hospital\src\main\java\com\dmrval\hospitalapp\hibernateLogic" />
+      <recent name="Q:\diplooom\hospital\src" />
+      <recent name="Q:\diplooom\hospital\src\main\java\com\dmrval\hospitalapp" />
+      <recent name="Q:\diplooom\hospital\src\main\java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -578,41 +352,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat ">
-    <configuration name="TestDebug" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dmrval.hospitalapp.TestDebug" />
-      <module name="hospital" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dmrval.hospitalapp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WorkCalendar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dmrval.hospitalapp.entity.WorkCalendar" />
-      <module name="hospital" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dmrval.hospitalapp.entity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="addDoctor.ftl" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WEB-INF/views/addDoctor.ftl">
-      <method v="2" />
-    </configuration>
-    <configuration name="pat_addVisit.ftl" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WEB-INF/views/pat_addVisit.ftl">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="Tomcat " type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat " ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="hospital:war">
           <settings>
@@ -683,21 +425,6 @@
         </option>
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.TestDebug" />
-      <item itemvalue="Application.WorkCalendar" />
-      <item itemvalue="JavaScript Debug.addDoctor.ftl" />
-      <item itemvalue="JavaScript Debug.pat_addVisit.ftl" />
-      <item itemvalue="Tomcat Server.Tomcat " />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.TestDebug" />
-        <item itemvalue="Application.WorkCalendar" />
-        <item itemvalue="JavaScript Debug.pat_addVisit.ftl" />
-        <item itemvalue="JavaScript Debug.addDoctor.ftl" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -740,12 +467,28 @@
       <workItem from="1561525852913" duration="91000" />
       <workItem from="1562056314722" duration="433000" />
       <workItem from="1563171773830" duration="3461000" />
-      <workItem from="1563344764230" duration="1809000" />
+      <workItem from="1563344764230" duration="4018000" />
+      <workItem from="1563948453885" duration="8454000" />
+      <workItem from="1564247474585" duration="446000" />
+      <workItem from="1564400848908" duration="1816000" />
+      <workItem from="1564483626779" duration="4085000" />
+      <workItem from="1565270377824" duration="2266000" />
+      <workItem from="1565349441936" duration="489000" />
+      <workItem from="1565596431251" duration="2658000" />
+      <workItem from="1566550219635" duration="860000" />
+      <workItem from="1566712628423" duration="594000" />
+      <workItem from="1567668634515" duration="16247000" />
+      <workItem from="1568055610155" duration="1982000" />
+      <workItem from="1568065911375" duration="155000" />
+      <workItem from="1568115749456" duration="5403000" />
+      <workItem from="1568188239124" duration="21092000" />
+      <workItem from="1569002822529" duration="2551000" />
+      <workItem from="1569073756352" duration="8609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="744405000" />
+    <option name="totallyTimeSpent" value="824321000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -758,9 +501,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7112135" visible="true" weight="0.17110874" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7112135" visible="true" weight="0.18070363" />
       <window_info id="Structure" order="1" sideWeight="0.28556594" side_tool="true" weight="0.18283582" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -780,20 +522,21 @@
       <window_info anchor="bottom" id="Spring" order="8" weight="0.124610595" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32917964" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.35721704" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.1973001" />
       <window_info anchor="bottom" x="-1340" y="489" width="940" height="418" id="Messages" order="12" sideWeight="0.5010661" side_tool="true" weight="0.22637591" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32917964" />
       <window_info anchor="bottom" id="Database Changes" order="14" sideWeight="0.49946696" weight="0.22741432" />
       <window_info anchor="bottom" id="Version Control" order="15" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.32917964" />
-      <window_info anchor="bottom" x="5" y="632" width="1845" height="382" id="Run" order="17" sideWeight="0.4989339" type="FLOATING" weight="0.21079959" />
+      <window_info anchor="bottom" x="263" y="560" width="1380" height="401" id="Run" order="17" sideWeight="0.4989339" visible="true" weight="0.26687434" />
+      <window_info anchor="bottom" id="CheckStyle" order="18" sideWeight="0.49946696" weight="0.1973001" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.1380597" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" weight="0.3291506" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info active="true" anchor="right" id="Database" order="6" sideWeight="0.46625128" visible="true" weight="0.19616205" />
+      <window_info anchor="right" id="Database" order="6" sideWeight="0.46625128" visible="true" weight="0.23347548" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.3291506" />
@@ -855,599 +598,285 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allPatients.ftl">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="57" column="6" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
-          <folding>
-            <element signature="e#1731#1737#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editDoctor.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="830">
-          <caret line="65" column="6" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
-          <folding>
-            <element signature="e#2637#2643#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editPatient.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="830">
-          <caret line="85" column="6" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
-          <folding>
-            <element signature="e#3604#3610#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editVisit.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
-          <folding>
-            <element signature="e#1563#1569#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/createDoctorlicense.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <element signature="e#473#479#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_addVisit.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="830">
-          <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
-          <folding>
-            <element signature="e#2176#2182#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_allVisits.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-          <folding>
-            <element signature="e#849#855#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_docSettings.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="830">
-          <caret line="65" column="6" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
-          <folding>
-            <element signature="e#2629#2635#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="562">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_MainPanel.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_docSettings.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/Iterator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
-          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-          <folding>
-            <element signature="e#1020#1026#0#HTML" expanded="true" />
-          </folding>
+          <caret line="59" column="39" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_newPassword.ftl">
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/ListIterator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="6" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
-          <folding>
-            <element signature="e#1324#1330#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="2890">
+          <caret line="193" column="17" selection-start-line="193" selection-start-column="17" selection-end-line="193" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_addVisit.ftl">
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/HashSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="853">
-          <caret line="54" column="6" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
-          <folding>
-            <element signature="e#1828#1834#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="1207">
+          <caret line="95" column="44" selection-start-line="95" selection-start-column="44" selection-end-line="95" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_newPassword.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/AdministratorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="6" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
-          <folding>
-            <element signature="e#1325#1331#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_patSettings.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="830">
-          <caret line="85" column="6" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
-          <folding>
-            <element signature="e#3569#3575#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/setDiagnosis.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
-          <folding>
-            <element signature="e#1024#1030#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/update.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding>
-            <element signature="e#455#461#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/updateDiagnosis.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
-          <folding>
-            <element signature="e#1118#1124#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/visit.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-          <folding>
-            <element signature="e#1943#1949#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_MainPanel.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
-          <folding>
-            <element signature="e#986#992#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_getFreeTimes.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding>
-            <element signature="e#128#134#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_allVisits.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
-          <folding>
-            <element signature="e#895#901#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/images/pexels-photo-736230.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/stop.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.10.RELEASE/spring-core-4.3.10.RELEASE.jar!/org/springframework/core/io/ResourceLoader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="-1328">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/4.3.9.RELEASE/spring-context-support-4.3.9.RELEASE.jar!/org/springframework/ui/freemarker/FreeMarkerConfigurationFactory.class">
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/security/Principal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
-          <folding>
-            <element signature="e#2761#2762#0" expanded="true" />
-            <element signature="e#2813#2814#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="236">
+          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singUp.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/visit.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state relative-caret-position="296">
+          <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/allstyle.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/updateDiagnosis.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
+        <state relative-caret-position="238">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accessDenied.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/setDiagnosis.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editDoctor.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allDoctors.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allVisits.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_editVisit.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="171" selection-start-line="16" selection-start-column="171" selection-end-line="16" selection-end-column="171" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_addVisit.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/doc_allVisits.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_addVisit.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pat_allVisits.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addPatient.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="35" column="37" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addDoctor.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addVisit.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_MainPanel.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="59" lean-forward="true" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/service/VisitService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/AdministratorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.address">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.address</OriginalElement>
-          <nodes>
-            <node x="0.0" y="0.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.address</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="82.0" y="81.0" />
-          <SelectedNodes>
-            <node>a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.address</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/a73ab2e9-4062-4bc4-a69a-9ca8bc295020.SCHEMA:postgres.public">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>a73ab2e9-4062-4bc4-a69a-9ca8bc295020.SCHEMA:postgres.public</OriginalElement>
-          <nodes>
-            <node x="198.0" y="124.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.address</node>
-            <node x="0.0" y="168.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.medicalpolicy</node>
-            <node x="410.25" y="592.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.visit</node>
-            <node x="382.0" y="135.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.usr</node>
-            <node x="151.5" y="347.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.patient</node>
-            <node x="611.25" y="402.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.diagnosis</node>
-            <node x="396.25" y="336.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.doctor</node>
-            <node x="551.0" y="168.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.doctorlicense</node>
-            <node x="369.5" y="0.0">a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.role</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.doctor" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.usr">
-              <point x="0.0" y="-103.0" />
-              <point x="37.25" y="70.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.doctor" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.doctorlicense">
-              <point x="65.0" y="-103.0" />
-              <point x="558.75" y="316.0" />
-              <point x="640.0" y="316.0" />
-              <point x="0.0" y="37.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.patient" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.medicalpolicy">
-              <point x="-58.33333333333334" y="-92.0" />
-              <point x="180.66666666666666" y="316.0" />
-              <point x="89.0" y="316.0" />
-              <point x="0.0" y="37.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.patient" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.address">
-              <point x="0.0" y="-92.0" />
-              <point x="-41.0" y="81.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.visit" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.diagnosis">
-              <point x="55.66666666666663" y="-70.0" />
-              <point x="549.4166666666666" y="567.0" />
-              <point x="721.75" y="567.0" />
-              <point x="0.0" y="37.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.doctor" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.address">
-              <point x="-65.0" y="-103.0" />
-              <point x="428.75" y="306.0" />
-              <point x="321.0" y="306.0" />
-              <point x="41.0" y="81.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.usr" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.role">
-              <point x="0.0" y="-70.0" />
-              <point x="0.0" y="37.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.visit" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.doctor">
-              <point x="0.0" y="-70.0" />
-              <point x="0.0" y="103.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.patient" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.usr">
-              <point x="58.333333333333314" y="-92.0" />
-              <point x="297.3333333333333" y="316.0" />
-              <point x="419.25" y="316.0" />
-              <point x="-37.25" y="70.0" />
-            </edge>
-            <edge source="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.visit" target="a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.patient">
-              <point x="-55.66666666666663" y="-70.0" />
-              <point x="438.08333333333337" y="567.0" />
-              <point x="239.0" y="567.0" />
-              <point x="0.0" y="92.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.5627198124267292" x="417.0" y="366.0" />
-          <SelectedNodes>
-            <node>a73ab2e9-4062-4bc4-a69a-9ca8bc295020.TABLE:postgres.public.patient</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/role">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Visit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Patient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/com.dmrval.hospitalapp.config.SecurityWebApplicationInitializer">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.dmrval.hospitalapp.config.SecurityWebApplicationInitializer</OriginalElement>
-          <nodes>
-            <node x="0.0" y="101.0">org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer</node>
-            <node x="70.0" y="0.0">org.springframework.web.WebApplicationInitializer</node>
-            <node x="58.5" y="600.0">com.dmrval.hospitalapp.config.SecurityWebApplicationInitializer</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer" target="org.springframework.web.WebApplicationInitializer">
-              <point x="0.0" y="-224.5" />
-              <point x="0.0" y="25.5" />
-            </edge>
-            <edge source="com.dmrval.hospitalapp.config.SecurityWebApplicationInitializer" target="org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer">
-              <point x="-63.5" y="-25.5" />
-              <point x="122.0" y="575.0" />
-              <point x="92.75" y="575.0" />
-              <point x="-92.75" y="224.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-170.0" y="-1.0" />
-          <SelectedNodes>
-            <node>com.dmrval.hospitalapp.config.SecurityWebApplicationInitializer</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-            <Category>Properties</Category>
-            <Category>Inner Classes</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/TestDebug.java" />
-    <entry file="uml://JAVA/com.dmrval.hospitalapp">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.dmrval.hospitalapp</OriginalElement>
-          <nodes>
-            <node x="214.24145299145297" y="330.451171875">com.dmrval.hospitalapp.controller</node>
-            <node x="126.99305555555557" y="13.451171875">com.dmrval.hospitalapp.entity</node>
-            <node x="122.4375" y="221.451171875">com.dmrval.hospitalapp.service</node>
-            <node x="80.4375" y="330.451171875">com.dmrval.hospitalapp.config</node>
-            <node x="20.0625" y="132.451171875">com.dmrval.hospitalapp.dao</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="com.dmrval.hospitalapp.service" target="com.dmrval.hospitalapp.dao">
-              <point x="-38.33333333333334" y="-14.5" />
-              <point x="141.60416666666666" y="201.451171875" />
-              <point x="106.6875" y="201.451171875" />
-              <point x="37.125" y="14.5" />
-            </edge>
-            <edge source="com.dmrval.hospitalapp.config" target="com.dmrval.hospitalapp.config">
-              <point x="0.0" y="14.5" />
-              <point x="136.9375" y="379.451171875" />
-              <point x="60.4375" y="379.451171875" />
-              <point x="60.4375" y="344.951171875" />
-              <point x="-56.5" y="-0.0" />
-            </edge>
-            <edge source="com.dmrval.hospitalapp.config" target="com.dmrval.hospitalapp.dao">
-              <point x="-14.125" y="-14.5" />
-              <point x="122.8125" y="300.451171875" />
-              <point x="81.9375" y="300.451171875" />
-              <point x="12.375" y="14.5" />
-            </edge>
-            <edge source="com.dmrval.hospitalapp.service" target="com.dmrval.hospitalapp.entity">
-              <point x="0.0" y="-14.5" />
-              <point x="179.9375" y="201.451171875" />
-              <point x="193.60416666666666" y="201.451171875" />
-              <point x="12.111111111111086" y="14.5" />
-            </edge>
-            <edge source="com.dmrval.hospitalapp.service" target="com.dmrval.hospitalapp.service">
-              <point x="-23.0" y="14.5" />
-              <point x="156.9375" y="280.451171875" />
-              <point x="92.4375" y="280.451171875" />
-              <point x="92.4375" y="228.701171875" />
-              <point x="-57.5" y="-7.25" />
-            </edge>
-            <edge source="com.dmrval.hospitalapp.dao" target="com.dmrval.hospitalapp.entity">
-              <point x="33.0" y="-14.5" />
-              <point x="102.5625" y="112.451171875" />
-              <point x="181.49305555555557" y="112.451171875" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="com.dmrval.hospitalapp.entity" target="com.dmrval.hospitalapp.entity">
-              <point x="-36.33333333333333" y="14.5" />
-              <point x="145.15972222222223" y="72.451171875" />
-              <point x="96.99305555555557" y="72.451171875" />
-              <point x="96.99305555555557" y="20.701171875" />
-              <point x="-54.5" y="-7.25" />
-            </edge>
-            <edge source="com.dmrval.hospitalapp.dao" target="com.dmrval.hospitalapp.dao">
-              <point x="-37.125" y="14.5" />
-              <point x="32.4375" y="181.451171875" />
-              <point x="0.0625" y="181.451171875" />
-              <point x="0.0625" y="146.951171875" />
-              <point x="-49.5" y="-0.0" />
-            </edge>
-            <edge source="com.dmrval.hospitalapp.controller" target="com.dmrval.hospitalapp.entity">
-              <point x="43.33333333333334" y="-14.5" />
-              <point x="322.5747863247863" y="310.451171875" />
-              <point x="291.80555555555554" y="310.451171875" />
-              <point x="291.80555555555554" y="92.451171875" />
-              <point x="229.93750000000003" y="92.451171875" />
-              <point x="48.44444444444446" y="14.5" />
-            </edge>
-            <edge source="com.dmrval.hospitalapp.config" target="com.dmrval.hospitalapp.service">
-              <point x="42.375" y="-14.5" />
-              <point x="179.3125" y="310.451171875" />
-              <point x="202.9375" y="310.451171875" />
-              <point x="23.0" y="14.5" />
-            </edge>
-            <edge source="com.dmrval.hospitalapp.controller" target="com.dmrval.hospitalapp.service">
-              <point x="-43.33333333333334" y="-14.5" />
-              <point x="235.90811965811963" y="310.451171875" />
-              <point x="225.9375" y="310.451171875" />
-              <point x="46.0" y="14.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="210.0" y="189.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-            <Category>Properties</Category>
-            <Category>Inner Classes</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/patient">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adm_allVisits.ftl">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/SecurityWebApplicationInitializer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singUp.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/PatientDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/RoleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/RoleDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/SpringConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/DoctorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="75" column="52" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/controller/PatientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/DoctorlicenseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/MedicalpolicyDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/MedicalpolicyDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/DoctorDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/DiagnosisDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/PatientDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/visit">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/diagnosis">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/doctor">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1461,6 +890,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/role">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/patient">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/medicalpolicy">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/doctorlicense">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/diagnosis">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/address">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1468,23 +932,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="40" column="74" lean-forward="true" selection-start-line="40" selection-start-column="74" selection-end-line="40" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="das://a73ab2e9-4062-4bc4-a69a-9ca8bc295020/database/postgres/schema/public/table/doctor">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/dao/PatientDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dmrval/hospitalapp/entity/Diagnosis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="72" column="39" lean-forward="true" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-104">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>

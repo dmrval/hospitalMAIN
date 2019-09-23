@@ -17,11 +17,11 @@
     <#if visit.getDiagnosis()??>
         <p>${visit.getDiagnosis().getResultofdiagnosis()}</p>
     <#else>
-    <#if isADMIN??>
-        <P><a href="/administrator/allVisits/${visit.getVisitid()}/setDiagosis">Поставить диагноз</a></P>
-    <#else>
-        <P><a href="/doctor/allVisits/${visit.getVisitid()}/setDiagosis">Поставить диагноз</a></P>
-    </#if>
+        <#if isADMIN??>
+            <P><a href="/administrator/allVisits/${visit.getVisitid()}/setDiagosis">Поставить диагноз</a></P>
+        <#else>
+            <P><a href="/doctor/allVisits/${visit.getVisitid()}/setDiagosis">Поставить диагноз</a></P>
+        </#if>
     </#if>
     <h3>Осматриваемый врач</h3>
     <p>${visit.getDoctor().getSpecialization()}

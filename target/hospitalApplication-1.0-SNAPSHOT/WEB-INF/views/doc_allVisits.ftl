@@ -24,7 +24,6 @@
     </tr>
     <#else>
     <p>No VISITS
-
         </#list>
 </table>
 <br>

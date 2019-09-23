@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:form="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <title>Добавить в базу данных нового доктора</title>
     <style type="text/css">
@@ -11,8 +11,10 @@
 <h1>Внести в базу данных нового доктора</h1>
 <form name="newDoctor" action="/addDoctorPost" method="post">
     <div>
-        <p>Дата рождения</p>
-        <input id="birthday" title="Birthday" name="birthday" type="date" max="2004-12-12" min="1920-12-12" required>
+        <p>Дата рождения (гггг-мм-дд)</p>
+        <input id="birthday" title="Birthday" name="birthday"
+               pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" type="date" max="2004-12-12"
+               min="1920-12-12" required>
         <label>Логин </label>
         <input id="login" title="login" name="login" type="text" required>
     </div>

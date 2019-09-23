@@ -14,7 +14,7 @@
     <div>
         <p>Дата и время приема </p>
         <input id="dayofvisit" title="dayofvisit" name="dayofvisit" type="datetime-local"
-               value="${visit.give_dayOfVisitString()}"/>
+               value="${visit.give_dayOfVisitString()}" pattern="[1-2]{1}[0-9]{3}[-]{1}[0-1]{1}[0-9]{1}[-]{1}[0-2]{1}[0-9]{1}[T]{1}[0-2]{1}[0-9]{1}[:]{1}[0-5]{1}[0-9]{1}"  />
     </div>
     <div>
         <p>Доктор</p>
